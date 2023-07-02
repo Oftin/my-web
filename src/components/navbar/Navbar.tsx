@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ColorText } from "../text";
+import { ColorText, WhiteAndGreenText } from "../text";
 import { colors } from "@/styles/colors";
+import { Nav, Ul, LeftSideLi, RightSideLi } from "./styled";
 
 const webTabs = ["Home", "About", "Blog", "Project", "Contact"].map((e) =>
   e.toLowerCase()
@@ -8,22 +9,21 @@ const webTabs = ["Home", "About", "Blog", "Project", "Contact"].map((e) =>
 
 export const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
+    <Nav>
+      <Ul>
+        <LeftSideLi>
           <Link href={"/"}>
-            <ColorText text="Kamil" color={colors.white} />
-            <ColorText text="Bobrowski" color={colors.greenThemeColor} />
+            <WhiteAndGreenText firstText="Kamil" secondText="Bobrowki" />
           </Link>
-        </li>
+        </LeftSideLi>
         {webTabs.map((tab) => {
           return (
-            <li key={tab}>
+            <RightSideLi key={tab} style={{ display: "flex" }}>
               <Link href={`/${tab}`}>{`.${tab}()`}</Link>
-            </li>
+            </RightSideLi>
           );
         })}
-      </ul>
-    </nav>
+      </Ul>
+    </Nav>
   );
 };
