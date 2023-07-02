@@ -1,11 +1,16 @@
 import Link from "next/link";
-import { ColorText, WhiteAndGreenText } from "../text";
-import { colors } from "@/styles/colors";
+import { WhiteAndGreenText } from "../text";
 import { Nav, Ul, LeftSideLi, RightSideLi } from "./styled";
 
-const webTabs = ["Home", "About", "Blog", "Project", "Contact"].map((e) =>
-  e.toLowerCase()
-);
+const webTabs = [
+  "About",
+  "Experience",
+  "Education",
+  "Skills",
+  "Blog",
+  "Projects",
+  "Contact",
+].map((e) => e.toLowerCase());
 
 export const Navbar = () => {
   return (
