@@ -1,21 +1,24 @@
 import { colors } from "@/styles/colors";
-import { ColorText } from "./ColorText";
+import { Text } from "./Text";
 import { WhiteAndGreenTextWrapper } from "./styled";
+import { TextSize } from "./types";
 
 interface WhiteAndGreenTextProps {
   firstText: string;
   secondText: string;
+  textSize: TextSize;
 }
 
 export const WhiteAndGreenText = ({
   firstText,
   secondText,
+  textSize,
 }: WhiteAndGreenTextProps) => {
   return (
     <WhiteAndGreenTextWrapper>
-      <ColorText text={firstText} color={colors.white} />
+      <Text text={firstText} color={colors.white} size={textSize} />
       &nbsp;
-      <ColorText text={secondText} color={colors.greenThemeColor} />
+      <Text text={secondText} color={colors.greenThemeColor} size={textSize} />
     </WhiteAndGreenTextWrapper>
   );
 };

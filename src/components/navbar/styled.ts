@@ -9,7 +9,6 @@ export const Nav = styled.nav`
   padding-top: 1rem;
   padding-bottom: 1rem;
 
-  ${typography.text["32px"]}
   background-color: ${colors.background.mirage};
 `;
 
@@ -26,8 +25,10 @@ export const LeftSideLi = styled.li`
 `;
 
 export const RightSideLi = styled.li`
+  display: flex;
   color: ${colors.white};
-  margin-left: 2rem;
+  margin-left: 1rem;
+  ${typography.text["24px"]}
 
   :hover {
     color: ${colors.greenThemeColor};

@@ -18,12 +18,16 @@ export const Navbar = () => {
       <Ul>
         <LeftSideLi>
           <Link href={"/"}>
-            <WhiteAndGreenText firstText="Kamil" secondText="Bobrowki" />
+            <WhiteAndGreenText
+              firstText="Kamil"
+              secondText="Bobrowki"
+              textSize="32px"
+            />
           </Link>
         </LeftSideLi>
         {webTabs.map((tab) => {
           return (
-            <RightSideLi key={tab} style={{ display: "flex" }}>
+            <RightSideLi key={tab}>
               <Link href={`/${tab}`}>{`.${tab}()`}</Link>
             </RightSideLi>
           );

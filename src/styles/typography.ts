@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 export const defaultFamily = css`
-  font-family: "Inter", "norserive";
+  /* font-family: "Inter", "Regular"; */
 `;
 
 export const textDefault = css`
@@ -44,12 +44,17 @@ export const typography = {
     "48px": css`
       ${textDefault};
       font-size: 3rem;
-      line-height: 6.625rem;
+      line-height: 3.625rem;
     `,
     notFound: css`
       ${textDefault};
       font-size: 18.75rem;
       line-height: 22.75rem;
+    `,
+    navbar: css`
+      ${textDefault};
+      font-size: 2rem;
+      line-height: 2.375rem;
     `,
   },
 };
