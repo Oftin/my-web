@@ -1,9 +1,9 @@
+import Image from "next/image";
 import { CallToActionButton } from "@/components/buttons";
 import { Icons } from "@/components/icons";
 import { TextParagraph } from "@/components/text";
 import { TitleSection } from "@/components/titleSection";
 import { FlexColumn, TwoColumn } from "@/components/wrappers/columns";
-import Image from "next/image";
 
 export const HelloSection = () => (
   <TwoColumn gap={10} styles="max-height: 100vh;">
