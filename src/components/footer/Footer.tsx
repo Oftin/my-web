@@ -4,12 +4,16 @@ import { Text, WhiteAndGreenText } from "../text";
 import { FlexColumn } from "../wrappers/columns";
 import { Icons } from "@/components/icons";
 
-export const Footer = () => {
+interface FooterProps {
+  backgroundColor: string;
+}
+
+export const Footer = ({ backgroundColor }: FooterProps) => {
   return (
     <FlexColumn
       items={"center"}
       justify={"center"}
-      styles={`background-color: ${colors.background.ebonyClay}`}
+      styles={`background-color: ${backgroundColor}`}
     >
       <FlexColumn
         direction="row"

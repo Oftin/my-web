@@ -12,6 +12,7 @@ import { BlogSection } from "./BlogSection";
 import { ProjectSection } from "./ProjectSection";
 import { ContactSection } from "./ContactSection";
 import { Footer } from "@/components/footer";
+import { colors } from "@/styles/colors";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
         <ProjectSection />
         <ContactSection />
       </MainPageWrapper>
-      <Footer />
+      <Footer backgroundColor={colors.background.ebonyClay} />
     </main>
   );
 }
