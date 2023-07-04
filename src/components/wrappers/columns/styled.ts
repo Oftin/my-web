@@ -1,12 +1,20 @@
 import styled, { css } from "styled-components";
 
-export const TwoColumnWrapper = styled.div<{ gap: number; styles: string }>`
+export const TwoColumnWrapper = styled.div<{
+  gap: number;
+  styles: string;
+  layoutMargin?: boolean;
+}>`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: ${(props) => props.gap}px;
 
-  padding-left: 8rem;
-  padding-right: 4rem;
+  ${(props) =>
+    props.layoutMargin &&
+    css`
+      padding-left: 8rem;
+      padding-right: 4rem;
+    `}
 
   ${(props) =>
     props.styles &&

@@ -28,7 +28,7 @@ export const AdditionalActivitiesSection = () => {
         justify="center"
         styles="width: 100%; height:100%"
       >
-        <TwoColumn gap={100}>
+        <TwoColumn gap={10}>
           <FlexColumn items="center" justify="center">
             <div
               style={{

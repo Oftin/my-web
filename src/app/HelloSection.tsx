@@ -6,7 +6,7 @@ import { TitleSection } from "@/components/titleSection";
 import { FlexColumn, TwoColumn } from "@/components/wrappers/columns";
 
 export const HelloSection = () => (
-  <TwoColumn gap={10} styles="max-height: 100vh;">
+  <TwoColumn gap={10} styles="max-height: 100vh;" layoutMargin>
     <FlexColumn
       items="start"
       justify="center"

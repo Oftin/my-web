@@ -7,7 +7,7 @@ import { CallToActionButton } from "@/components/buttons";
 
 export const AboutSection = () => {
   return (
-    <TwoColumn gap={10} styles="max-height: 100vh;">
+    <TwoColumn gap={10} styles="max-height: 100vh;" layoutMargin>
       <FlexColumn items="start" justify="center">
         <Image
           src={Icons.HexagonIcon}

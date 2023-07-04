@@ -4,11 +4,17 @@ import { colors } from "@/styles/colors";
 interface CallToActionButtonProps {
   name: string;
   href: string;
+  styles?: string;
 }
 
-export const CallToActionButton = ({ name, href }: CallToActionButtonProps) => {
+export const CallToActionButton = ({
+  name,
+  href,
+  styles,
+}: CallToActionButtonProps) => {
   return (
     <LinkStyled
+      styles={styles}
       href={href}
       style={{
         backgroundColor: `${colors.greenThemeColor}`,
