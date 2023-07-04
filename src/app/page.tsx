@@ -4,6 +4,14 @@ import { Navbar } from "@/components/navbar";
 import { MainPageWrapper } from "./styled";
 import { HelloSection } from "./HelloSection";
 import { AboutSection } from "./AboutSection";
+import { ExperienceSection } from "./ExperienceSection";
+import { EducationSection } from "./EducationSection";
+import { AdditionalActivitiesSection } from "./AdditionalActivitiesSection";
+import { SkillSection } from "./SkillSection";
+import { BlogSection } from "./BlogSection";
+import { ProjectSection } from "./ProjectSection";
+import { ContactSection } from "./ContactSection";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -12,11 +20,15 @@ export default function Home() {
       <MainPageWrapper>
         <HelloSection />
         <AboutSection />
-        <div>asdas</div>
-        <div>asdas</div>
-        <div>asdas</div>
-        <div>asdas</div>
+        <ExperienceSection />
+        <EducationSection />
+        <AdditionalActivitiesSection />
+        <SkillSection />
+        <BlogSection />
+        <ProjectSection />
+        <ContactSection />
       </MainPageWrapper>
+      <Footer />
     </main>
   );
 }

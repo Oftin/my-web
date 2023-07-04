@@ -16,12 +16,13 @@ export const TwoColumnWrapper = styled.div<{ gap: number; styles: string }>`
 `;
 
 export const FlexColumnWrapper = styled.div<{
+  direction: "column" | "row";
   items: string;
   justify: string;
   styles?: string;
 }>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => props.direction};
   align-items: ${(props) => props.items};
   justify-content: ${(props) => props.justify};
 
