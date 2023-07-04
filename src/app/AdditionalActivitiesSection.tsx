@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Text, WhiteAndGreenText } from "@/components/text";
-import { FlexColumn, TwoColumn } from "@/components/wrappers/columns";
+import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { CallToActionButton } from "@/components/buttons";
 
@@ -28,7 +28,7 @@ export const AdditionalActivitiesSection = () => {
         justify="center"
         styles="width: 100%; height:100%"
       >
-        <TwoColumn gap={10}>
+        <Column numberOfColumns={2} gap={10}>
           <FlexColumn items="center" justify="center">
             <div
               style={{
@@ -95,7 +95,7 @@ export const AdditionalActivitiesSection = () => {
               <CallToActionButton name="Read More" href="/addictional" />
             </div>
           </FlexColumn>
-        </TwoColumn>
+        </Column>
       </FlexColumn>
     </FlexColumn>
   );

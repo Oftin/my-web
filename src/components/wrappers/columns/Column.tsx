@@ -1,26 +1,29 @@
 import { ReactNode } from "react";
-import { TwoColumnWrapper } from "./styled";
+import { ColumnWrapper } from "./styled";
 
-interface TwoColumnProps {
+interface ColumnProps {
   children: ReactNode;
+  numberOfColumns: number;
   gap?: number;
   styles?: string;
   layoutMargin?: boolean;
 }
 
-export const TwoColumn = ({
+export const Column = ({
   children,
+  numberOfColumns,
   gap,
   styles,
   layoutMargin,
-}: TwoColumnProps) => {
+}: ColumnProps) => {
   return (
-    <TwoColumnWrapper
+    <ColumnWrapper
+      numberOfColumns={numberOfColumns}
       gap={gap || 0}
       styles={styles || ""}
       layoutMargin={layoutMargin}
     >
       {children}
-    </TwoColumnWrapper>
+    </ColumnWrapper>
   );
 };

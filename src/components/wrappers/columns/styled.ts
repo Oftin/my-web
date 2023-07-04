@@ -1,12 +1,19 @@
 import styled, { css } from "styled-components";
 
-export const TwoColumnWrapper = styled.div<{
+export const ColumnWrapper = styled.div<{
+  numberOfColumns: number;
   gap: number;
   styles: string;
   layoutMargin?: boolean;
 }>`
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  ${(props) =>
+    props.numberOfColumns &&
+    css`
+      grid-template-columns: repeat(${props.numberOfColumns}, minmax(0, 1fr));
+    `}
+
   gap: ${(props) => props.gap}px;
 
   ${(props) =>
@@ -29,6 +36,7 @@ export const FlexColumnWrapper = styled.div<{
   justify: string;
   styles?: string;
   layoutMargin?: boolean;
+  minusLayoutMargin?: boolean;
 }>`
   display: flex;
   flex-direction: ${(props) => props.direction};
@@ -46,5 +54,12 @@ export const FlexColumnWrapper = styled.div<{
     css`
       padding-left: 8em;
       padding-right: 4em;
+    `}
+
+    ${(props) =>
+    props.minusLayoutMargin &&
+    css`
+      padding-left: -8em;
+      padding-right: -4em;
     `}
 `;

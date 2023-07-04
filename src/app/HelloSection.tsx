@@ -3,10 +3,10 @@ import { CallToActionButton } from "@/components/buttons";
 import { Icons } from "@/components/icons";
 import { TextParagraph } from "@/components/text";
 import { TitleSection } from "@/components/titleSection";
-import { FlexColumn, TwoColumn } from "@/components/wrappers/columns";
+import { FlexColumn, Column } from "@/components/wrappers/columns";
 
 export const HelloSection = () => (
-  <TwoColumn gap={10} styles="max-height: 100vh;" layoutMargin>
+  <Column numberOfColumns={2} gap={10} styles="max-height: 100vh;" layoutMargin>
     <FlexColumn
       items="start"
       justify="center"
@@ -31,5 +31,5 @@ export const HelloSection = () => (
         height={540}
       />
     </FlexColumn>
-  </TwoColumn>
+  </Column>
 );

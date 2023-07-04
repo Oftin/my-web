@@ -14,14 +14,28 @@ export const WhiteAndGreenTextWrapper = styled.div<{ styles?: string }>`
     `}
 `;
 
-export const TextParagraphWrapper = styled.p`
+export const TextParagraphWrapper = styled.p<{
+  size?: TextSize;
+  styles?: string;
+}>`
   color: ${colors.white};
-  ${typography.text["20px"]}
 
   font-weight: 400;
   opacity: 0.6;
 
   width: 80%;
+
+  ${(props) =>
+    props.size &&
+    css`
+      ${typography.text[`${props.size}`]}
+    `}
+
+  ${(props) =>
+    props.styles &&
+    css`
+      ${props.styles}
+    `}
 `;
 
 export const TextStyle = styled.div<{

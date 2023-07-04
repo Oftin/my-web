@@ -1,6 +1,6 @@
 import { CallToActionButton } from "@/components/buttons";
 import { Text, WhiteAndGreenText } from "@/components/text";
-import { FlexColumn, TwoColumn } from "@/components/wrappers/columns";
+import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 
 export const SkillSection = () => {
@@ -19,7 +19,11 @@ export const SkillSection = () => {
       justify="center"
       styles="width: 100vw; height: 60vh"
     >
-      <TwoColumn styles="width: 100vw; height: 50vh" layoutMargin>
+      <Column
+        numberOfColumns={2}
+        styles="width: 100vw; height: 50vh"
+        layoutMargin
+      >
         <FlexColumn items="start" justify="center" styles="width: 100vw;">
           <WhiteAndGreenText
             firstText={"Favorite"}
@@ -52,7 +56,7 @@ export const SkillSection = () => {
         </FlexColumn>
 
         <FlexColumn items="center" justify="center">
-          <TwoColumn gap={5}>
+          <Column numberOfColumns={2} gap={5}>
             <FlexColumn items={"start"} justify={"start"}>
               <ul
                 style={{
@@ -102,9 +106,9 @@ export const SkillSection = () => {
                 })}
               </ul>
             </FlexColumn>
-          </TwoColumn>
+          </Column>
         </FlexColumn>
-      </TwoColumn>
+      </Column>
     </FlexColumn>
   );
 };

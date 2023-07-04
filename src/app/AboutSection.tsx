@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FlexColumn, TwoColumn } from "@/components/wrappers/columns";
+import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { Icons } from "@/components/icons";
 import { TitleSection } from "@/components/titleSection";
 import { TextParagraph } from "@/components/text";
@@ -7,7 +7,12 @@ import { CallToActionButton } from "@/components/buttons";
 
 export const AboutSection = () => {
   return (
-    <TwoColumn gap={10} styles="max-height: 100vh;" layoutMargin>
+    <Column
+      numberOfColumns={2}
+      gap={10}
+      styles="max-height: 100vh;"
+      layoutMargin
+    >
       <FlexColumn items="start" justify="center">
         <Image
           src={Icons.HexagonIcon}
@@ -29,6 +34,6 @@ export const AboutSection = () => {
 
         <CallToActionButton name={"Read More"} href={"/about"} />
       </FlexColumn>
-    </TwoColumn>
+    </Column>
   );
 };
