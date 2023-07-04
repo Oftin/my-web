@@ -1,3 +1,9 @@
-export const ContactSection = () => {
-  return <div>ContactSection</div>;
+interface ContactSectionProps {
+  backgroundColor: string;
+}
+
+export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
+  return (
+    <div style={{ backgroundColor: `${backgroundColor}` }}>ContactSection</div>
+  );
 };

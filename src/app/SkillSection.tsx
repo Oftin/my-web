@@ -3,7 +3,11 @@ import { Text, WhiteAndGreenText } from "@/components/text";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 
-export const SkillSection = () => {
+interface SkillSectionProps {
+  backgroundColor: string;
+}
+
+export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
   const firstSkillsColumn = [
     "TypeScript",
     "JavaScript",
@@ -17,7 +21,7 @@ export const SkillSection = () => {
     <FlexColumn
       items="center"
       justify="center"
-      styles="width: 100vw; height: 60vh"
+      styles={`width: 100vw; height: 60vh; background-color: ${backgroundColor}`}
     >
       <Column
         numberOfColumns={2}

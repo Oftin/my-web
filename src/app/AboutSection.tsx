@@ -5,12 +5,16 @@ import { TitleSection } from "@/components/titleSection";
 import { TextParagraph } from "@/components/text";
 import { CallToActionButton } from "@/components/buttons";
 
-export const AboutSection = () => {
+interface AboutSectionProps {
+  backgroundColor: string;
+}
+
+export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
   return (
     <Column
       numberOfColumns={2}
       gap={10}
-      styles="max-height: 100vh;"
+      styles={`max-height: 100vh; background-color: ${backgroundColor}`}
       layoutMargin
     >
       <FlexColumn items="start" justify="center">

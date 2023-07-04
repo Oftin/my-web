@@ -5,8 +5,17 @@ import { TextParagraph } from "@/components/text";
 import { TitleSection } from "@/components/titleSection";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
 
-export const HelloSection = () => (
-  <Column numberOfColumns={2} gap={10} styles="max-height: 100vh;" layoutMargin>
+interface HelloSectionProps {
+  backgroundColor: string;
+}
+
+export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
+  <Column
+    numberOfColumns={2}
+    gap={10}
+    styles={`max-height: 100vh; background-color: ${backgroundColor}`}
+    layoutMargin
+  >
     <FlexColumn
       items="start"
       justify="center"

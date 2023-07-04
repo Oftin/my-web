@@ -14,22 +14,27 @@ import { ContactSection } from "./ContactSection";
 import { Footer } from "@/components/footer";
 import { colors } from "@/styles/colors";
 
+const darkerBackgroundColor = colors.background.mirage;
+const brighterBackgroundColor = colors.background.ebonyClay;
+
 export default function Home() {
   return (
     <main>
       <Navbar />
       <MainPageWrapper>
-        <HelloSection />
-        <AboutSection />
-        <ExperienceSection />
-        <SkillSection />
-        <EducationSection />
-        <AdditionalActivitiesSection />
-        <BlogSection />
-        <ProjectSection />
-        <ContactSection />
+        <HelloSection backgroundColor={darkerBackgroundColor} />
+        <AboutSection backgroundColor={brighterBackgroundColor} />
+        <ExperienceSection backgroundColor={darkerBackgroundColor} />
+        <SkillSection backgroundColor={brighterBackgroundColor} />
+        <EducationSection backgroundColor={darkerBackgroundColor} />
+        <AdditionalActivitiesSection
+          backgroundColor={brighterBackgroundColor}
+        />
+        <BlogSection backgroundColor={darkerBackgroundColor} />
+        <ProjectSection backgroundColor={brighterBackgroundColor} />
+        <ContactSection backgroundColor={darkerBackgroundColor} />
       </MainPageWrapper>
-      <Footer backgroundColor={colors.background.ebonyClay} />
+      <Footer backgroundColor={darkerBackgroundColor} />
     </main>
   );
 }

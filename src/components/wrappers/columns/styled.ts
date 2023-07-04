@@ -44,22 +44,22 @@ export const FlexColumnWrapper = styled.div<{
   justify-content: ${(props) => props.justify};
 
   ${(props) =>
-    props.styles &&
-    css`
-      ${props.styles}
-    `}
-
-  ${(props) =>
     props.layoutMargin &&
     css`
       padding-left: 8em;
       padding-right: 4em;
     `}
 
-    ${(props) =>
+  ${(props) =>
     props.minusLayoutMargin &&
     css`
       padding-left: -8em;
       padding-right: -4em;
+    `}
+
+    ${(props) =>
+    props.styles &&
+    css`
+      ${props.styles}
     `}
 `;

@@ -6,12 +6,18 @@ import { Icons } from "@/components/icons";
 import { DisplayGrid } from "@/components/wrappers/displays";
 import { CallToActionButton } from "@/components/buttons";
 
-export const ExperienceSection = () => {
+interface ExperienceSectionProps {
+  backgroundColor: string;
+}
+
+export const ExperienceSection = ({
+  backgroundColor,
+}: ExperienceSectionProps) => {
   return (
     <FlexColumn
       items="start"
       justify="center"
-      styles="width: 100%; padding-top: 5em;"
+      styles={`width: 100%; height: 100vh; padding-top: 5em; background-color: ${backgroundColor}`}
       layoutMargin
     >
       <Text text="Last" color={colors.white} size="32px" />

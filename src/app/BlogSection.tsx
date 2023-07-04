@@ -4,6 +4,10 @@ import { Text } from "@/components/text";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 
+interface BlogSectionProps {
+  backgroundColor: string;
+}
+
 const threeLastArticles = [
   {
     title: "Pro tips in JavaScripts",
@@ -25,12 +29,12 @@ const threeLastArticles = [
   },
 ];
 
-export const BlogSection = () => {
+export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
   return (
     <FlexColumn
       items="center"
       justify="center"
-      styles="height: 100vh;  width: 100%"
+      styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
       minusLayoutMargin
     >
       <Text text={"Blog"} color={colors.greenThemeColor} size={"36px"} />

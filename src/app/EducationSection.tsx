@@ -1,3 +1,13 @@
-export const EducationSection = () => {
-  return <div>EducationSection</div>;
+interface EducationSectionProps {
+  backgroundColor: string;
+}
+
+export const EducationSection = ({
+  backgroundColor,
+}: EducationSectionProps) => {
+  return (
+    <div style={{ backgroundColor: `${backgroundColor}` }}>
+      EducationSection
+    </div>
+  );
 };

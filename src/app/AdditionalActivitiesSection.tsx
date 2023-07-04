@@ -4,13 +4,19 @@ import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { CallToActionButton } from "@/components/buttons";
 
-export const AdditionalActivitiesSection = () => {
+interface AdditionalActivitiesSectionProps {
+  backgroundColor: string;
+}
+
+export const AdditionalActivitiesSection = ({
+  backgroundColor,
+}: AdditionalActivitiesSectionProps) => {
   return (
     <FlexColumn
       items="start"
       justify="center"
       layoutMargin
-      styles="width: 100%; height:80vh;"
+      styles={`width: 100%; height:80vh; background-color: ${backgroundColor}`}
     >
       <WhiteAndGreenText
         firstText={"University"}
