@@ -11,7 +11,8 @@ export const ExperienceSection = () => {
     <FlexColumn
       items="start"
       justify="center"
-      styles="width: 100%; padding-top: 5em; padding-left: 8em; padding-right: 4em;"
+      styles="width: 100%; padding-top: 5em;"
+      layoutMargin
     >
       <Text text="Last" color={colors.white} size="32px" />
       <Text text="Experience" color={colors.greenThemeColor} size="48px" />

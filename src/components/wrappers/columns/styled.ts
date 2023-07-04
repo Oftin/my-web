@@ -20,6 +20,7 @@ export const FlexColumnWrapper = styled.div<{
   items: string;
   justify: string;
   styles?: string;
+  layoutMargin?: boolean;
 }>`
   display: flex;
   flex-direction: ${(props) => props.direction};
@@ -30,5 +31,12 @@ export const FlexColumnWrapper = styled.div<{
     props.styles &&
     css`
       ${props.styles}
+    `}
+
+  ${(props) =>
+    props.layoutMargin &&
+    css`
+      padding-left: 8em;
+      padding-right: 4em;
     `}
 `;

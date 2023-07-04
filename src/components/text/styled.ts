@@ -3,9 +3,15 @@ import { typography } from "@/styles/typography";
 import { TextSize } from "./types";
 import { colors } from "@/styles/colors";
 
-export const WhiteAndGreenTextWrapper = styled.div`
+export const WhiteAndGreenTextWrapper = styled.div<{ styles?: string }>`
   display: flex;
   align-items: center;
+
+  ${(props) =>
+    props.styles &&
+    css`
+      ${props.styles}
+    `}
 `;
 
 export const TextParagraphWrapper = styled.p`
@@ -21,6 +27,7 @@ export const TextParagraphWrapper = styled.p`
 export const TextStyle = styled.div<{
   color: string;
   size: TextSize;
+  styles?: string;
 }>`
   color: ${(props) => props.color};
 
@@ -28,5 +35,11 @@ export const TextStyle = styled.div<{
     props.size &&
     css`
       ${typography.text[`${props.size}`]}
+    `};
+
+  ${(props) =>
+    props.styles &&
+    css`
+      ${props.styles}
     `};
 `;

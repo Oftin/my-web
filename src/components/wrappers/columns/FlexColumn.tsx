@@ -7,6 +7,7 @@ interface FlexColumnProps {
   items: "start" | "center" | "end";
   justify: "start" | "center" | "end" | "space-between";
   styles?: string;
+  layoutMargin?: boolean;
 }
 
 export const FlexColumn = ({
@@ -15,6 +16,7 @@ export const FlexColumn = ({
   items,
   justify,
   styles,
+  layoutMargin,
 }: FlexColumnProps) => {
   return (
     <FlexColumnWrapper
@@ -22,6 +24,7 @@ export const FlexColumn = ({
       items={items}
       justify={justify}
       styles={styles}
+      layoutMargin={layoutMargin}
     >
       {children}
     </FlexColumnWrapper>

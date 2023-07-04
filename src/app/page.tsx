@@ -22,9 +22,9 @@ export default function Home() {
         <HelloSection />
         <AboutSection />
         <ExperienceSection />
+        <SkillSection />
         <EducationSection />
         <AdditionalActivitiesSection />
-        <SkillSection />
         <BlogSection />
         <ProjectSection />
         <ContactSection />

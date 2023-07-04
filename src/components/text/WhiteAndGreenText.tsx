@@ -7,15 +7,17 @@ interface WhiteAndGreenTextProps {
   firstText: string;
   secondText: string;
   textSize: TextSize;
+  styles?: string;
 }
 
 export const WhiteAndGreenText = ({
   firstText,
   secondText,
   textSize,
+  styles,
 }: WhiteAndGreenTextProps) => {
   return (
-    <WhiteAndGreenTextWrapper>
+    <WhiteAndGreenTextWrapper styles={styles}>
       <Text text={firstText} color={colors.white} size={textSize} />
       &nbsp;
       <Text text={secondText} color={colors.greenThemeColor} size={textSize} />
