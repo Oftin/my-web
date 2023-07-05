@@ -16,7 +16,7 @@ export const AdditionalActivitiesSection = ({
       items="start"
       justify="center"
       layoutMargin
-      styles={`width: 100%; height:80vh; background-color: ${backgroundColor}`}
+      styles={`width: 100%; height:100vh; padding-top: 5em; padding-bottom: 5em; background-color: ${backgroundColor}`}
     >
       <WhiteAndGreenText
         firstText={"University"}

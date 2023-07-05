@@ -17,7 +17,7 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
       styles={`max-height: 100vh; background-color: ${backgroundColor}`}
       layoutMargin
     >
-      <FlexColumn items="start" justify="center">
+      <FlexColumn items="center" justify="center">
         <Image
           src={Icons.HexagonIcon}
           alt="Hexagon Icon"

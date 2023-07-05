@@ -8,3 +8,10 @@ export type TextSize =
   | "48px"
   | "notFound"
   | "navbar";
+
+export interface TwoWordsTextProps {
+  firstText: string;
+  secondText: string;
+  textSize: TextSize;
+  styles?: string;
+}

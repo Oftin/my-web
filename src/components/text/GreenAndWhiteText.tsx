@@ -3,7 +3,7 @@ import { Text } from "./Text";
 import { TwoWordsTextWrapper } from "./styled";
 import { TwoWordsTextProps } from "./types";
 
-export const WhiteAndGreenText = ({
+export const GreenAndWhiteText = ({
   firstText,
   secondText,
   textSize,
@@ -11,9 +11,9 @@ export const WhiteAndGreenText = ({
 }: TwoWordsTextProps) => {
   return (
     <TwoWordsTextWrapper styles={styles}>
-      <Text text={firstText} color={colors.white} size={textSize} />
+      <Text text={firstText} color={colors.greenThemeColor} size={textSize} />
       &nbsp;
-      <Text text={secondText} color={colors.greenThemeColor} size={textSize} />
+      <Text text={secondText} color={colors.white} size={textSize} />
     </TwoWordsTextWrapper>
   );
 };

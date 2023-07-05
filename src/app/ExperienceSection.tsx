@@ -20,8 +20,8 @@ export const ExperienceSection = ({
       styles={`width: 100%; height: 100vh; padding-top: 5em; background-color: ${backgroundColor}`}
       layoutMargin
     >
-      <Text text="Last" color={colors.white} size="32px" />
-      <Text text="Experience" color={colors.greenThemeColor} size="48px" />
+      <Text text="Last" color={colors.greenThemeColor} size="32px" />
+      <Text text="Experience" color={colors.white} size="48px" />
 
       <FlexColumn
         items="center"

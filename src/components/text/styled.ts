@@ -3,7 +3,7 @@ import { typography } from "@/styles/typography";
 import { TextSize } from "./types";
 import { colors } from "@/styles/colors";
 
-export const WhiteAndGreenTextWrapper = styled.div<{ styles?: string }>`
+export const TwoWordsTextWrapper = styled.div<{ styles?: string }>`
   display: flex;
   align-items: center;
 
