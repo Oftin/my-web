@@ -45,7 +45,7 @@ export default function NotFound() {
           />
         </FlexColumn>
 
-        <CallToActionButton name={"Contact Form"} href={"/"} />
+        <CallToActionButton name={"Contact Form"} href={"/not-found-contact"} />
       </FlexColumn>
       <Footer backgroundColor={colors.background.mirage} />
     </>

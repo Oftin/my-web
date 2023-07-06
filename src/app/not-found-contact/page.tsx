@@ -4,22 +4,20 @@ import { RequestButton } from "@/components/buttons";
 import { Footer } from "@/components/footer";
 import { Input, TextArea } from "@/components/inputs";
 import { Navbar } from "@/components/navbar";
-import { WhiteAndGreenText, Text } from "@/components/text";
+import { Text } from "@/components/text";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 
-export default function Contact() {
+export default function NotFoundContact() {
   return (
     <>
       <Navbar />
-      <FlexColumn items="center" justify="center" styles="height: 100vh;">
-        <WhiteAndGreenText
-          firstText="Get In"
-          secondText="Touch!"
-          textSize="32px"
-        />
-
-        <Text text="Contact Me" color={colors.white} size="48px" />
+      <FlexColumn items={"center"} justify={"center"} styles={"height: 100vh;"}>
+        <div style={{ display: "flex", gap: 12 }}>
+          <Text text={"Idea for"} color={colors.white} size={"48px"} />
+          <Text text={"New"} color={colors.greenThemeColor} size={"48px"} />
+          <Text text={"Page"} color={colors.white} size={"48px"} />
+        </div>
 
         <Column
           numberOfColumns={2}
@@ -42,7 +40,7 @@ export default function Contact() {
         </Column>
 
         <TextArea
-          placeholder="Enter your message"
+          placeholder="Enter your idea for new page"
           width="650px"
           height="250px"
         />

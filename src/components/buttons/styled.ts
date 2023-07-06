@@ -30,3 +30,17 @@ export const ArrowBackWrapper = styled.button`
   cursor: pointer;
   outline: inherit;
 `;
+
+export const RequestButtonWrapper = styled.button`
+  width: 285px;
+  height: 85px;
+  padding: auto;
+  background-color: ${colors.greenThemeColor};
+  color: ${colors.white};
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  margin-top: 45px;
+  cursor: pointer;
+`;

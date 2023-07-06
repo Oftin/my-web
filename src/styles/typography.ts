@@ -1,7 +1,7 @@
 import { css } from "styled-components";
 
 export const defaultFamily = css`
-  /* font-family: "Inter", "Regular"; */
+  font-family: sans-serif;
 `;
 
 export const textDefault = css`
