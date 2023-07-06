@@ -12,19 +12,19 @@ interface ContactSectionProps {
 export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
   return (
     <FlexColumn
-      items={"center"}
-      justify={"center"}
+      items="center"
+      justify="center"
       styles={`height: 100vh; background-color: ${backgroundColor}`}
     >
       <WhiteAndGreenText
-        firstText={"Get In"}
-        secondText={"Touch!"}
-        textSize={"32px"}
+        firstText="Get In"
+        secondText="Touch!"
+        textSize="32px"
       />
 
-      <Text text={"Contact Me"} color={colors.white} size={"48px"} />
+      <Text text="Contact Me" color={colors.white} size="48px" />
 
-      <CallToActionButton name={"Contact Form"} href={"/contact"} />
+      <CallToActionButton name="Contact Form" href="/contact" />
 
       <Text
         text="or"
@@ -33,7 +33,7 @@ export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
         styles="margin-top: 2rem; margin-bottom: 2rem "
       />
 
-      <Image src={Icons.HexagonIcon} alt={""} />
+      <Image src={Icons.HexagonIcon} alt="" />
     </FlexColumn>
   );
 };

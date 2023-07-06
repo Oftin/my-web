@@ -16,16 +16,16 @@ export default function ScienceClub() {
         styles={`width: 100%; height:100vh`}
       >
         <WhiteAndGreenText
-          firstText={"University"}
-          secondText={"Time"}
-          textSize={"32px"}
+          firstText="University"
+          secondText="Time"
+          textSize="32px"
         />
         <WhiteAndGreenText
-          firstText={"Science"}
-          secondText={"Club"}
-          textSize={"48px"}
+          firstText="Science"
+          secondText="Club"
+          textSize="48px"
         />
-        <FlexColumn items={"center"} justify={"center"}>
+        <FlexColumn items="center" justify="center">
           <Column numberOfColumns={2}>
             <div
               style={{

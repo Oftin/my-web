@@ -14,8 +14,8 @@ export const EducationSection = ({
 }: EducationSectionProps) => {
   return (
     <FlexColumn
-      items={"start"}
-      justify={"center"}
+      items="start"
+      justify="center"
       styles={`width: 100%; height: 100%; padding-top: 5em; padding-bottom: 5em; background-color: ${backgroundColor}`}
       layoutMargin
     >
@@ -23,8 +23,8 @@ export const EducationSection = ({
       <Text text="Education" color={colors.white} size="48px" />
 
       <FlexColumn
-        items={"center"}
-        justify={"center"}
+        items="center"
+        justify="center"
         styles={`width: 100%; height: 100vh; background-color: ${backgroundColor}`}
         minusLayoutMargin
       >
@@ -41,30 +41,26 @@ export const EducationSection = ({
 
           <div style={{ margin: "auto" }}>
             <Text
-              text={"Silesian University of Technology in Gliwice (Poland)"}
+              text="Silesian University of Technology in Gliwice (Poland)"
               color={colors.white}
-              size={"20px"}
+              size="20px"
             />
 
             <GreenAndWhiteText
-              firstText={"2016-10 - 2020-02"}
-              secondText={"Bachelor of Engineering"}
-              textSize={"20px"}
+              firstText="2016-10 - 2020-02"
+              secondText="Bachelor of Engineering"
+              textSize="20px"
               styles="margin-top: 0.75rem; margin-bottom: 0.75rem"
             />
 
             <WhiteAndGreenText
-              firstText={"Faculty of Mechanical Engineering -"}
-              secondText={"Automation and Robotics"}
-              textSize={"20px"}
+              firstText="Faculty of Mechanical Engineering -"
+              secondText="Automation and Robotics"
+              textSize="20px"
             />
           </div>
 
-          <FlexColumn
-            items={"center"}
-            justify={"center"}
-            styles="margin-top: 7rem"
-          >
+          <FlexColumn items="center" justify="center" styles="margin-top: 7rem">
             <div
               style={{
                 width: "300px",
@@ -74,15 +70,15 @@ export const EducationSection = ({
             ></div>
 
             <Text
-              text={"Engineering degree project"}
+              text="Engineering degree project"
               color={colors.white}
-              size={"16px"}
+              size="16px"
               styles="margin-top: 1rem"
             />
 
             <CallToActionButton
-              name={"Read More"}
-              href={""}
+              name="Read More"
+              href=""
               styles="margin-top: 1rem"
             />
           </FlexColumn>
@@ -101,30 +97,26 @@ export const EducationSection = ({
 
           <div style={{ margin: "auto" }}>
             <Text
-              text={"Silesian University of Technology in Gliwice (Poland)"}
+              text="Silesian University of Technology in Gliwice (Poland)"
               color={colors.white}
-              size={"20px"}
+              size="20px"
             />
 
             <GreenAndWhiteText
-              firstText={"2020-03 - 2021-11"}
-              secondText={"Master of Engineering"}
-              textSize={"20px"}
+              firstText="2020-03 - 2021-11"
+              secondText="Master of Engineering"
+              textSize="20px"
               styles="margin-top: 0.75rem; margin-bottom: 0.75rem"
             />
 
             <WhiteAndGreenText
-              firstText={"Faculty of Mechanical Engineering -"}
-              secondText={"Automation and Robotics"}
-              textSize={"20px"}
+              firstText="Faculty of Mechanical Engineering -"
+              secondText="Automation and Robotics"
+              textSize="20px"
             />
           </div>
 
-          <FlexColumn
-            items={"center"}
-            justify={"center"}
-            styles="margin-top: 7rem"
-          >
+          <FlexColumn items="center" justify="center" styles="margin-top: 7rem">
             <div
               style={{
                 width: "300px",
@@ -134,15 +126,15 @@ export const EducationSection = ({
             ></div>
 
             <Text
-              text={"Engineering degree project"}
+              text="Engineering degree project"
               color={colors.white}
-              size={"16px"}
+              size="16px"
               styles="margin-top: 1rem"
             />
 
             <CallToActionButton
-              name={"Read More"}
-              href={""}
+              name="Read More"
+              href=""
               styles="margin-top: 1rem"
             />
           </FlexColumn>

@@ -23,7 +23,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
       <Nav>
         <Ul>
           <LeftSideLi>
-            <Link href={"/"}>
+            <Link href="/">
               <WhiteAndGreenText
                 firstText="Kamil"
                 secondText="Bobrowki"

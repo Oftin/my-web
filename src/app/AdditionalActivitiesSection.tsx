@@ -19,14 +19,14 @@ export const AdditionalActivitiesSection = ({
       styles={`width: 100%; height:100vh; padding-top: 5em; padding-bottom: 5em; background-color: ${backgroundColor}`}
     >
       <WhiteAndGreenText
-        firstText={"University"}
-        secondText={"Time"}
-        textSize={"32px"}
+        firstText="University"
+        secondText="Time"
+        textSize="32px"
       />
       <WhiteAndGreenText
-        firstText={"Additional"}
-        secondText={"Activities"}
-        textSize={"48px"}
+        firstText="Additional"
+        secondText="Activities"
+        textSize="48px"
       />
 
       <FlexColumn
@@ -46,15 +46,15 @@ export const AdditionalActivitiesSection = ({
                 height: 345,
               }}
             >
-              <Image width={590} height={345} src={""} alt={"Image"} />
+              <Image width={590} height={345} src="" alt="Image" />
             </div>
 
             <Text
-              text={"International Mars Rover Competition"}
+              text="International Mars Rover Competition"
               color={colors.white}
-              size={"20px"}
+              size="20px"
             />
-            <Text text={"ERC 2019"} color={colors.white} size={"20px"} />
+            <Text text="ERC 2019" color={colors.white} size="20px" />
           </FlexColumn>
 
           <FlexColumn
@@ -70,20 +70,20 @@ export const AdditionalActivitiesSection = ({
             />
 
             <Text
-              text={"The team built a Mars Rover at the"}
+              text="The team built a Mars Rover at the"
               color={colors.white}
-              size={"20px"}
+              size="20px"
             />
             <Text
-              text={"Silesian University of Technology in 2019"}
+              text="Silesian University of Technology in 2019"
               color={colors.white}
-              size={"20px"}
+              size="20px"
             />
             <Text
-              text={"My tasks in the team:"}
+              text="My tasks in the team:"
               color={colors.white}
-              size={"20px"}
-              styles={"margin-bottom: 1rem;"}
+              size="20px"
+              styles="margin-bottom: 1rem;"
             />
 
             {["3D Modeling", "Programing", "Mechanics"].map((el) => {

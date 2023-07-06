@@ -11,7 +11,7 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <FlexColumn items={"center"} justify={"center"}>
+      <FlexColumn items="center" justify="center">
         <Column numberOfColumns={2} styles="height: 100vh">
           <Image
             src={Icons.HexagonIcon}

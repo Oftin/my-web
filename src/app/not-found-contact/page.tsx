@@ -12,11 +12,11 @@ export default function NotFoundContact() {
   return (
     <>
       <Navbar />
-      <FlexColumn items={"center"} justify={"center"} styles={"height: 100vh;"}>
+      <FlexColumn items="center" justify="center" styles="height: 100vh;">
         <div style={{ display: "flex", gap: 12 }}>
-          <Text text={"Idea for"} color={colors.white} size={"48px"} />
-          <Text text={"New"} color={colors.greenThemeColor} size={"48px"} />
-          <Text text={"Page"} color={colors.white} size={"48px"} />
+          <Text text="Idea for" color={colors.white} size="48px" />
+          <Text text="New" color={colors.greenThemeColor} size="48px" />
+          <Text text="Page" color={colors.white} size="48px" />
         </div>
 
         <Column

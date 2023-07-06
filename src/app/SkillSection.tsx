@@ -30,14 +30,14 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
       >
         <FlexColumn items="start" justify="center" styles="width: 100vw;">
           <WhiteAndGreenText
-            firstText={"Favorite"}
-            secondText={"Skills"}
-            textSize={"32px"}
+            firstText="Favorite"
+            secondText="Skills"
+            textSize="32px"
           />
           <Text
-            text={"My Skills"}
+            text="My Skills"
             color={colors.greenThemeColor}
-            size={"48px"}
+            size="48px"
             styles="margin-bottom: 1.25rem"
           />
           <p
@@ -61,7 +61,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
 
         <FlexColumn items="center" justify="center">
           <Column numberOfColumns={2} gap={5}>
-            <FlexColumn items={"start"} justify={"start"}>
+            <FlexColumn items="start" justify="start">
               <ul
                 style={{
                   color: `${colors.white}`,
@@ -86,7 +86,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
               </ul>
             </FlexColumn>
 
-            <FlexColumn items={"start"} justify={"start"}>
+            <FlexColumn items="start" justify="start">
               <ul
                 style={{
                   color: `${colors.white}`,

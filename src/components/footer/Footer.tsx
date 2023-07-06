@@ -11,8 +11,8 @@ interface FooterProps {
 export const Footer = ({ backgroundColor }: FooterProps) => {
   return (
     <FlexColumn
-      items={"center"}
-      justify={"center"}
+      items="center"
+      justify="center"
       styles={`background-color: ${backgroundColor}`}
     >
       <FlexColumn
@@ -23,15 +23,11 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
       >
         <div>
           <WhiteAndGreenText
-            firstText={"Kamil"}
-            secondText={"Bobrowski"}
-            textSize={"24px"}
+            firstText="Kamil"
+            secondText="Bobrowski"
+            textSize="24px"
           />
-          <Text
-            text={"Front-end Developer"}
-            color={colors.white}
-            size={"16px"}
-          />
+          <Text text="Front-end Developer" color={colors.white} size="16px" />
         </div>
 
         <div
@@ -40,13 +36,13 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
             justifyContent: "space-between",
           }}
         >
-          <Image src={Icons.HexagonIcon} alt={""} />
+          <Image src={Icons.HexagonIcon} alt="" />
           <Image
             src={Icons.HexagonIcon}
-            alt={""}
+            alt=""
             style={{ marginLeft: "1rem", marginRight: "1rem" }}
           />
-          <Image src={Icons.HexagonIcon} alt={""} />
+          <Image src={Icons.HexagonIcon} alt="" />
         </div>
 
         <Text

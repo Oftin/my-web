@@ -29,7 +29,7 @@ export const ShortTileInfo = ({
         <Text
           text={title}
           color={colors.white}
-          size={"24px"}
+          size="24px"
           styles="margin-top: 2.5rem"
         />
 

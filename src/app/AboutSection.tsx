@@ -36,7 +36,7 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
         <TextParagraph text="I'm a master of science in Automation and Robotics." />
         <TextParagraph text="I studied at the University of Silesia." />
 
-        <CallToActionButton name={"Read More"} href={"/about"} />
+        <CallToActionButton name="Read More" href="/about" />
       </FlexColumn>
     </Column>
   );

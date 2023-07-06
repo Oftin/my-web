@@ -29,10 +29,10 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
 
       <TextParagraph text="Optimistic programmer, passionate about modern technologies. I continuously develop my skills and see challenges where others see problems." />
 
-      <CallToActionButton name={"Contact Me"} href={"/"} />
+      <CallToActionButton name="Contact Me" href="/" />
     </FlexColumn>
 
-    <FlexColumn items={"center"} justify={"center"}>
+    <FlexColumn items="center" justify="center">
       <Image
         src={Icons.HexagonIcon}
         alt="Hexagon Icon"

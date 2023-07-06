@@ -37,11 +37,11 @@ export const ProjectSection = ({ backgroundColor }: ProjectSectionProps) => {
       styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
       minusLayoutMargin
     >
-      <Text text={"Last"} color={colors.greenThemeColor} size={"36px"} />
+      <Text text="Last" color={colors.greenThemeColor} size="36px" />
       <Text
-        text={"Projects"}
+        text="Projects"
         color={colors.white}
-        size={"48px"}
+        size="48px"
         styles="margin-bottom: 3.5rem"
       />
 

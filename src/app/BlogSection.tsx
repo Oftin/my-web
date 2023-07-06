@@ -37,11 +37,11 @@ export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
       styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
       minusLayoutMargin
     >
-      <Text text={"Blog"} color={colors.greenThemeColor} size={"36px"} />
+      <Text text="Blog" color={colors.greenThemeColor} size="36px" />
       <Text
-        text={"Latest Articles"}
+        text="Latest Articles"
         color={colors.white}
-        size={"48px"}
+        size="48px"
         styles="margin-bottom: 3.5rem"
       />
 
