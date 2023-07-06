@@ -20,10 +20,7 @@ export const TextParagraphWrapper = styled.p<{
 }>`
   color: ${colors.white};
 
-  font-weight: 400;
   opacity: 0.6;
-
-  width: 80%;
 
   ${(props) =>
     props.size &&

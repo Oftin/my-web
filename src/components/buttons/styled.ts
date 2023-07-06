@@ -16,3 +16,17 @@ export const LinkStyled = styled(Link)<{ styles?: string }>`
       ${props.styles}
     `}
 `;
+
+export const ArrowBackWrapper = styled.button`
+  position: absolute;
+  top: 6rem;
+  margin-left: 8rem;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+`;

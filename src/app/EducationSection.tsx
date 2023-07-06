@@ -1,11 +1,9 @@
 import Image from "next/image";
 import { CallToActionButton } from "@/components/buttons";
-import { WhiteAndGreenText, Text } from "@/components/text";
-import { Column, FlexColumn } from "@/components/wrappers/columns";
+import { WhiteAndGreenText, GreenAndWhiteText, Text } from "@/components/text";
+import { FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
-import { DisplayGrid } from "@/components/wrappers/displays";
-import { GreenAndWhiteText } from "@/components/text/GreenAndWhiteText";
 
 interface EducationSectionProps {
   backgroundColor: string;

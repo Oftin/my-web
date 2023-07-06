@@ -6,6 +6,7 @@ import GreenDotWithRing from "@/assets/icons/GreenDotWithRing.svg";
 import HexagonIcon from "@/assets/icons/HexagonIcon.svg";
 import InstagramIcon from "@/assets/icons/InstagramIcon.svg";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon.svg";
+import ArrowBack from "@/assets/icons/ArrowBack.svg";
 
 export const Icons = {
   HexagonIcon,
@@ -16,4 +17,5 @@ export const Icons = {
   ArrowUp,
   ArrowDown,
   ArrowLongHorizontal,
+  ArrowBack,
 };

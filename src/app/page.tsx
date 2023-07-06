@@ -20,7 +20,7 @@ const brighterBackgroundColor = colors.background.ebonyClay;
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <Navbar showArrowBack={false} />
       <MainPageWrapper>
         <HelloSection backgroundColor={darkerBackgroundColor} />
         <AboutSection backgroundColor={brighterBackgroundColor} />

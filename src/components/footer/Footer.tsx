@@ -5,7 +5,7 @@ import { FlexColumn } from "../wrappers/columns";
 import { Icons } from "@/components/icons";
 
 interface FooterProps {
-  backgroundColor: string;
+  backgroundColor?: string;
 }
 
 export const Footer = ({ backgroundColor }: FooterProps) => {
