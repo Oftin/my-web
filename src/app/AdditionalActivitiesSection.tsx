@@ -98,7 +98,7 @@ export const AdditionalActivitiesSection = ({
             })}
 
             <div style={{ marginTop: "5rem" }}>
-              <CallToActionButton name="Read More" href="/addictional" />
+              <CallToActionButton name="Read More" href="/science-club" />
             </div>
           </FlexColumn>
         </Column>

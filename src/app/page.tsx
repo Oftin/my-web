@@ -30,8 +30,8 @@ export default function Home() {
         <AdditionalActivitiesSection
           backgroundColor={brighterBackgroundColor}
         />
-        <BlogSection backgroundColor={darkerBackgroundColor} />
-        <ProjectSection backgroundColor={brighterBackgroundColor} />
+        <ProjectSection backgroundColor={darkerBackgroundColor} />
+        <BlogSection backgroundColor={brighterBackgroundColor} />
         <ContactSection backgroundColor={darkerBackgroundColor} />
       </MainPageWrapper>
       <Footer backgroundColor={darkerBackgroundColor} />

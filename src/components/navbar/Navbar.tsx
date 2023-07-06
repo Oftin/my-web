@@ -6,10 +6,10 @@ import { ArrowBack } from "../buttons";
 const webTabs = [
   "About",
   "Experience",
-  "Education",
   "Skills",
-  "Blog",
+  "Education",
   "Projects",
+  "Blog",
   "Contact",
 ].map((e) => e.toLowerCase());
 
