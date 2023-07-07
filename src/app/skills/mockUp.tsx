@@ -49,6 +49,11 @@ export const skillsArray: SkillsArrayType[] = [
   },
   {
     parentId: 1,
+    skill: "Next.js",
+    description: "asdoasdinasdijnajdnas",
+  },
+  {
+    parentId: 1,
     skill: "React.js",
     description:
       "asdadasdasdasdasdadasasdadasdasdasdasdadasasdadasdasdasdasdadasasdadasdasdasdasdadas",
