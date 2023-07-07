@@ -78,6 +78,18 @@ export default function Skills() {
           );
         })}
       </FlexColumn>
+
+      <FlexColumn
+        items={"center"}
+        justify={"center"}
+        styles="margin-top: 6rem; margin-bottom: 12rem"
+      >
+        <Text
+          text={"More skills incoming!"}
+          color={colors.white}
+          size={"48px"}
+        />
+      </FlexColumn>
       <Footer />
     </>
   );

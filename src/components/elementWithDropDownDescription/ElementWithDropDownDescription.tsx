@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { colors } from "@/styles/colors";
 import { ElementWithDropDownDescriptionWrapper } from "./styled";
+import { useState } from "react";
+import { Icons } from "../icons";
 
 interface ElementWithDropDownDescriptionProps {
   text: string;
@@ -13,13 +15,18 @@ export const ElementWithDropDownDescription = ({
   backgroundColor,
   dropDownText,
 }: ElementWithDropDownDescriptionProps) => {
+  const [showDropDownText, setShowDropDownText] = useState(false);
+
   return (
     <div
       style={{
         width: "100%",
       }}
     >
-      <ElementWithDropDownDescriptionWrapper backgroundColor={backgroundColor}>
+      <ElementWithDropDownDescriptionWrapper
+        backgroundColor={backgroundColor}
+        onClick={() => setShowDropDownText((state) => !state)}
+      >
         <div
           style={{
             display: "flex",
@@ -45,18 +52,18 @@ export const ElementWithDropDownDescription = ({
             />
             {text}
           </div>
-          <div
+          <Image
+            src={Icons.DropDownArrow}
+            alt={""}
+            width={30}
+            height={30}
             style={{
-              width: "0.75rem",
-              height: "0.75rem",
-              backgroundColor: `${colors.white}`,
-              borderRadius: "0.375rem",
-              margin: "0.625rem 0.75rem",
+              rotate: showDropDownText ? "" : "180deg",
             }}
-          ></div>
+          />
         </div>
       </ElementWithDropDownDescriptionWrapper>
-      {true && (
+      {showDropDownText ? (
         <div
           style={{
             zIndex: 10,
@@ -65,7 +72,7 @@ export const ElementWithDropDownDescription = ({
             marginTop: "-0.5rem",
             marginLeft: "1rem",
             overflowWrap: "break-word",
-            padding: dropDownText ? "0.75rem" : "0.25rem",
+            padding: "0.75rem",
             paddingLeft: "1rem",
             paddingRight: "1rem",
             borderBottomLeftRadius: "6px",
@@ -75,6 +82,23 @@ export const ElementWithDropDownDescription = ({
         >
           {dropDownText}
         </div>
+      ) : (
+        <div
+          style={{
+            zIndex: 10,
+            width: "20rem",
+            backgroundColor: `${colors.greenThemeColorHover}`,
+            marginTop: "-0.5rem",
+            marginLeft: "1rem",
+            overflowWrap: "break-word",
+            padding: "0.25rem",
+            paddingLeft: "1rem",
+            paddingRight: "1rem",
+            borderBottomLeftRadius: "6px",
+            borderBottomRightRadius: "6px",
+            color: `${colors.white}`,
+          }}
+        />
       )}
     </div>
   );

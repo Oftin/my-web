@@ -7,6 +7,7 @@ import HexagonIcon from "@/assets/icons/HexagonIcon.svg";
 import InstagramIcon from "@/assets/icons/InstagramIcon.svg";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon.svg";
 import ArrowBack from "@/assets/icons/ArrowBack.svg";
+import DropDownArrow from "@/assets/icons/DropDownArrow.svg";
 
 export const Icons = {
   HexagonIcon,
@@ -18,4 +19,5 @@ export const Icons = {
   ArrowDown,
   ArrowLongHorizontal,
   ArrowBack,
+  DropDownArrow,
 };

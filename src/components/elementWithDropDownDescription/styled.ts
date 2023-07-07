@@ -15,10 +15,11 @@ export const ElementWithDropDownDescriptionWrapper = styled.div<{
   padding: 0.75rem;
   margin: 0.5rem;
   border-radius: 8px;
+  cursor: pointer;
 
   ${(props) =>
     props.backgroundColor &&
     css`
       background-color: ${props.backgroundColor};
-    `}
+    `};
 `;
