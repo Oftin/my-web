@@ -35,7 +35,7 @@ export const ProjectSection = ({ backgroundColor }: ProjectSectionProps) => {
       items="center"
       justify="center"
       styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
-      minusLayoutMargin
+      minusExtraSpaceFromEdgeOfScreen
     >
       <Text text="Last" color={colors.greenThemeColor} size="36px" />
       <Text
@@ -45,7 +45,7 @@ export const ProjectSection = ({ backgroundColor }: ProjectSectionProps) => {
         styles="margin-bottom: 3.5rem"
       />
 
-      <Column numberOfColumns={3} gap={50}>
+      <Column columns={3} gap={50}>
         {threeLastProjects.map((project) => {
           return (
             <ShortTileInfo

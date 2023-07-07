@@ -16,8 +16,6 @@ export const TextArea = ({
 }: TextAreaProps) => {
   const [text, setText] = useState<string>("");
 
-  console.log("text: ", text);
-
   const limitWords = 5000;
 
   return (

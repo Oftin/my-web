@@ -20,7 +20,7 @@ export default function NotFoundContact() {
         </div>
 
         <Column
-          numberOfColumns={2}
+          columns={2}
           gap={20}
           styles="margin-top: 45px; margin-bottom: 45px;"
         >

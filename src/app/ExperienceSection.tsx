@@ -18,7 +18,7 @@ export const ExperienceSection = ({
       items="start"
       justify="center"
       styles={`width: 100%; height: 100vh; padding-top: 5em; background-color: ${backgroundColor}`}
-      layoutMargin
+      extraSpaceFromEdgeOfScreen={true}
     >
       <Text text="Last" color={colors.greenThemeColor} size="32px" />
       <Text text="Experience" color={colors.white} size="48px" />

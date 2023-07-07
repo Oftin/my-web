@@ -22,7 +22,7 @@ export default function Contact() {
         <Text text="Contact Me" color={colors.white} size="48px" />
 
         <Column
-          numberOfColumns={2}
+          columns={2}
           gap={20}
           styles="margin-top: 45px; margin-bottom: 45px;"
         >

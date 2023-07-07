@@ -1,23 +1,23 @@
 import styled, { css } from "styled-components";
 
 export const ColumnWrapper = styled.div<{
-  numberOfColumns: number;
+  columns: number;
   gap: number;
   styles: string;
-  layoutMargin?: boolean;
+  extraSpaceFromEdgeOfScreen?: boolean;
 }>`
   display: grid;
 
   ${(props) =>
-    props.numberOfColumns &&
+    props.columns &&
     css`
-      grid-template-columns: repeat(${props.numberOfColumns}, minmax(0, 1fr));
+      grid-template-columns: repeat(${props.columns}, minmax(0, 1fr));
     `}
 
   gap: ${(props) => props.gap}px;
 
   ${(props) =>
-    props.layoutMargin &&
+    props.extraSpaceFromEdgeOfScreen &&
     css`
       padding-left: 8rem;
       padding-right: 4rem;
@@ -35,8 +35,8 @@ export const FlexColumnWrapper = styled.div<{
   items: string;
   justify: string;
   styles?: string;
-  layoutMargin?: boolean;
-  minusLayoutMargin?: boolean;
+  extraSpaceFromEdgeOfScreen?: boolean;
+  minusExtraSpaceFromEdgeOfScreen?: boolean;
 }>`
   display: flex;
   flex-direction: ${(props) => props.direction};
@@ -44,14 +44,14 @@ export const FlexColumnWrapper = styled.div<{
   justify-content: ${(props) => props.justify};
 
   ${(props) =>
-    props.layoutMargin &&
+    props.extraSpaceFromEdgeOfScreen &&
     css`
       padding-left: 8em;
       padding-right: 4em;
     `}
 
   ${(props) =>
-    props.minusLayoutMargin &&
+    props.minusExtraSpaceFromEdgeOfScreen &&
     css`
       padding-left: -8em;
       padding-right: -4em;

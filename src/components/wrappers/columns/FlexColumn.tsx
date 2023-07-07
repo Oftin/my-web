@@ -7,8 +7,8 @@ interface FlexColumnProps {
   items: "start" | "center" | "end";
   justify: "start" | "center" | "end" | "space-between";
   styles?: string;
-  layoutMargin?: boolean;
-  minusLayoutMargin?: boolean;
+  extraSpaceFromEdgeOfScreen?: boolean;
+  minusExtraSpaceFromEdgeOfScreen?: boolean;
 }
 
 export const FlexColumn = ({
@@ -17,8 +17,8 @@ export const FlexColumn = ({
   items,
   justify,
   styles,
-  layoutMargin,
-  minusLayoutMargin,
+  extraSpaceFromEdgeOfScreen = false,
+  minusExtraSpaceFromEdgeOfScreen,
 }: FlexColumnProps) => {
   return (
     <FlexColumnWrapper
@@ -26,8 +26,8 @@ export const FlexColumn = ({
       items={items}
       justify={justify}
       styles={styles}
-      layoutMargin={layoutMargin}
-      minusLayoutMargin={minusLayoutMargin}
+      extraSpaceFromEdgeOfScreen={extraSpaceFromEdgeOfScreen || undefined}
+      minusExtraSpaceFromEdgeOfScreen={minusExtraSpaceFromEdgeOfScreen}
     >
       {children}
     </FlexColumnWrapper>

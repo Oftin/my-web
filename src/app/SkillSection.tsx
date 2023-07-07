@@ -24,9 +24,9 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
       styles={`width: 100vw; height: 60vh; background-color: ${backgroundColor}`}
     >
       <Column
-        numberOfColumns={2}
+        columns={2}
         styles="width: 100vw; height: 50vh"
-        layoutMargin
+        extraSpaceFromEdgeOfScreen={true}
       >
         <FlexColumn items="start" justify="center" styles="width: 100vw;">
           <WhiteAndGreenText
@@ -60,7 +60,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
         </FlexColumn>
 
         <FlexColumn items="center" justify="center">
-          <Column numberOfColumns={2} gap={5}>
+          <Column columns={2} gap={5}>
             <FlexColumn items="start" justify="start">
               <ul
                 style={{

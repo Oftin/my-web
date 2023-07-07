@@ -17,8 +17,6 @@ export const TitleSection = ({
 
   const upperTextHaveTwoWords = twoColorUpperText.length > 1;
 
-  console.log({ twoColorUpperText });
-
   return (
     <TitleSectionWrapper>
       {upperTextHaveTwoWords ? (

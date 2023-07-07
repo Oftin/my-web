@@ -12,7 +12,7 @@ export default function ScienceClub() {
       <FlexColumn
         items="start"
         justify="center"
-        layoutMargin
+        extraSpaceFromEdgeOfScreen={true}
         styles={`width: 100%; height:100vh`}
       >
         <WhiteAndGreenText
@@ -26,7 +26,7 @@ export default function ScienceClub() {
           textSize="48px"
         />
         <FlexColumn items="center" justify="center">
-          <Column numberOfColumns={2}>
+          <Column columns={2}>
             <div
               style={{
                 backgroundColor: "pink",

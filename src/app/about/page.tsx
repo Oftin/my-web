@@ -12,7 +12,7 @@ export default function About() {
     <>
       <Navbar />
       <FlexColumn items="center" justify="center">
-        <Column numberOfColumns={2} styles="height: 100vh">
+        <Column columns={2} styles="height: 100vh">
           <Image
             src={Icons.HexagonIcon}
             alt="Hexagon Icon"

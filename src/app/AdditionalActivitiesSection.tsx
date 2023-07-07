@@ -15,7 +15,7 @@ export const AdditionalActivitiesSection = ({
     <FlexColumn
       items="start"
       justify="center"
-      layoutMargin
+      extraSpaceFromEdgeOfScreen={true}
       styles={`width: 100%; height:100vh; padding-top: 5em; padding-bottom: 5em; background-color: ${backgroundColor}`}
     >
       <WhiteAndGreenText
@@ -34,7 +34,7 @@ export const AdditionalActivitiesSection = ({
         justify="center"
         styles="width: 100%; height:100%"
       >
-        <Column numberOfColumns={2} gap={10}>
+        <Column columns={2} gap={10}>
           <FlexColumn items="center" justify="center">
             <div
               style={{

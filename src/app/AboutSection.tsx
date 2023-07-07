@@ -12,10 +12,10 @@ interface AboutSectionProps {
 export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
   return (
     <Column
-      numberOfColumns={2}
+      columns={2}
       gap={10}
       styles={`max-height: 100vh; background-color: ${backgroundColor}`}
-      layoutMargin
+      extraSpaceFromEdgeOfScreen={true}
     >
       <FlexColumn items="center" justify="center">
         <Image

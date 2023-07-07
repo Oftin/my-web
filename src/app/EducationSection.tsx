@@ -17,7 +17,7 @@ export const EducationSection = ({
       items="start"
       justify="center"
       styles={`width: 100%; height: 100%; padding-top: 5em; padding-bottom: 5em; background-color: ${backgroundColor}`}
-      layoutMargin
+      extraSpaceFromEdgeOfScreen={true}
     >
       <Text text="University" color={colors.greenThemeColor} size="32px" />
       <Text text="Education" color={colors.white} size="48px" />
@@ -26,7 +26,7 @@ export const EducationSection = ({
         items="center"
         justify="center"
         styles={`width: 100%; height: 100vh; background-color: ${backgroundColor}`}
-        minusLayoutMargin
+        minusExtraSpaceFromEdgeOfScreen
       >
         <div
           style={{

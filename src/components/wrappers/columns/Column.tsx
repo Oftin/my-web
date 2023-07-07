@@ -3,25 +3,25 @@ import { ColumnWrapper } from "./styled";
 
 interface ColumnProps {
   children: ReactNode;
-  numberOfColumns: number;
+  columns: number;
   gap?: number;
   styles?: string;
-  layoutMargin?: boolean;
+  extraSpaceFromEdgeOfScreen?: boolean;
 }
 
 export const Column = ({
   children,
-  numberOfColumns,
+  columns,
   gap,
   styles,
-  layoutMargin,
+  extraSpaceFromEdgeOfScreen = false,
 }: ColumnProps) => {
   return (
     <ColumnWrapper
-      numberOfColumns={numberOfColumns}
+      columns={columns}
       gap={gap || 0}
       styles={styles || ""}
-      layoutMargin={layoutMargin}
+      extraSpaceFromEdgeOfScreen={extraSpaceFromEdgeOfScreen || undefined}
     >
       {children}
     </ColumnWrapper>

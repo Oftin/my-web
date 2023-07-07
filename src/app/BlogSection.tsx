@@ -35,7 +35,7 @@ export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
       items="center"
       justify="center"
       styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
-      minusLayoutMargin
+      minusExtraSpaceFromEdgeOfScreen
     >
       <Text text="Blog" color={colors.greenThemeColor} size="36px" />
       <Text
@@ -45,7 +45,7 @@ export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
         styles="margin-bottom: 3.5rem"
       />
 
-      <Column numberOfColumns={3} gap={50}>
+      <Column columns={3} gap={50}>
         {threeLastArticles.map((article) => {
           return (
             <ShortTileInfo
