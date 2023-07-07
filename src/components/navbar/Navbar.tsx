@@ -2,6 +2,7 @@ import Link from "next/link";
 import { WhiteAndGreenText } from "../text";
 import { Nav, Ul, LeftSideLi, RightSideLi } from "./styled";
 import { ArrowBack } from "../buttons";
+import { scrollUserToTopView } from "@/helpers";
 
 const webTabs = [
   "About",
@@ -23,7 +24,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
       <Nav>
         <Ul>
           <LeftSideLi>
-            <Link href="/">
+            <Link href="/" onClick={() => scrollUserToTopView()}>
               <WhiteAndGreenText
                 firstText="Kamil"
                 secondText="Bobrowki"
@@ -34,7 +35,10 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
           {webTabs.map((tab) => {
             return (
               <RightSideLi key={tab}>
-                <Link href={`/${tab}`}>{`.${tab}()`}</Link>
+                <Link
+                  href={`/${tab}`}
+                  onClick={() => scrollUserToTopView()}
+                >{`.${tab}()`}</Link>
               </RightSideLi>
             );
           })}
