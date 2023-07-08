@@ -8,8 +8,8 @@ import { ExperienceSection } from "./ExperienceSection";
 import { EducationSection } from "./EducationSection";
 import { AdditionalActivitiesSection } from "./AdditionalActivitiesSection";
 import { SkillSection } from "./SkillSection";
-import { BlogSection } from "./BlogSection";
-import { ProjectSection } from "./ProjectSection";
+// import { BlogSection } from "./BlogSection";
+// import { ProjectSection } from "./ProjectSection";
 import { ContactSection } from "./ContactSection";
 import { Footer } from "@/components/footer";
 import { colors } from "@/styles/colors";
@@ -30,8 +30,8 @@ export default function Home() {
         <AdditionalActivitiesSection
           backgroundColor={brighterBackgroundColor}
         />
-        <ProjectSection backgroundColor={darkerBackgroundColor} />
-        <BlogSection backgroundColor={brighterBackgroundColor} />
+        {/* <ProjectSection backgroundColor={darkerBackgroundColor} /> */}
+        {/* <BlogSection backgroundColor={brighterBackgroundColor} /> */}
         <ContactSection backgroundColor={darkerBackgroundColor} />
       </MainPageWrapper>
       <Footer backgroundColor={darkerBackgroundColor} />

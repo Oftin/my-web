@@ -13,7 +13,7 @@ export default function ScienceClub() {
         items="start"
         justify="center"
         extraSpaceFromEdgeOfScreen={true}
-        styles={`width: 100%; height:100vh`}
+        styles={`width: 100%; height:100vh; padding-top: 8rem; margin-top: 4rem;`}
       >
         <WhiteAndGreenText
           firstText="University"
