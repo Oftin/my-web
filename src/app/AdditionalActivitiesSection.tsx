@@ -3,6 +3,7 @@ import { Text, WhiteAndGreenText } from "@/components/text";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { CallToActionButton } from "@/components/buttons";
+import { scrollUserToTopView } from "@/helpers";
 
 interface AdditionalActivitiesSectionProps {
   backgroundColor: string;
@@ -98,7 +99,11 @@ export const AdditionalActivitiesSection = ({
             })}
 
             <div style={{ marginTop: "5rem" }}>
-              <CallToActionButton name="Read More" href="/science-club" />
+              <CallToActionButton
+                name="Read More"
+                href="/science-club"
+                onClick={() => scrollUserToTopView()}
+              />
             </div>
           </FlexColumn>
         </Column>

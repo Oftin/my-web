@@ -5,6 +5,7 @@ import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
 import { DisplayGrid } from "@/components/wrappers/displays";
 import { CallToActionButton } from "@/components/buttons";
+import { scrollUserToTopView } from "@/helpers";
 
 interface ExperienceSectionProps {
   backgroundColor: string;
@@ -120,7 +121,11 @@ export const ExperienceSection = ({
         </DisplayGrid>
 
         <FlexColumn items="center" justify="center">
-          <CallToActionButton name="Read More" href="/experience" />
+          <CallToActionButton
+            name="Read More"
+            href="/experience"
+            onClick={() => scrollUserToTopView()}
+          />
         </FlexColumn>
       </FlexColumn>
     </FlexColumn>

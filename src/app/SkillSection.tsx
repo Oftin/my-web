@@ -2,6 +2,7 @@ import { CallToActionButton } from "@/components/buttons";
 import { Text, WhiteAndGreenText } from "@/components/text";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
+import { scrollUserToTopView } from "@/helpers";
 
 interface SkillSectionProps {
   backgroundColor: string;
@@ -56,6 +57,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
             name="Read More"
             href="/skills"
             styles="margin-top: 3rem"
+            onClick={() => scrollUserToTopView()}
           />
         </FlexColumn>
 

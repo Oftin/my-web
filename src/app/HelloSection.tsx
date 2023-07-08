@@ -4,6 +4,7 @@ import { Icons } from "@/components/icons";
 import { TextParagraph } from "@/components/text";
 import { TitleSection } from "@/components/titleSection";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
+import { scrollUserToTopView } from "@/helpers";
 
 interface HelloSectionProps {
   backgroundColor: string;
@@ -29,7 +30,11 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
 
       <TextParagraph text="Optimistic programmer, passionate about modern technologies. I continuously develop my skills and see challenges where others see problems." />
 
-      <CallToActionButton name="Contact Me" href="/" />
+      <CallToActionButton
+        name="Contact Me"
+        href="/contact"
+        onClick={() => scrollUserToTopView()}
+      />
     </FlexColumn>
 
     <FlexColumn items="center" justify="center">

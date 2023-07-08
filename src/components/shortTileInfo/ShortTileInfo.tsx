@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Text, TextParagraph } from "../text";
 import { colors } from "@/styles/colors";
 import { FlexColumn } from "../wrappers/columns";
+import { scrollUserToTopView } from "@/helpers";
 
 interface ShortTileInfoProps {
   href: string;
@@ -24,6 +25,7 @@ export const ShortTileInfo = ({
         border: "2px solid red",
         borderRadius: "8px",
       }}
+      onClick={() => scrollUserToTopView()}
     >
       <FlexColumn items="center" justify="center">
         <Text

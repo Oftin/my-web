@@ -4,6 +4,7 @@ import { WhiteAndGreenText, Text } from "@/components/text";
 import { FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
+import { scrollUserToTopView } from "@/helpers";
 
 interface ContactSectionProps {
   backgroundColor: string;
@@ -24,7 +25,11 @@ export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
 
       <Text text="Contact Me" color={colors.white} size="48px" />
 
-      <CallToActionButton name="Contact Form" href="/contact" />
+      <CallToActionButton
+        name="Contact Form"
+        href="/contact"
+        onClick={() => scrollUserToTopView()}
+      />
 
       <Text
         text="or"

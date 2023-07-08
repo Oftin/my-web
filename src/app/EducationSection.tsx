@@ -4,6 +4,7 @@ import { WhiteAndGreenText, GreenAndWhiteText, Text } from "@/components/text";
 import { FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
+import { scrollUserToTopView } from "@/helpers";
 
 interface EducationSectionProps {
   backgroundColor: string;
@@ -80,6 +81,7 @@ export const EducationSection = ({
               name="Read More"
               href=""
               styles="margin-top: 1rem"
+              onClick={() => scrollUserToTopView()}
             />
           </FlexColumn>
         </div>
@@ -136,6 +138,7 @@ export const EducationSection = ({
               name="Read More"
               href=""
               styles="margin-top: 1rem"
+              onClick={() => scrollUserToTopView()}
             />
           </FlexColumn>
         </div>

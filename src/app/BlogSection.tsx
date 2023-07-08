@@ -3,6 +3,7 @@ import { ShortTileInfo } from "@/components/shortTileInfo";
 import { Text } from "@/components/text";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
+import { scrollUserToTopView } from "@/helpers";
 
 interface BlogSectionProps {
   backgroundColor: string;
@@ -62,6 +63,7 @@ export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
         name="All Articles"
         href="/blog"
         styles="margin-top: 5rem"
+        onClick={() => scrollUserToTopView()}
       />
     </FlexColumn>
   );

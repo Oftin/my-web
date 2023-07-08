@@ -4,6 +4,7 @@ import { Icons } from "@/components/icons";
 import { TitleSection } from "@/components/titleSection";
 import { TextParagraph } from "@/components/text";
 import { CallToActionButton } from "@/components/buttons";
+import { scrollUserToTopView } from "@/helpers";
 
 interface AboutSectionProps {
   backgroundColor: string;
@@ -36,7 +37,11 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
         <TextParagraph text="I'm a master of science in Automation and Robotics." />
         <TextParagraph text="I studied at the University of Silesia." />
 
-        <CallToActionButton name="Read More" href="/about" />
+        <CallToActionButton
+          name="Read More"
+          href="/about"
+          onClick={() => scrollUserToTopView()}
+        />
       </FlexColumn>
     </Column>
   );
