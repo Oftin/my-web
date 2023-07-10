@@ -5,6 +5,7 @@ import { FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
 import { scrollUserToTopView } from "@/helpers";
+import { Images } from "@/components/images";
 
 interface EducationSectionProps {
   backgroundColor: string;
@@ -119,13 +120,15 @@ export const EducationSection = ({
           </div>
 
           <FlexColumn items="center" justify="center" styles="margin-top: 7rem">
-            <div
+            <Image
+              src={Images.Spider}
+              alt={""}
+              width={300}
+              height={170}
               style={{
-                width: "300px",
-                height: "170px",
-                backgroundColor: "pink",
+                borderRadius: "8px",
               }}
-            ></div>
+            />
 
             <Text
               text="Engineering degree project"

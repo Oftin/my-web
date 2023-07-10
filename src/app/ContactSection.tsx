@@ -3,8 +3,9 @@ import { CallToActionButton } from "@/components/buttons";
 import { WhiteAndGreenText, Text } from "@/components/text";
 import { FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
-import { Icons } from "@/components/icons";
 import { scrollUserToTopView } from "@/helpers";
+import { Images } from "@/components/images";
+import Link from "next/link";
 
 interface ContactSectionProps {
   backgroundColor: string;
@@ -38,7 +39,19 @@ export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
         styles="margin-top: 2rem; margin-bottom: 2rem "
       />
 
-      <Image src={Icons.HexagonIcon} alt="" />
+      <Link
+        href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
+        target="_blank"
+      >
+        <Image
+          src={Images.LinkedIn}
+          alt=""
+          width={200}
+          style={{
+            borderRadius: "8px",
+          }}
+        />
+      </Link>
     </FlexColumn>
   );
 };

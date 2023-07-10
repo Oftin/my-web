@@ -5,6 +5,7 @@ import { TextParagraph } from "@/components/text";
 import { TitleSection } from "@/components/titleSection";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { scrollUserToTopView } from "@/helpers";
+import { Images } from "@/components/images";
 
 interface HelloSectionProps {
   backgroundColor: string;
@@ -28,7 +29,8 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
         lowerText="Front-end Developer"
       />
 
-      <TextParagraph text="Optimistic programmer, passionate about modern technologies. I continuously develop my skills and see challenges where others see problems." />
+      <TextParagraph text="Optimistic programmer, passionate about modern technologies." />
+      <TextParagraph text="I continuously develop my skills and see challenges where others see problems." />
 
       <CallToActionButton
         name="Contact Me"
@@ -39,10 +41,12 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
 
     <FlexColumn items="center" justify="center">
       <Image
-        src={Icons.HexagonIcon}
+        src={Images.MyMainPhoto}
         alt="Hexagon Icon"
-        width={530}
-        height={540}
+        width={500}
+        style={{
+          borderRadius: "8px",
+        }}
       />
     </FlexColumn>
   </Column>

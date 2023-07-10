@@ -9,8 +9,8 @@ const webTabs = [
   "Experience",
   "Skills",
   "Education",
-  "Projects",
-  "Blog",
+  // "Projects",
+  // "Blog",
   "Contact",
 ].map((e) => e.toLowerCase());
 

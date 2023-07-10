@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { colors } from "@/styles/colors";
 import { Text, WhiteAndGreenText } from "../text";
 import { FlexColumn } from "../wrappers/columns";
-import { Icons } from "@/components/icons";
+import { Images } from "../images";
 
 interface FooterProps {
   backgroundColor?: string;
@@ -30,25 +31,25 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
           <Text text="Front-end Developer" color={colors.white} size="16px" />
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
+        <Link
+          href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
+          target="_blank"
         >
-          <Image src={Icons.HexagonIcon} alt="" />
           <Image
-            src={Icons.HexagonIcon}
+            src={Images.LinkedIn}
             alt=""
-            style={{ marginLeft: "1rem", marginRight: "1rem" }}
+            width={200}
+            style={{
+              borderRadius: "8px",
+            }}
           />
-          <Image src={Icons.HexagonIcon} alt="" />
-        </div>
+        </Link>
 
         <Text
           text="© 2023 Kamil Bobrowski. All rights reserved."
           color={colors.white}
           size="12px"
+          styles="margin-right: -4rem;"
         />
       </FlexColumn>
     </FlexColumn>

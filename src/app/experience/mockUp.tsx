@@ -1,4 +1,5 @@
 type ExperienceArrayType = {
+  id: number;
   company: string;
   date: string;
   role: string;
@@ -7,6 +8,7 @@ type ExperienceArrayType = {
 
 export const experienceArray: ExperienceArrayType[] = [
   {
+    id: 1,
     company: "UPC Polska",
     date: "2017-10 - 2019-08",
     role: "Technical Support Engineer",
@@ -20,6 +22,7 @@ export const experienceArray: ExperienceArrayType[] = [
     ],
   },
   {
+    id: 2,
     company: "RW Swiss Automation",
     date: "2019-09 - 2020-05",
     role: "Robotic Engineer",
@@ -32,6 +35,7 @@ export const experienceArray: ExperienceArrayType[] = [
     ],
   },
   {
+    id: 3,
     company: "SR Robotics",
     date: "2021-05 - 2021-06",
     role: "Technical support",
@@ -43,6 +47,7 @@ export const experienceArray: ExperienceArrayType[] = [
     ],
   },
   {
+    id: 4,
     company: "LEOCODE",
     date: "2021-10 - 2023-06",
     role: "Junior React Developer",

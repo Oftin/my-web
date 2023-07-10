@@ -3,22 +3,22 @@
 import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
-import { Icons } from "@/components/icons";
-import { TextParagraph, WhiteAndGreenText } from "@/components/text";
+import { TextParagraph, WhiteAndGreenText, Text } from "@/components/text";
 import { Footer } from "@/components/footer";
+import { colors } from "@/styles/colors";
+import { Images } from "@/components/images";
 
 export default function About() {
   return (
     <>
       <Navbar />
       <FlexColumn items="center" justify="center">
-        <Column columns={2} styles="height: 100vh">
+        <Column columns={2} styles="height: 100vh; margin-top: 4rem;">
           <Image
-            src={Icons.HexagonIcon}
-            alt="Hexagon Icon"
+            src={Images.ERC2019MyPhoto}
+            alt=""
             width={550}
-            height={550}
-            style={{ margin: "auto" }}
+            style={{ margin: "auto", borderRadius: "8px" }}
           />
           <div
             style={{
@@ -52,6 +52,33 @@ export default function About() {
               }
               size="24px"
             />
+          </div>
+        </Column>
+      </FlexColumn>
+      <FlexColumn items={"center"} justify={"center"} styles="height: 100vh">
+        <Text text={"Interests"} color={colors.white} size={"48px"} />
+        <Column columns={2}>
+          <div>
+            {[
+              "Modern technology",
+              "Artificial intelligence",
+              "Programming languages",
+              "Electronics",
+              "Business analytics",
+            ].map((el) => {
+              return <div key={el}>{el}</div>;
+            })}
+          </div>
+          <div>
+            {[
+              "Psychology",
+              "Reading books",
+              "Physical activity",
+              "Travels",
+              "Dancing",
+            ].map((el) => {
+              return <div key={el}>{el}</div>;
+            })}
           </div>
         </Column>
       </FlexColumn>

@@ -4,6 +4,7 @@ import { FlexColumn, Column } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { CallToActionButton } from "@/components/buttons";
 import { scrollUserToTopView } from "@/helpers";
+import { Images } from "@/components/images";
 
 interface AdditionalActivitiesSectionProps {
   backgroundColor: string;
@@ -37,18 +38,17 @@ export const AdditionalActivitiesSection = ({
       >
         <Column columns={2} gap={10}>
           <FlexColumn items="center" justify="center">
-            <div
+            <Image
+              src={Images.ERC2019}
+              alt=""
+              width={590}
+              height={345}
               style={{
-                backgroundColor: "rgb(252 165 165)",
                 marginTop: "5rem",
                 marginBottom: "1.5rem",
-                borderRadius: "0.5rem",
-                width: 590,
-                height: 345,
+                borderRadius: "8px",
               }}
-            >
-              <Image width={590} height={345} src="" alt="Image" />
-            </div>
+            />
 
             <Text
               text="International Mars Rover Competition"

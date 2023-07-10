@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
-import { Icons } from "@/components/icons";
 import { TitleSection } from "@/components/titleSection";
 import { TextParagraph } from "@/components/text";
 import { CallToActionButton } from "@/components/buttons";
 import { scrollUserToTopView } from "@/helpers";
+import { Images } from "@/components/images";
 
 interface AboutSectionProps {
   backgroundColor: string;
@@ -20,10 +20,12 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
     >
       <FlexColumn items="center" justify="center">
         <Image
-          src={Icons.HexagonIcon}
-          alt="Hexagon Icon"
-          width={530}
-          height={540}
+          src={Images.ERC2019MyPhoto}
+          alt=""
+          width={500}
+          style={{
+            borderRadius: "8px",
+          }}
         />
       </FlexColumn>
 

@@ -7,10 +7,30 @@ import { GreenAndWhiteText, Text } from "@/components/text";
 import { FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
+import { Images } from "@/components/images";
 import { ExperienceWraper } from "./styled";
 import { experienceArray } from "./mockUp";
 
 const importExperienceArray = experienceArray;
+
+const imageArray = [
+  {
+    image: Images.Support,
+    paretnId: 1,
+  },
+  {
+    image: Images.IndustryRobot,
+    paretnId: 2,
+  },
+  {
+    image: Images.UnderwaterScooter,
+    paretnId: 3,
+  },
+  {
+    image: Images.Programming,
+    paretnId: 4,
+  },
+];
 
 export default function Experience() {
   return (
@@ -84,15 +104,21 @@ export default function Experience() {
                 </ul>
               </div>
 
-              <div
-                style={{
-                  width: "170px",
-                  height: "170px",
-                  backgroundColor: "pink",
-                  margin: "auto",
-                  marginTop: "5.75rem",
-                }}
-              />
+              {imageArray.map((el) => {
+                const showImage = el.paretnId === exp.id;
+                return (
+                  <>
+                    {showImage && (
+                      <Image
+                        key={el.paretnId}
+                        src={el.image}
+                        alt={""}
+                        width={170}
+                      />
+                    )}
+                  </>
+                );
+              })}
             </ExperienceWraper>
           );
         })}
