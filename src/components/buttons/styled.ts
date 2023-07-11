@@ -43,4 +43,9 @@ export const RequestButtonWrapper = styled.button`
   border-radius: 8px;
   margin-top: 45px;
   cursor: pointer;
+
+  &:disabled {
+    background-color: grey;
+    cursor: default;
+  }
 `;

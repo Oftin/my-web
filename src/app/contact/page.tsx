@@ -1,14 +1,43 @@
 "use client";
 
+import { useState } from "react";
+import { toast } from "react-toastify";
 import { RequestButton } from "@/components/buttons";
 import { Footer } from "@/components/footer";
 import { Input, TextArea } from "@/components/inputs";
 import { Navbar } from "@/components/navbar";
 import { WhiteAndGreenText, Text } from "@/components/text";
+import { Toast } from "@/components/toast";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 
 export default function Contact() {
+  const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
+  const [disabledRequestButton, setDisabledRequestButton] =
+    useState<boolean>(true);
+
+  const notifyApprove = () => {
+    setTypeToast("success");
+    toast.success("Message sent!", {
+      theme: "dark",
+    });
+  };
+
+  const notifyFail = () => {
+    setTypeToast("fail");
+    toast.error("Message not sent, please try again.", {
+      theme: "dark",
+    });
+  };
+
+  const SubmitHandle = () => {
+    try {
+      notifyApprove();
+    } catch {
+      notifyFail();
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -49,8 +78,10 @@ export default function Contact() {
 
         <RequestButton
           name="Send Message"
-          onClick={() => console.log("Send reqiest!")}
+          onClick={SubmitHandle}
+          disabled={disabledRequestButton}
         />
+        <Toast toastType={typeToast} />
       </FlexColumn>
       <Footer />
     </>

@@ -3,11 +3,16 @@ import { RequestButtonWrapper } from "./styled";
 
 interface RequestButtonProps extends HTMLAttributes<HTMLButtonElement> {
   name: string;
+  disabled?: boolean;
 }
 
-export const RequestButton = ({ name, ...props }: RequestButtonProps) => {
+export const RequestButton = ({
+  name,
+  disabled,
+  ...props
+}: RequestButtonProps) => {
   return (
-    <RequestButtonWrapper type="submit" {...props}>
+    <RequestButtonWrapper type="submit" {...props} disabled={disabled}>
       {name}
     </RequestButtonWrapper>
   );
