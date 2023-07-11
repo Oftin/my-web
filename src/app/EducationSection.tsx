@@ -63,13 +63,15 @@ export const EducationSection = ({
           </div>
 
           <FlexColumn items="center" justify="center" styles="margin-top: 7rem">
-            <div
+            <Image
+              src={Images.EngineeringRobot}
+              alt={""}
+              width={300}
+              height={170}
               style={{
-                width: "300px",
-                height: "170px",
-                backgroundColor: "pink",
+                borderRadius: "8px",
               }}
-            ></div>
+            />
 
             <Text
               text="Engineering degree project"

@@ -7,7 +7,6 @@ import { GreenAndWhiteText, Text } from "@/components/text";
 import { FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
-import { Images } from "@/components/images";
 import { ExperienceWraper } from "./styled";
 import { experienceArray } from "./mockUp";
 
@@ -15,19 +14,19 @@ const importExperienceArray = experienceArray;
 
 const imageArray = [
   {
-    image: Images.Support,
+    image: Icons.Support,
     paretnId: 1,
   },
   {
-    image: Images.IndustryRobot,
+    image: Icons.IndustryRobot,
     paretnId: 2,
   },
   {
-    image: Images.UnderwaterScooter,
+    image: Icons.UnderwaterScooter,
     paretnId: 3,
   },
   {
-    image: Images.Programming,
+    image: Icons.Programming,
     paretnId: 4,
   },
 ];
@@ -39,13 +38,13 @@ export default function Experience() {
       <FlexColumn
         items={"center"}
         justify={"center"}
-        styles={`background-color: ${colors.background.mirage}`}
+        styles={`background-color: ${colors.background.mirage}; margin-bottom: 6rem;`}
       >
         <Text
           text={"Experience"}
           color={colors.white}
           size={"48px"}
-          styles="margin-top: 10rem;"
+          styles="margin-top: 10rem; margin-bottom: 4rem;"
         />
         {importExperienceArray.map((exp) => {
           return (
@@ -113,7 +112,10 @@ export default function Experience() {
                         key={el.paretnId}
                         src={el.image}
                         alt={""}
-                        width={170}
+                        width={150}
+                        style={{
+                          marginTop: "3rem",
+                        }}
                       />
                     )}
                   </>
