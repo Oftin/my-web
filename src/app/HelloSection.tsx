@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { CallToActionButton } from "@/components/buttons";
-import { Icons } from "@/components/icons";
 import { TextParagraph } from "@/components/text";
 import { TitleSection } from "@/components/titleSection";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
@@ -17,6 +16,7 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
     gap={10}
     styles={`max-height: 100vh; background-color: ${backgroundColor}`}
     extraSpaceFromEdgeOfScreen={true}
+    id="hello"
   >
     <FlexColumn
       items="start"

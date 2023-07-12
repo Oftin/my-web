@@ -23,6 +23,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
       items="center"
       justify="center"
       styles={`width: 100vw; height: 60vh; background-color: ${backgroundColor}`}
+      id="skills"
     >
       <Column
         columns={2}

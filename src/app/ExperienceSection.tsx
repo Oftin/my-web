@@ -20,6 +20,7 @@ export const ExperienceSection = ({
       justify="center"
       styles={`width: 100%; height: 100vh; padding-top: 5em; background-color: ${backgroundColor}`}
       extraSpaceFromEdgeOfScreen={true}
+      id="experience"
     >
       <Text text="Last" color={colors.greenThemeColor} size="32px" />
       <Text text="Experience" color={colors.white} size="48px" />

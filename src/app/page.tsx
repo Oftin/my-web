@@ -1,7 +1,6 @@
 "use client";
 
 import { Navbar } from "@/components/navbar";
-import { MainPageWrapper } from "./styled";
 import { HelloSection } from "./HelloSection";
 import { AboutSection } from "./AboutSection";
 import { ExperienceSection } from "./ExperienceSection";
@@ -21,19 +20,15 @@ export default function Home() {
   return (
     <main>
       <Navbar showArrowBack={false} />
-      <MainPageWrapper>
-        <HelloSection backgroundColor={darkerBackgroundColor} />
-        <AboutSection backgroundColor={brighterBackgroundColor} />
-        <ExperienceSection backgroundColor={darkerBackgroundColor} />
-        <SkillSection backgroundColor={brighterBackgroundColor} />
-        <EducationSection backgroundColor={darkerBackgroundColor} />
-        <AdditionalActivitiesSection
-          backgroundColor={brighterBackgroundColor}
-        />
-        {/* <ProjectSection backgroundColor={darkerBackgroundColor} /> */}
-        {/* <BlogSection backgroundColor={brighterBackgroundColor} /> */}
-        <ContactSection backgroundColor={darkerBackgroundColor} />
-      </MainPageWrapper>
+      <HelloSection backgroundColor={darkerBackgroundColor} />
+      <AboutSection backgroundColor={brighterBackgroundColor} />
+      <ExperienceSection backgroundColor={darkerBackgroundColor} />
+      <SkillSection backgroundColor={brighterBackgroundColor} />
+      <EducationSection backgroundColor={darkerBackgroundColor} />
+      <AdditionalActivitiesSection backgroundColor={brighterBackgroundColor} />
+      {/* <ProjectSection backgroundColor={darkerBackgroundColor} /> */}
+      {/* <BlogSection backgroundColor={brighterBackgroundColor} /> */}
+      <ContactSection backgroundColor={darkerBackgroundColor} />
       <Footer backgroundColor={darkerBackgroundColor} />
     </main>
   );

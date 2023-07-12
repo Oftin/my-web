@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Link as ReactScrollLink } from "react-scroll";
 import { WhiteAndGreenText } from "../text";
 import { Nav, Ul, LeftSideLi, RightSideLi } from "./styled";
 import { ArrowBack } from "../buttons";
@@ -19,27 +21,62 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
+  const [mainScreen, setMainScreen] = useState<boolean>(
+    window.location.pathname === "/"
+  );
+
+  useEffect(() => {
+    setMainScreen(window.location.pathname === "/");
+  }, [mainScreen]);
+
   return (
     <>
       <Nav>
         <Ul>
           <LeftSideLi>
-            <Link href="/" onClick={() => scrollUserToTopView()}>
-              <WhiteAndGreenText
-                firstText="Kamil"
-                secondText="Bobrowki"
-                textSize="32px"
-              />
-            </Link>
+            {mainScreen ? (
+              <ReactScrollLink
+                to={"hello"}
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <WhiteAndGreenText
+                  firstText="Kamil"
+                  secondText="Bobrowki"
+                  textSize="32px"
+                />
+              </ReactScrollLink>
+            ) : (
+              <Link href="/" onClick={() => scrollUserToTopView()}>
+                <WhiteAndGreenText
+                  firstText="Kamil"
+                  secondText="Bobrowki"
+                  textSize="32px"
+                />
+              </Link>
+            )}
           </LeftSideLi>
+
           {webTabs.map((tab) => {
             return (
-              <RightSideLi key={tab}>
-                <Link
-                  href={`/${tab}`}
-                  onClick={() => scrollUserToTopView()}
-                >{`.${tab}()`}</Link>
-              </RightSideLi>
+              <>
+                {mainScreen ? (
+                  <ReactScrollLink
+                    to={`${tab}`}
+                    spy={true}
+                    smooth={true}
+                    offset={tab === "skills" ? -200 : undefined}
+                    duration={500}
+                  >
+                    <RightSideLi>{`.${tab}()`}</RightSideLi>
+                  </ReactScrollLink>
+                ) : (
+                  <RightSideLi key={tab}>
+                    <Link href={`/#${tab}`}>{`.${tab}()`}</Link>
+                  </RightSideLi>
+                )}
+              </>
             );
           })}
         </Ul>

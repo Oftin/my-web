@@ -37,6 +37,7 @@ export const ProjectSection = ({ backgroundColor }: ProjectSectionProps) => {
       justify="center"
       styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
       minusExtraSpaceFromEdgeOfScreen
+      id="projects"
     >
       <Text text="Last" color={colors.greenThemeColor} size="36px" />
       <Text

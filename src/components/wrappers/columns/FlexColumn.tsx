@@ -9,6 +9,7 @@ interface FlexColumnProps {
   styles?: string;
   extraSpaceFromEdgeOfScreen?: boolean;
   minusExtraSpaceFromEdgeOfScreen?: boolean;
+  id?: string;
 }
 
 export const FlexColumn = ({
@@ -19,6 +20,7 @@ export const FlexColumn = ({
   styles,
   extraSpaceFromEdgeOfScreen = false,
   minusExtraSpaceFromEdgeOfScreen,
+  id,
 }: FlexColumnProps) => {
   return (
     <FlexColumnWrapper
@@ -28,6 +30,7 @@ export const FlexColumn = ({
       styles={styles}
       extraSpaceFromEdgeOfScreen={extraSpaceFromEdgeOfScreen || undefined}
       minusExtraSpaceFromEdgeOfScreen={minusExtraSpaceFromEdgeOfScreen}
+      id={id}
     >
       {children}
     </FlexColumnWrapper>

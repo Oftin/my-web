@@ -37,6 +37,7 @@ export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
       justify="center"
       styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
       minusExtraSpaceFromEdgeOfScreen
+      id="blog"
     >
       <Text text="Blog" color={colors.greenThemeColor} size="36px" />
       <Text

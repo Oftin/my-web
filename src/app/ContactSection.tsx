@@ -17,6 +17,7 @@ export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
       items="center"
       justify="center"
       styles={`height: 100vh; background-color: ${backgroundColor}`}
+      id="contact"
     >
       <WhiteAndGreenText
         firstText="Get In"

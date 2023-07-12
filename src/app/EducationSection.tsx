@@ -20,6 +20,7 @@ export const EducationSection = ({
       justify="center"
       styles={`width: 100%; height: 100%; padding-top: 5em; padding-bottom: 5em; background-color: ${backgroundColor}`}
       extraSpaceFromEdgeOfScreen={true}
+      id="education"
     >
       <Text text="University" color={colors.greenThemeColor} size="32px" />
       <Text text="Education" color={colors.white} size="48px" />

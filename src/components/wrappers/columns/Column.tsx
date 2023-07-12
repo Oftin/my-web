@@ -7,6 +7,7 @@ interface ColumnProps {
   gap?: number;
   styles?: string;
   extraSpaceFromEdgeOfScreen?: boolean;
+  id?: string;
 }
 
 export const Column = ({
@@ -15,6 +16,7 @@ export const Column = ({
   gap,
   styles,
   extraSpaceFromEdgeOfScreen = false,
+  id,
 }: ColumnProps) => {
   return (
     <ColumnWrapper
@@ -22,6 +24,7 @@ export const Column = ({
       gap={gap || 0}
       styles={styles || ""}
       extraSpaceFromEdgeOfScreen={extraSpaceFromEdgeOfScreen || undefined}
+      id={id}
     >
       {children}
     </ColumnWrapper>

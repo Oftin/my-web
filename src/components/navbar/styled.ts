@@ -23,6 +23,7 @@ export const Ul = styled.ul`
 
 export const LeftSideLi = styled.li`
   margin-right: auto;
+  cursor: pointer;
 `;
 
 export const RightSideLi = styled.li`
@@ -30,8 +31,9 @@ export const RightSideLi = styled.li`
   color: ${colors.white};
   margin-left: 1rem;
   ${typography.text["24px"]}
+  cursor: pointer;
 
-  :hover {
+  &:hover {
     color: ${colors.greenThemeColor};
   }
 `;

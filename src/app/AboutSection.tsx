@@ -17,6 +17,7 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
       gap={10}
       styles={`max-height: 100vh; background-color: ${backgroundColor}`}
       extraSpaceFromEdgeOfScreen={true}
+      id="about"
     >
       <FlexColumn items="center" justify="center">
         <Image
