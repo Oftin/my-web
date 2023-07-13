@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { CallToActionButton } from "@/components/buttons";
+import { Link as ReactScrollLink } from "react-scroll";
 import { TextParagraph } from "@/components/text";
 import { TitleSection } from "@/components/titleSection";
 import { FlexColumn, Column } from "@/components/wrappers/columns";
-import { scrollUserToTopView } from "@/helpers";
 import { Images } from "@/components/images";
+import { ContactButton } from "./styled";
 
 interface HelloSectionProps {
   backgroundColor: string;
@@ -32,11 +32,9 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
       <TextParagraph text="Optimistic programmer, passionate about modern technologies." />
       <TextParagraph text="I continuously develop my skills and see challenges where others see problems." />
 
-      <CallToActionButton
-        name="Contact Me"
-        href="/contact"
-        onClick={() => scrollUserToTopView()}
-      />
+      <ReactScrollLink to={"contact"} spy={true} smooth={true} duration={500}>
+        <ContactButton>Contact Me</ContactButton>
+      </ReactScrollLink>
     </FlexColumn>
 
     <FlexColumn items="center" justify="center">
