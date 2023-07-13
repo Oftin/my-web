@@ -9,6 +9,8 @@ import Support from "@/assets/icons/Support.svg";
 import IndustryRobot from "@/assets/icons/IndustryRobot.svg";
 import UnderwaterScooter from "@/assets/icons/UnderwaterScooter.svg";
 import Programming from "@/assets/icons/Programming.svg";
+import RightArrowTriangle from "@/assets/icons/RightArrowTriangle.svg";
+import DownArrowTriangle from "@/assets/icons/DownArrowTriangle.svg";
 
 export const Icons = {
   HexagonIcon,
@@ -22,4 +24,6 @@ export const Icons = {
   IndustryRobot,
   UnderwaterScooter,
   Programming,
+  RightArrowTriangle,
+  DownArrowTriangle,
 };

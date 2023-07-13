@@ -9,6 +9,7 @@ import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
 import { ExperienceWraper } from "./styled";
 import { experienceArray } from "./mockUp";
+import { Arrow } from "@/components/arrow";
 
 const importExperienceArray = experienceArray;
 
@@ -47,18 +48,15 @@ export default function Experience() {
           styles="margin-top: 10rem; margin-bottom: 4rem;"
         />
         {importExperienceArray.map((exp) => {
+          const lastElement = importExperienceArray.findLast((last) => {
+            return last;
+          });
+
+          const showArrowhead = exp.company === lastElement?.company;
+
           return (
             <ExperienceWraper key={exp.company}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  backgroundColor: `${colors.white}`,
-                  width: "2px",
-                  height: "100%",
-                  margin: "auto",
-                }}
-              />
+              <Arrow orientation="vertical" showArrowhead={showArrowhead} />
 
               <div style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
                 <Text text={exp.company} color={colors.white} size={"20px"} />

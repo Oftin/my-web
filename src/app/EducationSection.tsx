@@ -6,6 +6,7 @@ import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
 import { scrollUserToTopView } from "@/helpers";
 import { Images } from "@/components/images";
+import { Arrow } from "@/components/arrow";
 
 interface EducationSectionProps {
   backgroundColor: string;
@@ -28,7 +29,7 @@ export const EducationSection = ({
       <FlexColumn
         items="center"
         justify="center"
-        styles={`width: 100%; height: 100vh; background-color: ${backgroundColor}`}
+        styles={`width: 100%; height: 100%; background-color: ${backgroundColor}; margin-top: 2rem;`}
         minusExtraSpaceFromEdgeOfScreen
       >
         <div
@@ -36,10 +37,33 @@ export const EducationSection = ({
             display: "grid",
             gridTemplateColumns: "10% 1fr 30%",
             width: "100%",
+            height: "100%",
           }}
         >
-          <div style={{ margin: "auto", marginRight: 0 }}>
-            <Image src={Icons.GreenDotWithRing} alt="" />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                height: "50%",
+                marginTop: "20vh",
+              }}
+            >
+              <Arrow orientation="vertical" showArrowhead={false} />
+            </div>
+            <Image
+              src={Icons.GreenDotWithRing}
+              alt=""
+              style={{
+                zIndex: 800,
+              }}
+            />
           </div>
 
           <div style={{ margin: "auto" }}>
@@ -97,8 +121,30 @@ export const EducationSection = ({
             width: "100%",
           }}
         >
-          <div style={{ margin: "auto", marginRight: 0 }}>
-            <Image src={Icons.GreenDotWithRing} alt="" />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                height: "50%",
+                marginBottom: "20vh",
+              }}
+            >
+              <Arrow orientation="vertical" />
+            </div>
+            <Image
+              src={Icons.GreenDotWithRing}
+              alt=""
+              style={{
+                zIndex: 800,
+              }}
+            />
           </div>
 
           <div style={{ margin: "auto" }}>

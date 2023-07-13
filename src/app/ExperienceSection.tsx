@@ -6,6 +6,7 @@ import { Icons } from "@/components/icons";
 import { DisplayGrid } from "@/components/wrappers/displays";
 import { CallToActionButton } from "@/components/buttons";
 import { scrollUserToTopView } from "@/helpers";
+import { Arrow } from "@/components/arrow";
 
 interface ExperienceSectionProps {
   backgroundColor: string;
@@ -39,13 +40,11 @@ export const ExperienceSection = ({
               position: "absolute",
               justifyItems: "center",
               width: "100%",
-              marginLeft: "-8rem",
+              marginLeft: "-4rem",
               marginRight: "-3.5rem",
             }}
           >
-            <FlexColumn items="center" justify="center">
-              <Image src={Icons.ArrowLongHorizontal} alt="" />
-            </FlexColumn>
+            <Arrow orientation="horizontal" />
           </div>
 
           <DisplayGrid numberOfRows={5}>
@@ -55,7 +54,13 @@ export const ExperienceSection = ({
               color={colors.greenThemeColor}
               size="20px"
             />
-            <Image src={Icons.GreenDotWithRing} alt="" />
+            <Image
+              src={Icons.GreenDotWithRing}
+              alt=""
+              style={{
+                zIndex: 800,
+              }}
+            />
             <Image src={Icons.ArrowDown} alt="" />
             <FlexColumn items="center" justify="center">
               <Text
@@ -77,7 +82,13 @@ export const ExperienceSection = ({
               />
             </FlexColumn>
             <Image src={Icons.ArrowUp} alt="" />
-            <Image src={Icons.GreenDotWithRing} alt="" />
+            <Image
+              src={Icons.GreenDotWithRing}
+              alt=""
+              style={{
+                zIndex: 800,
+              }}
+            />
             <Text
               text="2019-09 - 2020-05"
               color={colors.greenThemeColor}
@@ -93,7 +104,13 @@ export const ExperienceSection = ({
               color={colors.greenThemeColor}
               size="20px"
             />
-            <Image src={Icons.GreenDotWithRing} alt="" />
+            <Image
+              src={Icons.GreenDotWithRing}
+              alt=""
+              style={{
+                zIndex: 800,
+              }}
+            />
             <Image src={Icons.ArrowDown} alt="" />
             <FlexColumn items="center" justify="center">
               <Text text="Technical support" color={colors.white} size="20px" />
@@ -111,7 +128,13 @@ export const ExperienceSection = ({
               <Text text="LEOCODE" color={colors.white} size="20px" />
             </FlexColumn>
             <Image src={Icons.ArrowUp} alt="" />
-            <Image src={Icons.GreenDotWithRing} alt="" />
+            <Image
+              src={Icons.GreenDotWithRing}
+              alt=""
+              style={{
+                zIndex: 800,
+              }}
+            />
             <Text
               text="2021-10 - 2023-07"
               color={colors.greenThemeColor}
