@@ -29,7 +29,7 @@ export default function Home() {
       {/* <ProjectSection backgroundColor={darkerBackgroundColor} /> */}
       {/* <BlogSection backgroundColor={brighterBackgroundColor} /> */}
       <ContactSection backgroundColor={darkerBackgroundColor} />
-      <Footer backgroundColor={darkerBackgroundColor} />
+      <Footer backgroundColor={brighterBackgroundColor} />
     </main>
   );
 }
