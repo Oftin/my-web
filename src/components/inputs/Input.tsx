@@ -6,6 +6,7 @@ interface InputProps {
   width: string;
   height: string;
   styles?: string;
+  disabled?: boolean;
 }
 
 export const Input = ({
@@ -14,6 +15,7 @@ export const Input = ({
   width,
   height,
   styles,
+  ...props
 }: InputProps) => {
   return (
     <InputWrapper
@@ -22,6 +24,7 @@ export const Input = ({
       width={width}
       height={height}
       styles={styles}
+      {...props}
     />
   );
 };

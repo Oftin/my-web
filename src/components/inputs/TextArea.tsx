@@ -6,6 +6,7 @@ interface TextAreaProps {
   width: string;
   height: string;
   styles?: string;
+  disabled?: boolean;
 }
 
 export const TextArea = ({
@@ -13,6 +14,7 @@ export const TextArea = ({
   width,
   height,
   styles,
+  ...props
 }: TextAreaProps) => {
   const [text, setText] = useState<string>("");
 
@@ -28,6 +30,7 @@ export const TextArea = ({
         maxLength={limitWords}
         value={text}
         onChange={(e: any) => setText(e.currentTarget.value)}
+        {...props}
       />
       {text.length === limitWords && (
         <div

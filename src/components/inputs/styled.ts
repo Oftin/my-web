@@ -24,6 +24,10 @@ export const InputWrapper = styled.input<{
     css`
       ${props.styles}
     `}
+
+  &:disabled {
+    background-color: ${colors.disabledColor};
+  }
 `;
 
 export const TextAreaWrapper = styled.textarea<{
@@ -50,4 +54,8 @@ export const TextAreaWrapper = styled.textarea<{
     css`
       ${props.styles}
     `}
+
+  &:disabled {
+    background-color: ${colors.disabledColor};
+  }
 `;

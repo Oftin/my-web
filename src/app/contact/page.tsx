@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { RequestButton } from "@/components/buttons";
 import { Footer } from "@/components/footer";
@@ -13,8 +14,11 @@ import { colors } from "@/styles/colors";
 
 export default function Contact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
+  const [disabledInputs, setDisabledInputs] = useState<boolean>(false);
   const [disabledRequestButton, setDisabledRequestButton] =
-    useState<boolean>(true);
+    useState<boolean>(false);
+
+  const router = useRouter();
 
   const notifyApprove = () => {
     setTypeToast("success");
@@ -32,8 +36,13 @@ export default function Contact() {
 
   const SubmitHandle = () => {
     try {
+      setDisabledInputs(true);
       notifyApprove();
+      setTimeout(() => {
+        router.push("/thanks");
+      }, 6000);
     } catch {
+      setDisabledInputs(false);
       notifyFail();
     }
   };
@@ -60,6 +69,7 @@ export default function Contact() {
             placeholder="Enter your name"
             width="315px"
             height="60px"
+            disabled={disabledInputs}
           />
 
           <Input
@@ -67,6 +77,7 @@ export default function Contact() {
             placeholder="Enter your email"
             width="315px"
             height="60px"
+            disabled={disabledInputs}
           />
         </Column>
 
@@ -74,6 +85,7 @@ export default function Contact() {
           placeholder="Enter your message"
           width="650px"
           height="250px"
+          disabled={disabledInputs}
         />
 
         <RequestButton
