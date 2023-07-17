@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import ReCAPTCHA from "react-google-recaptcha";
 import { RequestButton } from "@/components/buttons";
 import { Footer } from "@/components/footer";
 import { Input, TextArea } from "@/components/inputs";
@@ -16,7 +17,7 @@ export default function NotFoundContact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
   const [disabledInputs, setDisabledInputs] = useState<boolean>(false);
   const [disabledRequestButton, setDisabledRequestButton] =
-    useState<boolean>(false);
+    useState<boolean>(true);
 
   const router = useRouter();
 
@@ -44,6 +45,12 @@ export default function NotFoundContact() {
     } catch {
       setDisabledInputs(false);
       notifyFail();
+    }
+  };
+
+  const onChangeReCAPTCHA = (token: string | null): void | undefined => {
+    if (token) {
+      setDisabledRequestButton(false);
     }
   };
 
@@ -84,6 +91,16 @@ export default function NotFoundContact() {
           width="650px"
           height="250px"
           disabled={disabledInputs}
+        />
+
+        <ReCAPTCHA
+          sitekey={process.env.RECAPTCHA_SITE_KEY!}
+          onChange={onChangeReCAPTCHA}
+          theme="dark"
+          style={{
+            marginTop: "1.5rem",
+            borderRadius: "20px",
+          }}
         />
 
         <RequestButton

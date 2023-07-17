@@ -12,7 +12,6 @@ import { WhiteAndGreenText, Text } from "@/components/text";
 import { Toast } from "@/components/toast";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
-import env from "@/env";
 
 export default function Contact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
@@ -51,7 +50,6 @@ export default function Contact() {
 
   const onChangeReCAPTCHA = (token: string | null): void | undefined => {
     if (token) {
-      console.log("Captcha token:", token);
       setDisabledRequestButton(false);
     }
   };
@@ -98,7 +96,7 @@ export default function Contact() {
         />
 
         <ReCAPTCHA
-          sitekey={env.RECAPTCHA_SITE_KEY}
+          sitekey={process.env.RECAPTCHA_SITE_KEY!}
           onChange={onChangeReCAPTCHA}
           theme="dark"
           style={{
