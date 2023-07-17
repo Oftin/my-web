@@ -14,11 +14,18 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
   const [
     disappearLinkedInButtonOnMainPage,
     setDisappearLinkedInButtonOnMainPage,
-  ] = useState(window.location.pathname !== "/");
+  ] = useState(
+    // window.location.pathname !== "/"
+
+    false
+  );
 
   useEffect(() => {
-    setDisappearLinkedInButtonOnMainPage(window.location.pathname !== "/");
-  }, [window.location.pathname]);
+    setDisappearLinkedInButtonOnMainPage(
+      // window.location.pathname !== "/"
+      false
+    );
+  }, []);
 
   return (
     <FlexColumn

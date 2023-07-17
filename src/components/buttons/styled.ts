@@ -41,7 +41,7 @@ export const RequestButtonWrapper = styled.button`
   font-weight: 700;
   border: none;
   border-radius: 8px;
-  margin-top: 45px;
+  margin-top: 1.5rem;
   cursor: pointer;
 
   &:disabled {

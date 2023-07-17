@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import ReCAPTCHA from "react-google-recaptcha";
 import { RequestButton } from "@/components/buttons";
 import { Footer } from "@/components/footer";
 import { Input, TextArea } from "@/components/inputs";
@@ -11,12 +12,13 @@ import { WhiteAndGreenText, Text } from "@/components/text";
 import { Toast } from "@/components/toast";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
+import env from "@/env";
 
 export default function Contact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
   const [disabledInputs, setDisabledInputs] = useState<boolean>(false);
   const [disabledRequestButton, setDisabledRequestButton] =
-    useState<boolean>(false);
+    useState<boolean>(true);
 
   const router = useRouter();
 
@@ -47,6 +49,13 @@ export default function Contact() {
     }
   };
 
+  const onChangeReCAPTCHA = (token: string | null): void | undefined => {
+    if (token) {
+      console.log("Captcha token:", token);
+      setDisabledRequestButton(false);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -62,7 +71,7 @@ export default function Contact() {
         <Column
           columns={2}
           gap={20}
-          styles="margin-top: 45px; margin-bottom: 45px;"
+          styles="margin-top: 1.5rem; margin-bottom: 1.5rem;"
         >
           <Input
             type="text"
@@ -86,6 +95,16 @@ export default function Contact() {
           width="650px"
           height="250px"
           disabled={disabledInputs}
+        />
+
+        <ReCAPTCHA
+          sitekey={env.RECAPTCHA_SITE_KEY}
+          onChange={onChangeReCAPTCHA}
+          theme="dark"
+          style={{
+            marginTop: "1.5rem",
+            borderRadius: "20px",
+          }}
         />
 
         <RequestButton

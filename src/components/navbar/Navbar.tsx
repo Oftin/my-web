@@ -22,12 +22,13 @@ interface NavbarProps {
 
 export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
   const [mainScreen, setMainScreen] = useState<boolean>(
-    window.location.pathname === "/"
+    // window.location.pathname === "/"
+    false
   );
 
-  useEffect(() => {
-    setMainScreen(window.location.pathname === "/");
-  }, [mainScreen]);
+  // useEffect(() => {
+  //   setMainScreen(window.location.pathname === "/");
+  // }, [mainScreen]);
 
   return (
     <>
