@@ -319,7 +319,6 @@ export default function MasterDegreeProject() {
               }
               color={colors.white}
               size={"20px"}
-              styles="margin-bottom: 2rem;"
             />
           </FlexColumn>
         </FlexColumn>

@@ -11,6 +11,15 @@ import UnderwaterScooter from "@/assets/icons/UnderwaterScooter.svg";
 import Programming from "@/assets/icons/Programming.svg";
 import RightArrowTriangle from "@/assets/icons/RightArrowTriangle.svg";
 import DownArrowTriangle from "@/assets/icons/DownArrowTriangle.svg";
+import AI from "@/assets/icons/interests/AI.svg";
+import Electronics from "@/assets/icons/interests/Electronics.svg";
+import BusinessAnalytics from "@/assets/icons/interests/BusinessAnalytics.svg";
+import ModernTechnology from "@/assets/icons/interests/ModernTechnology.svg";
+import Psychology from "@/assets/icons/interests/Psychology.svg";
+import ReadingBooks from "@/assets/icons/interests/ReadingBooks.svg";
+import PhysicalActivity from "@/assets/icons/interests/PhysicalActivity.svg";
+import Travels from "@/assets/icons/interests/Travels.svg";
+import Dancing from "@/assets/icons/interests/Dancing.svg";
 
 export const Icons = {
   HexagonIcon,
@@ -26,4 +35,13 @@ export const Icons = {
   Programming,
   RightArrowTriangle,
   DownArrowTriangle,
+  AI,
+  Electronics,
+  BusinessAnalytics,
+  ModernTechnology,
+  Psychology,
+  ReadingBooks,
+  PhysicalActivity,
+  Travels,
+  Dancing,
 };
