@@ -12,12 +12,17 @@ import { Text } from "@/components/text";
 import { Toast } from "@/components/toast";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
+import { sendEmailWithEmailJS } from "@/helpers";
 
 export default function NotFoundContact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
   const [disabledInputs, setDisabledInputs] = useState<boolean>(false);
   const [disabledRequestButton, setDisabledRequestButton] =
     useState<boolean>(true);
+
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [newPageIdea, setNewPageIdea] = useState<string>("");
 
   const router = useRouter();
 
@@ -38,6 +43,7 @@ export default function NotFoundContact() {
   const SubmitHandle = () => {
     try {
       setDisabledInputs(true);
+      sendEmailWithEmailJS({ name, email, newPageIdea });
       notifyApprove();
       setTimeout(() => {
         router.push("/thanks");
@@ -74,6 +80,9 @@ export default function NotFoundContact() {
             placeholder="Enter your name"
             width="315px"
             height="60px"
+            handleChange={(e: React.FormEvent<HTMLInputElement>) =>
+              setName(e.currentTarget.value)
+            }
             disabled={disabledInputs}
           />
 
@@ -82,6 +91,9 @@ export default function NotFoundContact() {
             placeholder="Enter your email"
             width="315px"
             height="60px"
+            handleChange={(e: React.FormEvent<HTMLInputElement>) =>
+              setEmail(e.currentTarget.value)
+            }
             disabled={disabledInputs}
           />
         </Column>
@@ -90,6 +102,9 @@ export default function NotFoundContact() {
           placeholder="Enter your idea for new page"
           width="650px"
           height="250px"
+          handleChange={(e: React.FormEvent<HTMLTextAreaElement>) =>
+            setNewPageIdea(e.currentTarget.value)
+          }
           disabled={disabledInputs}
         />
 

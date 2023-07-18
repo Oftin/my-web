@@ -1,3 +1,4 @@
+import { ChangeEventHandler } from "react";
 import { InputWrapper } from "./styled";
 
 interface InputProps {
@@ -7,6 +8,7 @@ interface InputProps {
   height: string;
   styles?: string;
   disabled?: boolean;
+  handleChange?: ChangeEventHandler<HTMLInputElement> | undefined;
 }
 
 export const Input = ({
@@ -15,6 +17,7 @@ export const Input = ({
   width,
   height,
   styles,
+  handleChange,
   ...props
 }: InputProps) => {
   return (
@@ -24,6 +27,8 @@ export const Input = ({
       width={width}
       height={height}
       styles={styles}
+      required
+      onChange={handleChange}
       {...props}
     />
   );

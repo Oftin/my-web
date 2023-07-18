@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEventHandler } from "react";
 import { TextAreaWrapper } from "./styled";
 
 interface TextAreaProps {
@@ -7,6 +7,8 @@ interface TextAreaProps {
   height: string;
   styles?: string;
   disabled?: boolean;
+  textValue?: string;
+  handleChange?: ChangeEventHandler<HTMLTextAreaElement> | undefined;
 }
 
 export const TextArea = ({
@@ -14,11 +16,12 @@ export const TextArea = ({
   width,
   height,
   styles,
+  textValue,
+  handleChange,
   ...props
 }: TextAreaProps) => {
-  const [text, setText] = useState<string>("");
-
   const limitWords = 5000;
+  const showLimitWords = textValue?.length === limitWords;
 
   return (
     <>
@@ -28,11 +31,12 @@ export const TextArea = ({
         height={height}
         styles={styles}
         maxLength={limitWords}
-        value={text}
-        onChange={(e: any) => setText(e.currentTarget.value)}
+        value={textValue}
+        onChange={handleChange}
+        required
         {...props}
       />
-      {text.length === limitWords && (
+      {showLimitWords && (
         <div
           style={{
             marginTop: "1.5rem",

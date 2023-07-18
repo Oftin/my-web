@@ -12,12 +12,17 @@ import { WhiteAndGreenText, Text } from "@/components/text";
 import { Toast } from "@/components/toast";
 import { Column, FlexColumn } from "@/components/wrappers/columns";
 import { colors } from "@/styles/colors";
+import { sendEmailWithEmailJS } from "@/helpers";
 
 export default function Contact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
   const [disabledInputs, setDisabledInputs] = useState<boolean>(false);
   const [disabledRequestButton, setDisabledRequestButton] =
     useState<boolean>(true);
+
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
 
   const router = useRouter();
 
@@ -38,6 +43,7 @@ export default function Contact() {
   const SubmitHandle = () => {
     try {
       setDisabledInputs(true);
+      sendEmailWithEmailJS({ name, email, message });
       notifyApprove();
       setTimeout(() => {
         router.push("/thanks");
@@ -76,6 +82,9 @@ export default function Contact() {
             placeholder="Enter your name"
             width="315px"
             height="60px"
+            handleChange={(e: React.FormEvent<HTMLInputElement>) =>
+              setName(e.currentTarget.value)
+            }
             disabled={disabledInputs}
           />
 
@@ -84,6 +93,9 @@ export default function Contact() {
             placeholder="Enter your email"
             width="315px"
             height="60px"
+            handleChange={(e: React.FormEvent<HTMLInputElement>) =>
+              setEmail(e.currentTarget.value)
+            }
             disabled={disabledInputs}
           />
         </Column>
@@ -92,6 +104,10 @@ export default function Contact() {
           placeholder="Enter your message"
           width="650px"
           height="250px"
+          textValue={message}
+          handleChange={(e: React.FormEvent<HTMLTextAreaElement>) =>
+            setMessage(e.currentTarget.value)
+          }
           disabled={disabledInputs}
         />
 
