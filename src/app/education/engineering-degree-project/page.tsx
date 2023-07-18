@@ -32,6 +32,12 @@ export default function EngineeringDegreeProject() {
           text={"Engineering degree project"}
           color={colors.white}
           size={"48px"}
+          styles="margin-bottom: 1rem;"
+        />
+        <Text
+          text={"Model of a robotic station with control"}
+          color={colors.greenThemeColor}
+          size={"24px"}
           styles="margin-bottom: 4rem;"
         />
         <YouTube
