@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { colors } from "@/styles/colors";
 import { Text, WhiteAndGreenText } from "../text";
 import { FlexColumn } from "../wrappers/columns";
 import { Images } from "../images";
-import { useEffect, useState } from "react";
 
 interface FooterProps {
   backgroundColor?: string;
@@ -16,7 +16,6 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
     setDisappearLinkedInButtonOnMainPage,
   ] = useState(
     // window.location.pathname !== "/"
-
     false
   );
 

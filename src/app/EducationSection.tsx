@@ -107,7 +107,7 @@ export const EducationSection = ({
 
             <CallToActionButton
               name="Read More"
-              href=""
+              href="/education/engineering-degree-project"
               styles="margin-top: 1rem"
               onClick={() => scrollUserToTopView()}
             />
@@ -188,7 +188,7 @@ export const EducationSection = ({
 
             <CallToActionButton
               name="Read More"
-              href=""
+              href="/education/master-degree-project"
               styles="margin-top: 1rem"
               onClick={() => scrollUserToTopView()}
             />
