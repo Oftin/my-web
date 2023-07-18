@@ -91,21 +91,15 @@ export default function About() {
             />
             <TextParagraph
               text={
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                "The main word that describes me is an optimist. Because of that, I decided to rebrand myself as a programmer. With great passion for modern technology, especially artificial intelligence, I constantly try to improve my growing asset of skills. I have a master's degree in Automation and Robotics. Instead of problems, I see challenges and that is the mindset I am trying ro apply to my personal life and career path."
               }
               size="24px"
               styles="margin-bottom: 1rem"
             />
+
             <TextParagraph
               text={
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
-              }
-              size="24px"
-              styles="margin-bottom: 1rem"
-            />
-            <TextParagraph
-              text={
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                "I love new challenges, implementing my own ideas and helping people."
               }
               size="24px"
             />
