@@ -40,218 +40,235 @@ export const skillsArray: SkillsArrayType[] = [
   {
     parentId: 1,
     skill: "TypeScript",
-    description: "asdadasdasdasdasdadas",
+    description:
+      "Creating types and interfaces for components and requests. It is one of my favorite tools when programming.",
   },
   {
     parentId: 1,
     skill: "JavaScript",
-    description: "asdasd",
+    description: "It is the primary programming language I use at work.",
   },
   {
     parentId: 1,
     skill: "Next.js",
-    description: "asdoasdinasdijnajdnas",
+    description:
+      "I gained my knowledge of using Next.js by programming the site you are currently on :D",
   },
   {
     parentId: 1,
     skill: "React.js",
     description:
-      "asdadasdasdasdasdadasasdadasdasdasdasdadasasdadasdasdasdasdadasasdadasdasdasdasdadas",
+      "The main library for JavaScript that I use with the ability to enter any architecture and edit it as needed.",
   },
   {
     parentId: 1,
     skill: "React Native",
-    description: "",
+    description: "I have been developing a meditation app using this tool.",
   },
   {
     parentId: 1,
     skill: "Git",
-    description: "",
+    description:
+      "A tool without which I can't imagine the teamwork of developers.",
   },
   {
     parentId: 1,
     skill: "Firebase",
-    description: "",
+    description: "I mainly used it to create SSO for applications.",
   },
   {
     parentId: 1,
     skill: "JWT",
-    description: "",
+    description: "I created user authentication in the login panel using JWT.",
   },
   {
     parentId: 1,
     skill: "Figma",
-    description: "",
+    description:
+      "Create tasks and estimation work times base on design from Figma. Creating design and discus with team about tasks on meetings where we had shared screen.",
   },
   {
     parentId: 1,
     skill: "Styled Component",
-    description: "",
+    description:
+      "I use it in an advanced way to style applications while maintaining clean code.",
   },
   {
     parentId: 1,
     skill: "Tailwind CSS",
-    description: "",
+    description: "I use for application where there is a simple design.",
   },
   {
     parentId: 1,
     skill: "CSS3",
-    description: "",
+    description: "This is standard on Front-end.",
   },
   {
     parentId: 1,
     skill: "HTML5",
-    description: "",
+    description: "This is standard on Front-end.",
   },
   {
     parentId: 1,
     skill: "Storybook",
-    description: "",
+    description: "I was creating a design system.",
   },
   {
     parentId: 1,
     skill: "Cypress",
-    description: "",
+    description: "I have been creating e2e tests for web applications.",
   },
   {
     parentId: 1,
     skill: "Detox",
-    description: "",
+    description:
+      "I have been creating e2e tests for mobile applications in React Native.",
   },
   {
     parentId: 1,
     skill: "SQL",
-    description: "",
+    description:
+      "I used to combine and segregate data in tables to get a clear picture of the data.",
   },
   {
     parentId: 1,
     skill: "DayJS",
-    description: "",
+    description: "A useful and easy-to-use library for date handling.",
   },
   {
     parentId: 1,
     skill: "Lodash",
-    description: "",
+    description: "I use for complex data transformations.",
   },
   {
     parentId: 1,
     skill: "React Context API",
-    description: "",
+    description: "Passing data through the component tree.",
   },
   {
     parentId: 1,
     skill: "Redux",
-    description: "",
+    description: "I use to manage state in applications.",
   },
   {
     parentId: 1,
     skill: "Axios",
-    description: "",
+    description: "Creating service requests.",
   },
   {
     parentId: 1,
     skill: "Swagger",
-    description: "",
+    description: "Very good tool for documenting APIs.",
   },
   {
     parentId: 2,
     skill: "Make",
     description:
-      "adasdasdadasdasdasdasdadasdasdasdasdasdasasdashudbasduhbashudba",
+      "Create automation scenarios with conditioning for different departments in companies.",
   },
   {
     parentId: 2,
     skill: "Airtable",
-    description: "",
+    description:
+      "A useful database for integration with various tools with the ability to create user interfaces.",
   },
   {
     parentId: 2,
     skill: "Zapier",
-    description: "",
+    description:
+      "Create single-condition automations for different departments in companies.",
   },
   {
     parentId: 3,
     skill: "Browsers",
-    description: "",
+    description: "Developing and debugging browser applications.",
   },
   {
     parentId: 3,
     skill: "Mobile",
-    description: "",
+    description: "Developing and debugging mobile applications.",
   },
   {
     parentId: 3,
     skill: "Raspberry Pi",
-    description: "",
+    description: "Developing and debugging applications on Linux environment.",
   },
   {
     parentId: 4,
     skill: "Polish (native)",
-    description: "",
+    description: "It is my main language used every day.",
   },
   {
     parentId: 4,
     skill: "English",
-    description: "",
+    description: "This is my second language that I use daily.",
   },
   {
     parentId: 5,
     skill: "Autodesk Inventor",
-    description: "",
+    description:
+      "In this program, I created 3D models for an engineering project and a master's project.",
   },
   {
     parentId: 5,
     skill: "3D Printing",
-    description: "",
+    description: "I use 3D printing to create devices and everyday items.",
   },
   {
     parentId: 5,
     skill: "Process Simulate",
-    description: "",
+    description:
+      "Programming industrial robots and creating production cells for the automotive industry.",
   },
   {
     parentId: 5,
     skill: "Fusion 360",
-    description: "",
+    description: "Now my main program for designing 3D models.",
   },
   {
     parentId: 5,
     skill: "Autodesk AutoCad",
-    description: "",
+    description: "Create complex 2D models.",
   },
   {
     parentId: 5,
     skill: "Robcad",
-    description: "",
+    description:
+      "Programming industrial robots and creating production cells for the automotive industry.",
   },
   {
     parentId: 6,
     skill: "Adobe Premier Pro",
-    description: "",
+    description: "Video editing.",
   },
   {
     parentId: 6,
     skill: "Sony Vegas",
-    description: "",
+    description: "Video editing.",
   },
   {
     parentId: 6,
     skill: "MS Office Package",
-    description: "",
+    description: "Working with documents.",
+  },
+  {
+    parentId: 6,
+    skill: "Inkscape",
+    description: "Creating and editing vector graphics.",
   },
   {
     parentId: 6,
     skill: "Gimp",
-    description: "",
+    description: "Create and edit raster graphics.",
   },
   {
     parentId: 6,
     skill: "Adobe XD",
-    description: "",
+    description: "Vector graphics creation and web design.",
   },
   {
     parentId: 6,
     skill: "Driving Licence",
-    description: "",
+    description: "I have a category B driver's license.",
   },
 ];
