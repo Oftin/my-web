@@ -24,10 +24,10 @@ export const ArrowWrapper = styled.div<{ orientation: string }>`
 
 export const WhiteArrow = styled.div<{
   orientation: string;
-  showArrowhead?: boolean;
+  $showArrowhead?: boolean;
 }>`
-  ${({ orientation, showArrowhead }) =>
-    orientation === "vertical" && showArrowhead
+  ${({ orientation, $showArrowhead }) =>
+    orientation === "vertical" && $showArrowhead
       ? css`
           width: 2px;
           height: 100%;

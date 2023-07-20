@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Text, TextParagraph } from "../text";
 import { colors } from "@/styles/colors";
-import { FlexColumn } from "../wrappers/columns";
+import { Position } from "@/components/wrappers/position";
 import { scrollUserToTopView } from "@/helpers";
 
 interface ShortTileInfoProps {
@@ -27,7 +27,7 @@ export const ShortTileInfo = ({
       }}
       onClick={() => scrollUserToTopView()}
     >
-      <FlexColumn items="center" justify="center">
+      <Position>
         <Text
           text={title}
           color={colors.white}
@@ -40,7 +40,7 @@ export const ShortTileInfo = ({
           size="16px"
           styles="margin-top: 2.5rem; margin-left: 2.5rem; margin-right: 2.5rem; margin-bottom: 5rem"
         />
-      </FlexColumn>
+      </Position>
     </Link>
   );
 };

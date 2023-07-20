@@ -11,6 +11,12 @@ export const Nav = styled.nav`
   padding-bottom: 1rem;
 
   background-color: ${colors.background.mirage};
+
+  border-bottom: 1px solid ${colors.greenThemeColor};
+
+  &:hover {
+    box-shadow: 0px 0px 10px 0px ${colors.greenThemeColor};
+  }
 `;
 
 export const Ul = styled.ul`

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { colors } from "@/styles/colors";
 import { Text, WhiteAndGreenText } from "../text";
-import { FlexColumn } from "../wrappers/columns";
+import { Position } from "@/components/wrappers/position";
 import { Images } from "../images";
 
 interface FooterProps {
@@ -27,15 +27,10 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
   }, []);
 
   return (
-    <FlexColumn
-      items="center"
-      justify="center"
-      styles={`background-color: ${backgroundColor}`}
-    >
-      <FlexColumn
-        direction="row"
-        items="center"
-        justify="space-between"
+    <Position styles={`background-color: ${backgroundColor};`}>
+      <Position
+        flexDirection="row"
+        justifyContent="space-between"
         styles="marginLeft: 8rem; marginRight: 3.5rem; width: 80%; height: 144px;"
       >
         <div>
@@ -69,7 +64,7 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
           size="12px"
           styles="margin-right: -4rem;"
         />
-      </FlexColumn>
-    </FlexColumn>
+      </Position>
+    </Position>
   );
 };

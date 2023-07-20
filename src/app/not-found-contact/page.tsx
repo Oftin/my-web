@@ -10,7 +10,8 @@ import { Input, TextArea } from "@/components/inputs";
 import { Navbar } from "@/components/navbar";
 import { Text } from "@/components/text";
 import { Toast } from "@/components/toast";
-import { Column, FlexColumn } from "@/components/wrappers/columns";
+import { Position } from "@/components/wrappers/position";
+import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { sendEmailWithEmailJS } from "@/helpers";
 
@@ -63,7 +64,7 @@ export default function NotFoundContact() {
   return (
     <>
       <Navbar />
-      <FlexColumn items="center" justify="center" styles="height: 100vh;">
+      <Position items="center" justify="center" styles="height: 100vh;">
         <div style={{ display: "flex", gap: 12 }}>
           <Text text="Idea for" color={colors.white} size="48px" />
           <Text text="New" color={colors.greenThemeColor} size="48px" />
@@ -124,7 +125,7 @@ export default function NotFoundContact() {
           disabled={disabledRequestButton}
         />
         <Toast toastType={typeToast} />
-      </FlexColumn>
+      </Position>
       <Footer />
     </>
   );

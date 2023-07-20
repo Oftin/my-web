@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const DisplayGridWrapper = styled.div<{
-  numberOfColumn?: number;
-  numberOfRows?: number;
+  $numberOfColumn?: number;
+  $numberOfRows?: number;
   styles?: string;
 }>`
   display: grid;
@@ -10,15 +10,15 @@ export const DisplayGridWrapper = styled.div<{
   align-items: center;
 
   ${(props) =>
-    props.numberOfColumn &&
+    props.$numberOfColumn &&
     css`
-      grid-template-columns: repeat(${props.numberOfColumn}, minmax(0, 1fr));
+      grid-template-columns: repeat(${props.$numberOfColumn}, minmax(0, 1fr));
     `}
 
   ${(props) =>
-    props.numberOfRows &&
+    props.$numberOfRows &&
     css`
-      grid-template-rows: repeat(${props.numberOfRows}, minmax(0, 1fr));
+      grid-template-rows: repeat(${props.$numberOfRows}, minmax(0, 1fr));
     `}
 
   ${(props) =>

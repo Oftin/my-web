@@ -1,7 +1,9 @@
+import { PagePosition } from "@/components/wrappers/pagePosition";
 import { CallToActionButton } from "@/components/buttons";
 import { ShortTileInfo } from "@/components/shortTileInfo";
 import { Text } from "@/components/text";
-import { Column, FlexColumn } from "@/components/wrappers/columns";
+import { Position } from "@/components/wrappers/position";
+import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { scrollUserToTopView } from "@/helpers";
 
@@ -32,40 +34,38 @@ const threeLastArticles = [
 
 export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
   return (
-    <FlexColumn
-      items="center"
-      justify="center"
-      styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
-      minusExtraSpaceFromEdgeOfScreen
-      id="blog"
-    >
-      <Text text="Blog" color={colors.greenThemeColor} size="36px" />
-      <Text
-        text="Latest Articles"
-        color={colors.white}
-        size="48px"
-        styles="margin-bottom: 3.5rem"
-      />
+    <PagePosition backgroundColor={backgroundColor} id="blog">
+      <Position
+        styles={`height: 100vh;  width: 100%; background-color: ${backgroundColor}`}
+      >
+        <Text text="Blog" color={colors.greenThemeColor} size="36px" />
+        <Text
+          text="Latest Articles"
+          color={colors.white}
+          size="48px"
+          styles="margin-bottom: 3.5rem"
+        />
 
-      <Column columns={3} gap={50}>
-        {threeLastArticles.map((article) => {
-          return (
-            <ShortTileInfo
-              key={article.title}
-              title={article.title}
-              href={article.href}
-              shortInfo={article.short}
-            />
-          );
-        })}
-      </Column>
+        <Column columns={3} gap={50}>
+          {threeLastArticles.map((article) => {
+            return (
+              <ShortTileInfo
+                key={article.title}
+                title={article.title}
+                href={article.href}
+                shortInfo={article.short}
+              />
+            );
+          })}
+        </Column>
 
-      <CallToActionButton
-        name="All Articles"
-        href="/blog"
-        styles="margin-top: 5rem"
-        onClick={() => scrollUserToTopView()}
-      />
-    </FlexColumn>
+        <CallToActionButton
+          name="All Articles"
+          href="/blog"
+          styles="margin-top: 5rem"
+          onClick={() => scrollUserToTopView()}
+        />
+      </Position>
+    </PagePosition>
   );
 };

@@ -6,7 +6,7 @@ import { ArrowWrapper, WhiteArrow } from "./styled";
 export const Arrow = ({ orientation, showArrowhead = true }: ArrowProps) => {
   return (
     <ArrowWrapper orientation={orientation}>
-      <WhiteArrow orientation={orientation} showArrowhead={showArrowhead} />
+      <WhiteArrow orientation={orientation} $showArrowhead={showArrowhead} />
       {orientation === "horizontal"
         ? showArrowhead && (
             <Image src={Icons.RightArrowTriangle} alt={""} width={15} />

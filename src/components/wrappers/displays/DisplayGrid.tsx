@@ -16,8 +16,8 @@ export const DisplayGrid = ({
 }: DisplayGridProps) => {
   return (
     <DisplayGridWrapper
-      numberOfColumn={numberOfColumn}
-      numberOfRows={numberOfRows}
+      $numberOfColumn={numberOfColumn}
+      $numberOfRows={numberOfRows}
       styles={styles}
     >
       {children}

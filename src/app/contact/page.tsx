@@ -10,7 +10,8 @@ import { Input, TextArea } from "@/components/inputs";
 import { Navbar } from "@/components/navbar";
 import { WhiteAndGreenText, Text } from "@/components/text";
 import { Toast } from "@/components/toast";
-import { Column, FlexColumn } from "@/components/wrappers/columns";
+import { Position } from "@/components/wrappers/position";
+import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { sendEmailWithEmailJS } from "@/helpers";
 
@@ -63,7 +64,7 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <FlexColumn items="center" justify="center" styles="height: 100vh;">
+      <Position styles="height: 100vh;">
         <WhiteAndGreenText
           firstText="Get In"
           secondText="Touch!"
@@ -127,7 +128,7 @@ export default function Contact() {
           disabled={disabledRequestButton}
         />
         <Toast toastType={typeToast} />
-      </FlexColumn>
+      </Position>
       <Footer />
     </>
   );

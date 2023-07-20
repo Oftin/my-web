@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { FlexColumn, Column } from "@/components/wrappers/columns";
+import { PagePosition } from "@/components/wrappers/pagePosition";
+import { Position } from "@/components/wrappers/position";
+import { Column } from "@/components/wrappers/column";
 import { TitleSection } from "@/components/titleSection";
 import { TextParagraph } from "@/components/text";
 import { CallToActionButton } from "@/components/buttons";
@@ -12,40 +14,32 @@ interface AboutSectionProps {
 
 export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
   return (
-    <Column
-      columns={2}
-      gap={10}
-      styles={`max-height: 100vh; background-color: ${backgroundColor}`}
-      extraSpaceFromEdgeOfScreen={true}
-      id="about"
-    >
-      <FlexColumn items="center" justify="center">
-        <Image
-          src={Images.ERC2019MyPhoto}
-          alt=""
-          width={500}
-          style={{
-            borderRadius: "8px",
-          }}
-        />
-      </FlexColumn>
+    <PagePosition backgroundColor={backgroundColor} paddingPlus id="about">
+      <Column columns={2} gap={10} styles={`max-height: 100vh;`}>
+        <Position>
+          <Image
+            src={Images.ERC2019MyPhoto}
+            alt=""
+            width={500}
+            style={{
+              borderRadius: "8px",
+            }}
+          />
+        </Position>
 
-      <FlexColumn
-        items="start"
-        justify="center"
-        styles="height: 100vh; width: 100%;"
-      >
-        <TitleSection upperText="My Intro" mainText="About Me" />
+        <Position alignItems="start" styles="height: 100vh; width: 100%;">
+          <TitleSection upperText="My Intro" mainText="About Me" />
 
-        <TextParagraph text="I'm a master of science in Automation and Robotics." />
-        <TextParagraph text="I studied at the University of Silesia." />
+          <TextParagraph text="I'm a master of science in Automation and Robotics." />
+          <TextParagraph text="I studied at the University of Silesia." />
 
-        <CallToActionButton
-          name="Read More"
-          href="/about"
-          onClick={() => scrollUserToTopView()}
-        />
-      </FlexColumn>
-    </Column>
+          <CallToActionButton
+            name="Read More"
+            href="/about"
+            onClick={() => scrollUserToTopView()}
+          />
+        </Position>
+      </Column>
+    </PagePosition>
   );
 };
