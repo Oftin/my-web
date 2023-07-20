@@ -40,7 +40,11 @@ export const TextStyle = styled.div<{
   size: TextSize;
   styles?: string;
 }>`
-  color: ${(props) => props.color};
+  ${(props) =>
+    props.color &&
+    css`
+      color: ${props.color};
+    `};
 
   ${(props) =>
     props.size &&

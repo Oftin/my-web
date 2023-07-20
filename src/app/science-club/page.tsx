@@ -48,14 +48,14 @@ export default function ScienceClub() {
                 "Through an intensive 9 months of dedicated work and collaboration, we were able to achieve an incredible goal - the creation of a Mars rover. It was a huge challenge, but thanks to our combined effort, determination and commitment, we managed to turn our ideas into real solutions."
               }
               size="24px"
-              styles="margin-top: 1rem; margin-bottom: 1rem"
+              styles="margin-top: 1rem; margin-bottom: 1rem;"
             />
             <TextParagraph
               text={
                 "Our work did not go unnoticed, as we had the opportunity to participate in the prestigious ERC2019 competition. This was not only a unique experience, but also a proof that our work was appreciated by the scientific community. We measured ourselves against other talented teams, and our Mars rover attracted the attention and interest of many people."
               }
               size="24px"
-              styles="margin-top: 1rem; margin-bottom: 1rem"
+              styles="margin-top: 1rem; margin-bottom: 1rem;"
             />
             <TextParagraph
               text={

@@ -61,7 +61,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
 
           {webTabs.map((tab) => {
             return (
-              <>
+              <div key={tab}>
                 {mainScreen ? (
                   <ReactScrollLink
                     to={`${tab}`}
@@ -73,11 +73,11 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                     <RightSideLi>{`.${tab}()`}</RightSideLi>
                   </ReactScrollLink>
                 ) : (
-                  <RightSideLi key={tab}>
+                  <RightSideLi>
                     <Link href={`/#${tab}`}>{`.${tab}()`}</Link>
                   </RightSideLi>
                 )}
-              </>
+              </div>
             );
           })}
         </Ul>

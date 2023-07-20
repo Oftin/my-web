@@ -1,0 +1,13 @@
+{
+  "presets": ["next/babel", "@babel/preset-typescript"],
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "src": true,
+        "displatName": true,
+        "preprocesor": false
+      }
+    ]
+  ]
+}

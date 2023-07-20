@@ -87,14 +87,14 @@ export default function About() {
               firstText="About"
               secondText="Me"
               textSize="48px"
-              styles="margin-bottom: 1rem"
+              styles="margin-bottom: 1rem;"
             />
             <TextParagraph
               text={
                 "The main word that describes me is an optimist. Because of that, I decided to rebrand myself as a programmer. With great passion for modern technology, especially artificial intelligence, I constantly try to improve my growing asset of skills. I have a master's degree in Automation and Robotics. Instead of problems, I see challenges and that is the mindset I am trying ro apply to my personal life and career path."
               }
               size="24px"
-              styles="margin-bottom: 1rem"
+              styles="margin-bottom: 1rem;"
             />
 
             <TextParagraph
