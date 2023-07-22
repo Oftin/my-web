@@ -20,6 +20,8 @@ export const ArrowWrapper = styled.div<{ orientation: string }>`
 
   align-items: center;
   justify-content: center;
+
+  margin: auto;
 `;
 
 export const WhiteArrow = styled.div<{
@@ -32,13 +34,11 @@ export const WhiteArrow = styled.div<{
           width: 2px;
           height: 100%;
           background-color: ${colors.white};
-          margin-bottom: -2px;
         `
       : css`
           width: 2px;
           height: 100%;
           background-color: ${colors.white};
-          margin-bottom: -2px;
         `};
 
   ${({ orientation }) =>

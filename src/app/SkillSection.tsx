@@ -1,14 +1,56 @@
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { CallToActionButton } from "@/components/buttons";
-import { Text, WhiteAndGreenText } from "@/components/text";
+import { Text, TextParagraph, WhiteAndGreenText } from "@/components/text";
 import { Position } from "@/components/wrappers/position";
 import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { scrollUserToTopView } from "@/helpers";
+import styled from "styled-components";
 
 interface SkillSectionProps {
   backgroundColor: string;
 }
+
+const SkillSectionWrapper = styled.div`
+  @media only screen and (max-width: 992px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    justify-content: center;
+  }
+
+  @media only screen and (min-width: 992px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 50vh;
+    align-items: center;
+  }
+`;
+
+const SkillWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  align-items: baseline;
+  justify-content: center;
+  justify-items: center;
+`;
+
+const ButtonForLargeScreen = styled.div`
+  @media only screen and (max-width: 992px) {
+    visibility: hidden;
+    display: none;
+  }
+`;
+
+const ButtonForSmallScreen = styled.div`
+  margin-top: 2rem;
+
+  @media only screen and (min-width: 992px) {
+    visibility: hidden;
+    display: none;
+  }
+`;
 
 export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
   const firstSkillsColumn = [
@@ -22,97 +64,89 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
 
   return (
     <PagePosition backgroundColor={backgroundColor} paddingPlus id="skills">
-      <Position styles={`width: 100%; height: 60vh;`}>
-        <Column columns={2} styles="width: 100%; height: 50vh">
-          <Position alignItems="start" styles="width: 100%;">
-            <WhiteAndGreenText
-              firstText="Favorite"
-              secondText="Skills"
-              textSize="32px"
-            />
-            <Text
-              text="My Skills"
-              color={colors.greenThemeColor}
-              size="48px"
-              styles="margin-bottom: 1.25rem"
-            />
-            <p
-              style={{
-                color: `${colors.white}`,
-                fontSize: "1.5rem",
-                lineHeight: "1,875rem",
-                opacity: 0.7,
-              }}
-            >
-              &quot;I always do what I can&apos;t, so I can figure<br></br>out
-              how to do it&quot; ~ Pablo Picasso
-            </p>
-
+      <SkillSectionWrapper>
+        <div>
+          <WhiteAndGreenText
+            firstText="Favorite"
+            secondText="Skills"
+            textSize="32px"
+          />
+          <Text
+            text="My Skills"
+            color={colors.greenThemeColor}
+            size="48px"
+            styles="margin-bottom: 1.25rem"
+          />
+          <TextParagraph
+            text={`"I always do what I can't, so I can figureout how to do it" ~ Pablo Picasso`}
+            size="20px"
+            width="410px"
+            styles="margin-bottom: 3rem;"
+          />
+          <ButtonForLargeScreen>
             <CallToActionButton
               name="Read More"
               href="/skills"
-              styles="margin-top: 3rem"
               onClick={() => scrollUserToTopView()}
             />
-          </Position>
+          </ButtonForLargeScreen>
+        </div>
 
-          <Position>
-            <Column columns={2} gap={5}>
-              <Position alignItems="start">
-                <ul
-                  style={{
-                    color: `${colors.white}`,
-                    fontSize: "1.5rem",
-                    lineHeight: "1,875rem",
-                    fontWeight: 700,
-                    listStyle: "none",
-                  }}
-                >
-                  {firstSkillsColumn.map((skill) => {
-                    return (
-                      <li key={skill} style={{ marginBottom: "1.25rem" }}>
-                        <span style={{ color: `${colors.greenThemeColor}` }}>
-                          {`0${
-                            firstSkillsColumn.findIndex((el) => el === skill) +
-                            1
-                          }.`}{" "}
-                        </span>
-                        {skill}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Position>
+        <SkillWrapper>
+          <ul
+            style={{
+              color: `${colors.white}`,
+              fontSize: "1.5rem",
+              lineHeight: "1,875rem",
+              fontWeight: 700,
+              listStyle: "none",
+            }}
+          >
+            {firstSkillsColumn.map((skill) => {
+              return (
+                <li key={skill} style={{ marginBottom: "1.25rem" }}>
+                  <span style={{ color: `${colors.greenThemeColor}` }}>
+                    {`0${
+                      firstSkillsColumn.findIndex((el) => el === skill) + 1
+                    }.`}{" "}
+                  </span>
+                  {skill}
+                </li>
+              );
+            })}
+          </ul>
 
-              <Position alignItems="start">
-                <ul
-                  style={{
-                    color: `${colors.white}`,
-                    fontSize: "1.5rem",
-                    lineHeight: "1,875rem",
-                    fontWeight: 700,
-                    listStyle: "none",
-                  }}
-                >
-                  {secondSkillsColumn.map((skill) => {
-                    return (
-                      <li key={skill} style={{ marginBottom: "1.25rem" }}>
-                        <span style={{ color: `${colors.greenThemeColor}` }}>
-                          {`0${
-                            secondSkillsColumn.findIndex((el) => el === skill) +
-                            5
-                          }.`}{" "}
-                        </span>
-                        {skill}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Position>
-            </Column>
-          </Position>
-        </Column>
-      </Position>
+          <ul
+            style={{
+              color: `${colors.white}`,
+              fontSize: "1.5rem",
+              lineHeight: "1,875rem",
+              fontWeight: 700,
+              listStyle: "none",
+            }}
+          >
+            {secondSkillsColumn.map((skill) => {
+              return (
+                <li key={skill} style={{ marginBottom: "1.25rem" }}>
+                  <span style={{ color: `${colors.greenThemeColor}` }}>
+                    {`0${
+                      secondSkillsColumn.findIndex((el) => el === skill) + 5
+                    }.`}{" "}
+                  </span>
+                  {skill}
+                </li>
+              );
+            })}
+          </ul>
+        </SkillWrapper>
+        <ButtonForSmallScreen>
+          <CallToActionButton
+            name="Read More"
+            href="/skills"
+            onClick={() => scrollUserToTopView()}
+          />
+        </ButtonForSmallScreen>
+      </SkillSectionWrapper>
     </PagePosition>
   );
 };

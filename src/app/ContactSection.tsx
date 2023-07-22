@@ -14,8 +14,8 @@ interface ContactSectionProps {
 
 export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
   return (
-    <PagePosition backgroundColor={backgroundColor} id="contact">
-      <Position styles={`height: 100vh;`}>
+    <PagePosition backgroundColor={backgroundColor} paddingPlus id="contact">
+      <Position>
         <WhiteAndGreenText
           firstText="Get In"
           secondText="Touch!"

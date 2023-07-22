@@ -5,7 +5,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 
 export const metadata = {
   title: "Kamil Bobrowski",
-  description: "Environment for learn and fun!",
+  description: "Environment for learning and fun!",
 };
 
 export default function RootLayout({

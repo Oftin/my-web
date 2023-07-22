@@ -64,7 +64,7 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <Position styles="height: 100vh;">
+      <Position>
         <WhiteAndGreenText
           firstText="Get In"
           secondText="Touch!"

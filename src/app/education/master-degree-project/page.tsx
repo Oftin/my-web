@@ -12,7 +12,7 @@ export default function MasterDegreeProject() {
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
-        <Position styles={"margin-top: 3rem; padding: 5em 0; height: 100%"}>
+        <Position>
           <Text
             text={"Master degree project"}
             color={colors.white}

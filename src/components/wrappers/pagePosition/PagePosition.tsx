@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { PagePositionWrapper } from "./styled";
+import { PageSize } from "@/components/wrappers/pageSize";
 
 interface PagePositionProps {
   children: ReactNode;
@@ -23,7 +24,7 @@ export const PagePosition = ({
       $paddingMinus={paddingMinus}
       id={id}
     >
-      {children}
+      <PageSize>{children}</PageSize>
     </PagePositionWrapper>
   );
 };

@@ -10,4 +10,5 @@ export const ContactButton = styled.div`
   color: ${colors.white};
   background-color: ${colors.greenThemeColor};
   cursor: pointer;
+  width: fit-content;
 `;

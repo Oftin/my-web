@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { PagePosition } from "@/components/wrappers/pagePosition";
 import { GreenAndWhiteText, Text } from "@/components/text";
 import { Position } from "@/components/wrappers/position";
 import { colors } from "@/styles/colors";
@@ -38,12 +38,12 @@ export default function Experience() {
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.mirage}>
-        <Position styles={"margin-bottom: 6rem;"}>
+        <Position>
           <Text
             text={"Experience"}
             color={colors.white}
             size={"48px"}
-            styles="margin-top: 10rem; margin-bottom: 4rem;"
+            styles="margin-bottom: 4rem;"
           />
           {importExperienceArray.map((exp) => {
             const lastElement = importExperienceArray.findLast((last) => {
@@ -54,7 +54,13 @@ export default function Experience() {
 
             return (
               <ExperienceWraper key={exp.company}>
-                <Arrow orientation="vertical" showArrowhead={showArrowhead} />
+                <div
+                  style={{
+                    height: "100%",
+                  }}
+                >
+                  <Arrow orientation="vertical" showArrowhead={showArrowhead} />
+                </div>
 
                 <div style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
                   <Text text={exp.company} color={colors.white} size={"20px"} />
@@ -62,7 +68,7 @@ export default function Experience() {
                   <div
                     style={{
                       display: "inline-flex",
-                      marginLeft: "-3.95rem",
+                      marginLeft: "-3.5rem",
                     }}
                   >
                     <Image
@@ -70,8 +76,8 @@ export default function Experience() {
                       alt={""}
                       style={{
                         margin: "auto",
-                        width: "25px",
-                        marginRight: "2.35rem",
+                        // width: "25px",
+                        marginRight: "1rem",
                         zIndex: 899,
                       }}
                     />
@@ -122,7 +128,6 @@ export default function Experience() {
           })}
         </Position>
       </PagePosition>
-
       <Footer />
     </>
   );

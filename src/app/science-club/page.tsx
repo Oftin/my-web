@@ -1,8 +1,8 @@
 "use client";
 
+import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { PagePosition } from "@/components/wrappers/pagePosition";
 import { TextParagraph, WhiteAndGreenText } from "@/components/text";
 import { Position } from "@/components/wrappers/position";
 import { Column } from "@/components/wrappers/column";
@@ -13,9 +13,7 @@ export default function ScienceClub() {
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
-        <Position
-          styles={`width: 100%; height:100%; padding-top: 4rem; padding-bottom: 4em; margin-top: 4rem;`}
-        >
+        <Position>
           <WhiteAndGreenText
             firstText="University"
             secondText="Time"

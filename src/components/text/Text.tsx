@@ -5,12 +5,18 @@ interface TextProps {
   text: string;
   color: string;
   size: TextSize;
+  centerText?: boolean;
   styles?: string;
 }
 
-export const Text = ({ text, color, size, styles }: TextProps) => {
+export const Text = ({ text, color, size, centerText, styles }: TextProps) => {
   return (
-    <TextStyle color={color} size={size} styles={styles}>
+    <TextStyle
+      $color={color}
+      $size={size}
+      $centerText={centerText}
+      $styles={styles}
+    >
       {text}
     </TextStyle>
   );

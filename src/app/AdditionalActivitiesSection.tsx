@@ -17,10 +17,7 @@ export const AdditionalActivitiesSection = ({
 }: AdditionalActivitiesSectionProps) => {
   return (
     <PagePosition backgroundColor={backgroundColor} paddingPlus>
-      <Position
-        alignItems="start"
-        styles={`width: 100%; height:100vh; padding-top: 5em; padding-bottom: 5em;`}
-      >
+      <Position alignItems="start">
         <WhiteAndGreenText
           firstText="University"
           secondText="Time"
@@ -32,7 +29,7 @@ export const AdditionalActivitiesSection = ({
           textSize="48px"
         />
 
-        <Position styles="width: 100%; height:100%">
+        <Position>
           <Column columns={2} gap={10}>
             <Position>
               <Image

@@ -6,19 +6,21 @@ interface TitleSectionProps {
   upperText: string;
   mainText: string;
   lowerText?: string;
+  width: string;
 }
 
 export const TitleSection = ({
   upperText,
   mainText,
   lowerText,
+  width,
 }: TitleSectionProps) => {
   const twoColorUpperText = upperText.split(" ");
 
   const upperTextHaveTwoWords = twoColorUpperText.length > 1;
 
   return (
-    <TitleSectionWrapper>
+    <TitleSectionWrapper $width={width}>
       {upperTextHaveTwoWords ? (
         <WhiteAndGreenText
           firstText={twoColorUpperText[0]}

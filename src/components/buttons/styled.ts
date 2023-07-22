@@ -21,7 +21,6 @@ export const ArrowBackWrapper = styled.button`
   position: absolute;
   top: 6rem;
   margin-left: 8rem;
-
   background: none;
   color: inherit;
   border: none;

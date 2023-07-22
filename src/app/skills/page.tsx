@@ -1,8 +1,8 @@
 "use client";
 
+import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { PagePosition } from "@/components/wrappers/pagePosition";
 import { ElementWithDropDownDescription } from "@/components/elementWithDropDownDescription";
 import { Text } from "@/components/text";
 import { Position } from "@/components/wrappers/position";
@@ -19,12 +19,7 @@ export default function Skills() {
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
         <Position>
-          <Text
-            text={"Skills"}
-            color={colors.greenThemeColor}
-            size={"48px"}
-            styles="margin-top: 10rem;"
-          />
+          <Text text={"Skills"} color={colors.greenThemeColor} size={"48px"} />
 
           {importSkillsTitleArray.map((el) => {
             const backgroundColorForSection =
@@ -41,7 +36,7 @@ export default function Skills() {
               <div
                 key={el.title}
                 style={{
-                  width: "100%",
+                  width: "100vw",
                   backgroundColor: backgroundColorForSection,
                 }}
               >
@@ -74,7 +69,7 @@ export default function Skills() {
           })}
         </Position>
 
-        <Position styles="margin-top: 6rem; margin-bottom: 12rem">
+        <Position styles="margin-top: 6rem;">
           <Text
             text={"More skills incoming!"}
             color={colors.white}

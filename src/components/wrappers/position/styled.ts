@@ -8,16 +8,52 @@ export const PositionWrapper = styled.div<{
   $styles?: string;
 }>`
   display: flex;
+  width: 100%;
+  height: 100%;
 
-  flex-direction: ${(props) => props.$flexDirection};
+  ${(props) =>
+    props.$flexDirection &&
+    css`
+      flex-direction: column;
 
-  justify-content: ${(props) => props.$justifyContent};
-  align-items: ${(props) => props.$alignItems};
-  align-content: ${(props) => props.$alignContent};
+      @media only screen and (min-width: 992px) {
+        flex-direction: ${props.$flexDirection};
+      }
+    `};
+
+  ${(props) =>
+    props.$justifyContent &&
+    css`
+      justify-content: center;
+
+      @media only screen and (min-width: 992px) {
+        justify-content: ${props.$justifyContent};
+      }
+    `};
+
+  ${(props) =>
+    props.$alignItems &&
+    css`
+      align-items: center;
+
+      @media only screen and (min-width: 992px) {
+        align-items: ${props.$alignItems};
+      }
+    `};
+
+  ${(props) =>
+    props.$alignContent &&
+    css`
+      align-content: center;
+
+      @media only screen and (min-width: 992px) {
+        align-content: ${props.$alignContent};
+      }
+    `};
 
   ${(props) =>
     props.$styles &&
     css`
       ${props.$styles}
-    `}
+    `};
 `;

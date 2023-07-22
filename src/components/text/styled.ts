@@ -15,46 +15,62 @@ export const TwoWordsTextWrapper = styled.div<{ styles?: string }>`
 `;
 
 export const TextParagraphWrapper = styled.p<{
-  size?: TextSize;
-  styles?: string;
+  $size?: TextSize;
+  $width?: string;
+  $styles?: string;
 }>`
   color: ${colors.white};
+  text-align: justify;
+  text-justify: inter-word;
 
   opacity: 0.6;
 
-  ${(props) =>
-    props.size &&
+  ${({ $size }) =>
+    $size &&
     css`
-      ${typography.text[`${props.size}`]}
+      ${typography.text[`${$size}`]}
     `}
 
-  ${(props) =>
-    props.styles &&
+  ${({ $width }) =>
+    $width &&
     css`
-      ${props.styles}
+      width: ${$width};
+    `}
+
+  ${({ $styles }) =>
+    $styles &&
+    css`
+      ${$styles}
     `}
 `;
 
 export const TextStyle = styled.div<{
-  color: string;
-  size: TextSize;
-  styles?: string;
+  $color: string;
+  $size: TextSize;
+  $centerText?: boolean;
+  $styles?: string;
 }>`
-  ${(props) =>
-    props.color &&
+  ${({ $color }) =>
+    $color &&
     css`
-      color: ${props.color};
+      color: ${$color};
     `};
 
-  ${(props) =>
-    props.size &&
+  ${({ $size }) =>
+    $size &&
     css`
-      ${typography.text[`${props.size}`]}
+      ${typography.text[`${$size}`]}
     `};
 
-  ${(props) =>
-    props.styles &&
+  ${({ $centerText }) =>
+    $centerText &&
     css`
-      ${props.styles}
+      text-align: center;
+    `}
+
+  ${({ $styles }) =>
+    $styles &&
+    css`
+      ${$styles}
     `};
 `;

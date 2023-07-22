@@ -20,14 +20,12 @@ export const EducationSection = ({
     <PagePosition backgroundColor={backgroundColor} paddingPlus id="education">
       <Position
         alignItems="start"
-        styles={`width: 100%; height: 100%; padding-top: 5em; padding-bottom: 5em;`}
+        styles="padding-top: 6rem; padding-bottom: 6rem;"
       >
         <Text text="University" color={colors.greenThemeColor} size="32px" />
         <Text text="Education" color={colors.white} size="48px" />
 
-        <Position
-          styles={`width: 100%; height: 100%; background-color: ${backgroundColor}; margin-top: 2rem;`}
-        >
+        <Position styles="height: fit-content">
           <div
             style={{
               display: "grid",
@@ -83,7 +81,7 @@ export const EducationSection = ({
               />
             </div>
 
-            <Position styles="margin-top: 7rem">
+            <Position styles="height: fit-content; margin-top: 7rem;">
               <Image
                 src={Images.EngineeringRobot}
                 alt={""}
@@ -164,7 +162,7 @@ export const EducationSection = ({
               />
             </div>
 
-            <Position styles="margin-top: 7rem">
+            <Position styles="height: fit-content; margin-top: 7rem;">
               <Image
                 src={Images.Spider}
                 alt={""}
@@ -176,7 +174,7 @@ export const EducationSection = ({
               />
 
               <Text
-                text="Engineering degree project"
+                text="Master degree project"
                 color={colors.white}
                 size="16px"
                 styles="margin-top: 1rem"
@@ -185,7 +183,7 @@ export const EducationSection = ({
               <CallToActionButton
                 name="Read More"
                 href="/education/master-degree-project"
-                styles="margin-top: 1rem"
+                styles="margin-top: 1rem;"
                 onClick={() => scrollUserToTopView()}
               />
             </Position>

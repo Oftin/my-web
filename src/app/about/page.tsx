@@ -73,7 +73,7 @@ export default function About() {
       <Navbar />
       <PagePosition>
         <Position>
-          <Column columns={2} styles="height: 100vh; margin-top: 4rem;">
+          <Column columns={2}>
             <Image
               src={Images.ERC2019MyPhoto}
               alt=""

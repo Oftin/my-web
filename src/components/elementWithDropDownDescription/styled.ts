@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { colors } from "@/styles/colors";
 
 export const ElementWithDropDownDescriptionWrapper = styled.div`
-  width: 100%;
+  max-width: 100%;
 `;
 
 export const MainPanelWrapper = styled.div<{
@@ -15,8 +15,7 @@ export const MainPanelWrapper = styled.div<{
   font-size: 1.5rem;
   line-height: 1.875rem;
   font-weight: 700;
-  padding: 0.75rem;
-  margin: 0.5rem;
+  padding: 0.75em;
   border-radius: 8px;
   cursor: pointer;
 
@@ -49,17 +48,15 @@ export const GreenDot = styled.div`
 
 export const CloseDropDown = styled.div`
   z-index: 10;
-  width: 20rem;
+  max-width: 100%;
   background-color: ${colors.greenThemeColorHover};
-  margin-top: -0.5rem;
-  margin-left: 1rem;
+  margin: 0 1rem 1rem 1rem;
   overflow-wrap: break-word;
   padding: 0.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   color: ${colors.white};
+  align-content: center;
 `;
 
 export const OpenDropDown = styled(CloseDropDown)`

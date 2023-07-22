@@ -1,6 +1,7 @@
 export const colors = {
   greenThemeColor: "#10A38A",
   greenThemeColorHover: "#097260",
+  grayText: "#70797D",
   fail: "#eb3352",
   failProgress: "#A31029",
   white: "#ffffff",

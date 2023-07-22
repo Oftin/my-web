@@ -25,7 +25,7 @@ export default function EngineeringDegreeProject() {
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
-        <Position styles={"margin-top: 3rem; height: 100vh;"}>
+        <Position>
           <Text
             text={"Engineering degree project"}
             color={colors.white}

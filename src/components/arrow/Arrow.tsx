@@ -9,10 +9,10 @@ export const Arrow = ({ orientation, showArrowhead = true }: ArrowProps) => {
       <WhiteArrow orientation={orientation} $showArrowhead={showArrowhead} />
       {orientation === "horizontal"
         ? showArrowhead && (
-            <Image src={Icons.RightArrowTriangle} alt={""} width={15} />
+            <Image src={Icons.RightArrowTriangle} alt={""} width={16} />
           )
         : showArrowhead && (
-            <Image src={Icons.DownArrowTriangle} alt={""} width={15} />
+            <Image src={Icons.DownArrowTriangle} alt={""} width={16} />
           )}
     </ArrowWrapper>
   );
