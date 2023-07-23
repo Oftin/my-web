@@ -5,8 +5,17 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Text } from "@/components/text";
-import { Position } from "@/components/wrappers/position";
 import { colors } from "@/styles/colors";
+import styled from "styled-components";
+
+const EngineeringDegreeProjectWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+`;
 
 export default function EngineeringDegreeProject() {
   const onPlayerReady: YouTubeProps["onReady"] = (event) => {
@@ -14,8 +23,8 @@ export default function EngineeringDegreeProject() {
   };
 
   const opts: YouTubeProps["opts"] = {
-    height: "510",
-    width: "905",
+    height: "340",
+    width: "600",
     playerVars: {
       autoplay: 1,
     },
@@ -25,7 +34,7 @@ export default function EngineeringDegreeProject() {
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
-        <Position>
+        <EngineeringDegreeProjectWrapper>
           <Text
             text={"Engineering degree project"}
             color={colors.white}
@@ -46,7 +55,7 @@ export default function EngineeringDegreeProject() {
               boxShadow: `0px 0px 10px 2px ${colors.greenThemeColor}`,
             }}
           />
-        </Position>
+        </EngineeringDegreeProjectWrapper>
       </PagePosition>
       <Footer />
     </>

@@ -7,13 +7,40 @@ import { TextParagraph, WhiteAndGreenText } from "@/components/text";
 import { Position } from "@/components/wrappers/position";
 import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
+import styled from "styled-components";
+
+const ScienceClubWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+`;
+
+const ColumnWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: start;
+  width: 80vw;
+  gap: 20px;
+
+  @media only screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
 export default function ScienceClub() {
   return (
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
-        <Position>
+        <ScienceClubWrapper>
           <WhiteAndGreenText
             firstText="University"
             secondText="Time"
@@ -24,7 +51,7 @@ export default function ScienceClub() {
             secondText="Club"
             textSize="48px"
           />
-          <Column columns={2}>
+          <ColumnWrapper>
             <div
               style={{
                 backgroundColor: "pink",
@@ -32,8 +59,8 @@ export default function ScienceClub() {
                 height: 500,
                 marginTop: "5rem",
               }}
-            ></div>
-            <div style={{ marginLeft: "-5rem" }}>
+            />
+            <div>
               <TextParagraph
                 text={
                   "As a member of a research club during my studies, I had the unusual opportunity to work in a team of about 20 talented people. Our team was extremely diverse, including mechanics, electronics engineers, programmers, 3D designers, and communication and power people."
@@ -62,8 +89,8 @@ export default function ScienceClub() {
                 size="24px"
               />
             </div>
-          </Column>
-        </Position>
+          </ColumnWrapper>
+        </ScienceClubWrapper>
       </PagePosition>
       <Footer />
     </>

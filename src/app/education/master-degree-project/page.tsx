@@ -6,13 +6,32 @@ import { Navbar } from "@/components/navbar";
 import { Text } from "@/components/text";
 import { Position } from "@/components/wrappers/position";
 import { colors } from "@/styles/colors";
+import styled from "styled-components";
+
+const MasterDegreeProjectWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  text-align: justify;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+`;
 
 export default function MasterDegreeProject() {
   return (
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
-        <Position>
+        <MasterDegreeProjectWrapper>
           <Text
             text={"Master degree project"}
             color={colors.white}
@@ -25,14 +44,13 @@ export default function MasterDegreeProject() {
             size={"24px"}
             styles="margin-bottom: 4rem;"
           />
-          <Position styles="width: 80vw;">
-            <Position alignItems={"start"} styles="width: 100%;">
-              <Text
-                text={"Abstract"}
-                color={colors.greenThemeColor}
-                size={"24px"}
-              />
-            </Position>
+          <ContentWrapper>
+            <Text
+              text={"Abstract"}
+              color={colors.greenThemeColor}
+              size={"24px"}
+            />
+
             <Text
               text={
                 "The aim of the work was to design, manufacture, and program a mobile platform for security control in rooms. Autodesk Inventor computer software environment was used to carry out the task. The supporting elements of the entire structure were made of PLA, using 3D printing technology. The motion system was implemented on an Arduino Uno board. Data collection from the environment and visualization of the obtained information were performed on a Raspberry Pi 3B+ computer platform."
@@ -42,13 +60,12 @@ export default function MasterDegreeProject() {
               styles="margin-bottom: 4rem;"
             />
 
-            <Position alignItems={"start"} styles="width: 100%;">
-              <Text
-                text={"Introduction"}
-                color={colors.greenThemeColor}
-                size={"24px"}
-              />
-            </Position>
+            <Text
+              text={"Introduction"}
+              color={colors.greenThemeColor}
+              size={"24px"}
+            />
+
             <Text
               text={
                 "Mobile platforms make it possible to work from a safe distance for human life and health while performing hazardous activities. Among them are inspections of the premises of buildings with possible biological contamination that are in danger of collapse."
@@ -74,21 +91,20 @@ export default function MasterDegreeProject() {
               styles="margin-bottom: 4rem;"
             />
 
-            <Position alignItems={"start"} styles="width: 100%;">
-              <Text
-                text={"Design process"}
-                color={colors.greenThemeColor}
-                size={"24px"}
-              />
-            </Position>
             <Text
-              text={
-                "The following design assumptions were made during the development of the mobile concept:"
-              }
-              color={colors.white}
-              size={"20px"}
+              text={"Design process"}
+              color={colors.greenThemeColor}
+              size={"24px"}
             />
-            <Position alignItems="start" styles="width: 100%;">
+
+            <div style={{ width: "100%" }}>
+              <Text
+                text={
+                  "The following design assumptions were made during the development of the mobile concept:"
+                }
+                color={colors.white}
+                size={"20px"}
+              />
               <Text
                 text={
                   "a) stability of the platform on a level, sloping and sandy surface,"
@@ -109,9 +125,7 @@ export default function MasterDegreeProject() {
                 size={"20px"}
                 styles="margin-bottom: 2rem;"
               />
-            </Position>
 
-            <Position>
               <Text
                 text={
                   "A computer-aided design system was used to design the mobile platform Autodesk Inventor. The design (Fig.1) has a central body and six legs. The high stability of the movement is a result of the number of legs, which allows to achieve a even pressure on the ground at six distant points (at least three legs are always in contact with the ground)."
@@ -170,13 +184,13 @@ export default function MasterDegreeProject() {
                 size={"20px"}
                 styles="margin-bottom: 4rem;"
               />
-              <Position alignItems={"start"} styles="width: 100%;">
-                <Text
-                  text={"Control system"}
-                  color={colors.greenThemeColor}
-                  size={"24px"}
-                />
-              </Position>
+
+              <Text
+                text={"Control system"}
+                color={colors.greenThemeColor}
+                size={"24px"}
+              />
+
               <Text
                 text={
                   "An Arduino Uno and a Raspberry Pi 3B+ were used to control the design, which allowed the system's tasks to be split between two boards and eased the task of software development. A servo controller with I2C communication was also used, which allows parallel control of multiple motors. In addition, it allowed reducing the amount of wiring inside the mobile platform. A POS-100-5-C power supply was used as the main power supply, which provides electricity to 18 servos. A portable battery, known as a powerbank, was used to power the logic, camera and sensors, which was placed inside the mobile platform."
@@ -198,6 +212,7 @@ export default function MasterDegreeProject() {
                   width: "100px",
                   height: "100px",
                   backgroundColor: "yellow",
+                  margin: "auto",
                 }}
               />
               <Text
@@ -272,47 +287,46 @@ export default function MasterDegreeProject() {
                 size={"20px"}
                 styles="margin-bottom: 4rem;"
               />
-              <Position alignItems={"start"} styles="width: 100%;">
-                <Text
-                  text={"Summary"}
-                  color={colors.greenThemeColor}
-                  size={"24px"}
-                />
-              </Position>
+
               <Text
-                text={
-                  "The aim of the study was to develop a mobile platform for remote security control in the premises. It was decided to go for a stable structure that has a total of six points of support, with a minimum of three points at all times when walking. The entire was designed in a CAD environment, using Autodesk Inventor. At the design stage design, it was necessary to take into account the numerous aspects for which the mobile platform must be prepared for during target operation."
-                }
-                color={colors.white}
-                size={"20px"}
-                styles="margin-bottom: 2rem;"
+                text={"Summary"}
+                color={colors.greenThemeColor}
+                size={"24px"}
               />
-              <Text
-                text={
-                  "The mobile platform was made using 3D printing technology. All supporting elements were made from PLA filament, which is lightweight and safe for the user during the printing process and does not emit gases that irritate the respiratory tract."
-                }
-                color={colors.white}
-                size={"20px"}
-                styles="margin-bottom: 2rem;"
-              />
-              <Text
-                text={
-                  "The system was split into two different microcontrollers. This made it possible to speed up the the process of programming and compiling the entire system, along with the division of responsibilities of of specific modules. The programmed modules responsible for the motion system were uploaded to the memory of the Arduino Uno board, and the modules responsible for communication wireless communication and collecting information from the environment were installed on a platform Raspberry Pi 3B+ computer platform"
-                }
-                color={colors.white}
-                size={"20px"}
-                styles="margin-bottom: 2rem;"
-              />
-              <Text
-                text={
-                  "An intuitive-to-use interface for operating the platform from mobile devices such as smartphones and tablets has also been designed."
-                }
-                color={colors.white}
-                size={"20px"}
-              />
-            </Position>
-          </Position>
-        </Position>
+            </div>
+            <Text
+              text={
+                "The aim of the study was to develop a mobile platform for remote security control in the premises. It was decided to go for a stable structure that has a total of six points of support, with a minimum of three points at all times when walking. The entire was designed in a CAD environment, using Autodesk Inventor. At the design stage design, it was necessary to take into account the numerous aspects for which the mobile platform must be prepared for during target operation."
+              }
+              color={colors.white}
+              size={"20px"}
+              styles="margin-bottom: 2rem;"
+            />
+            <Text
+              text={
+                "The mobile platform was made using 3D printing technology. All supporting elements were made from PLA filament, which is lightweight and safe for the user during the printing process and does not emit gases that irritate the respiratory tract."
+              }
+              color={colors.white}
+              size={"20px"}
+              styles="margin-bottom: 2rem;"
+            />
+            <Text
+              text={
+                "The system was split into two different microcontrollers. This made it possible to speed up the the process of programming and compiling the entire system, along with the division of responsibilities of of specific modules. The programmed modules responsible for the motion system were uploaded to the memory of the Arduino Uno board, and the modules responsible for communication wireless communication and collecting information from the environment were installed on a platform Raspberry Pi 3B+ computer platform"
+              }
+              color={colors.white}
+              size={"20px"}
+              styles="margin-bottom: 2rem;"
+            />
+            <Text
+              text={
+                "An intuitive-to-use interface for operating the platform from mobile devices such as smartphones and tablets has also been designed."
+              }
+              color={colors.white}
+              size={"20px"}
+            />
+          </ContentWrapper>
+        </MasterDegreeProjectWrapper>
       </PagePosition>
       <Footer />
     </>
