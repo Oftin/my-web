@@ -63,12 +63,6 @@ export const RightSideLiVertical = styled.li`
   justify-items: center;
   align-content: center;
 
-  @media only screen and (min-width: 992px) {
-    &:hover {
-      color: ${colors.greenThemeColor};
-    }
-  }
-
   @media only screen and (min-width: 991px) {
     visibility: hidden;
     display: none;

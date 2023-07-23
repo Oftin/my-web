@@ -30,18 +30,17 @@ a {
   background: #ffffff;
 }
 
-.bm-burger-bars-hover {
-  background: #10a38a;
-}
-
 .bm-cross-button {
-  visibility: hidden;
-  display: none;
+  background-color: none;
+  margin-right: 2rem;
+  margin-top: -2rem;
+  padding: 1.5rem;
 }
 
 .bm-cross {
-  visibility: hidden;
-  display: none;
+  background-color: none;
+  top: 10px;
+  right: 10px;
 }
 
 .bm-menu {

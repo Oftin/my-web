@@ -57,7 +57,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                onClick={() => setOpenHamburgerMenu(false)}
+                onClick={() => setOpenHamburgerMenu((prevState) => !prevState)}
               >
                 <WhiteAndGreenText
                   firstText="Kamil"
@@ -70,7 +70,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 href="/"
                 onClick={() => {
                   scrollUserToTopView();
-                  setOpenHamburgerMenu(false);
+                  setOpenHamburgerMenu((prevState) => !prevState);
                 }}
               >
                 <WhiteAndGreenText
@@ -92,7 +92,9 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                     smooth={true}
                     offset={tab === "skills" ? -200 : undefined}
                     duration={500}
-                    onClick={() => setOpenHamburgerMenu(false)}
+                    onClick={() =>
+                      setOpenHamburgerMenu((prevState) => !prevState)
+                    }
                   >
                     {`.${tab}()`}
                   </ReactScrollLink>
@@ -101,7 +103,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                     href={`/#${tab}`}
                     onClick={() => {
                       scrollUserToTopView();
-                      setOpenHamburgerMenu(false);
+                      setOpenHamburgerMenu((prevState) => !prevState);
                     }}
                   >{`.${tab}()`}</Link>
                 )}
@@ -114,7 +116,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
               right
               width={"100%"}
               isOpen={openHamburgerMenu}
-              onOpen={() => setOpenHamburgerMenu(true)}
+              onOpen={() => setOpenHamburgerMenu((prevState) => !prevState)}
             >
               {webTabs.map((tab) => {
                 return (
@@ -123,7 +125,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       href={`/#${tab}`}
                       onClick={() => {
                         scrollUserToTopView();
-                        setOpenHamburgerMenu(false);
+                        setOpenHamburgerMenu((prevState) => !prevState);
                       }}
                     >
                       {textInsideHamburgerMenu(tab)}
