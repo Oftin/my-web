@@ -107,7 +107,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
     // window.location.pathname === "/"
     false
   );
-  const [openHamburgerMenu, setOpenHamburgerMenu] = useState<boolean>(true);
+  const [openHamburgerMenu, setOpenHamburgerMenu] = useState<boolean>(false);
 
   // useEffect(() => {
   //   setMainScreen(window.location.pathname === "/");
@@ -195,28 +195,15 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
               {webTabs.map((tab) => {
                 return (
                   <MenuItems key={tab}>
-                    {mainScreen ? (
-                      <ReactScrollLink
-                        to={`${tab}`}
-                        spy={true}
-                        smooth={true}
-                        offset={tab === "skills" ? -200 : undefined}
-                        duration={500}
-                        onClick={() => setOpenHamburgerMenu(false)}
-                      >
-                        {textInsideHamburgerMenu(tab)}
-                      </ReactScrollLink>
-                    ) : (
-                      <Link
-                        href={`/#${tab}`}
-                        onClick={() => {
-                          scrollUserToTopView();
-                          setOpenHamburgerMenu(false);
-                        }}
-                      >
-                        {textInsideHamburgerMenu(tab)}
-                      </Link>
-                    )}
+                    <Link
+                      href={`/#${tab}`}
+                      onClick={() => {
+                        scrollUserToTopView();
+                        setOpenHamburgerMenu(false);
+                      }}
+                    >
+                      {textInsideHamburgerMenu(tab)}
+                    </Link>
                   </MenuItems>
                 );
               })}

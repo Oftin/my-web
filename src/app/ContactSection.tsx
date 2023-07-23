@@ -7,15 +7,24 @@ import { colors } from "@/styles/colors";
 import { scrollUserToTopView } from "@/helpers";
 import { Images } from "@/components/images";
 import Link from "next/link";
+import styled from "styled-components";
 
 interface ContactSectionProps {
   backgroundColor: string;
 }
 
+const ContactSectionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
   return (
     <PagePosition backgroundColor={backgroundColor} paddingPlus id="contact">
-      <Position>
+      <ContactSectionWrapper>
         <WhiteAndGreenText
           firstText="Get In"
           secondText="Touch!"
@@ -50,7 +59,7 @@ export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
             }}
           />
         </Link>
-      </Position>
+      </ContactSectionWrapper>
     </PagePosition>
   );
 };

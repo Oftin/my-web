@@ -23,7 +23,8 @@ const HelloSectionWrapper = styled.div`
   justify-items: center;
 
   @media only screen and (max-width: 992px) {
-    margin-top: 8rem;
+    padding-top: 8em;
+    padding-bottom: 6em;
   }
 
   @media only screen and (min-width: 992px) {

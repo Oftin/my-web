@@ -15,8 +15,9 @@ const SkillSectionWrapper = styled.div`
   @media only screen and (max-width: 992px) {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 4rem;
     justify-content: center;
+    padding-top: 6em;
+    padding-bottom: 6em;
   }
 
   @media only screen and (min-width: 992px) {

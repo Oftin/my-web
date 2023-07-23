@@ -21,9 +21,10 @@ const ExperienceSectionWrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   justify-self: center;
+  padding-top: 6em;
+  padding-bottom: 6em;
 
   @media only screen and (min-width: 992px) {
-    padding: 4em 0;
     height: 100vh;
   }
 `;
