@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import { Navbar } from "@/components/navbar";
-import { Position } from "@/components/wrappers/position";
-import { Column } from "@/components/wrappers/column";
 import { TextParagraph, WhiteAndGreenText, Text } from "@/components/text";
 import { Footer } from "@/components/footer";
 import { colors } from "@/styles/colors";

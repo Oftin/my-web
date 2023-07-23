@@ -1,11 +1,11 @@
 import { PacmanLoader } from "react-spinners";
-import { Position } from "@/components/wrappers/position";
 import { colors } from "@/styles/colors";
+import { LoaderWrapper } from "./styled";
 
 export const Loader = () => {
   return (
-    <Position styles="width: 100vw; height: 100vh;">
+    <LoaderWrapper>
       <PacmanLoader color={colors.greenThemeColor} size={50} />
-    </Position>
+    </LoaderWrapper>
   );
 };

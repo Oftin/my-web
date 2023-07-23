@@ -5,63 +5,17 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { GreenAndWhiteText, Text } from "@/components/text";
-import { Position } from "@/components/wrappers/position";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
-import { ExperienceWraper } from "./styled";
-import { experienceArray } from "./mockUp";
 import { Arrow } from "@/components/arrow";
-import styled from "styled-components";
-
-const ExperienceWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin-top: 10rem;
-  margin-bottom: 6rem;
-`;
-
-const ContentWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-
-  @media only screen and (max-width: 992px) {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  @media only screen and (max-width: 700px) {
-    grid-template-columns: 1fr 3fr;
-  }
-`;
-
-const ArrowWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-`;
-
-const ArrowPosition = styled.div`
-  position: absolute;
-  height: 40%;
-  margin-top: 4rem;
-
-  @media only screen and (max-width: 1300px) {
-    height: 40%;
-  }
-`;
-
-const ImagesWrapper = styled.div`
-  @media only screen and (max-width: 992px) {
-    visibility: hidden;
-    display: none;
-  }
-`;
+import { experienceArray } from "./mockUp";
+import {
+  ExperienceWrapper,
+  ContentWrapper,
+  ArrowWrapper,
+  ArrowPosition,
+  ImagesWrapper,
+} from "./styled";
 
 const importExperienceArray = experienceArray;
 

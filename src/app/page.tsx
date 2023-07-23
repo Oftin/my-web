@@ -1,15 +1,15 @@
 "use client";
 
 import { Navbar } from "@/components/navbar";
-import { HelloSection } from "./HelloSection";
-import { AboutSection } from "./AboutSection";
-import { ExperienceSection } from "./ExperienceSection";
-import { EducationSection } from "./EducationSection";
-import { AdditionalActivitiesSection } from "./AdditionalActivitiesSection";
-import { SkillSection } from "./SkillSection";
-// import { ProjectSection } from "./ProjectSection";
-// import { BlogSection } from "./BlogSection";
-import { ContactSection } from "./ContactSection";
+import { HelloSection } from "./sections/HelloSection";
+import { AboutSection } from "./sections/AboutSection/";
+import { ExperienceSection } from "./sections/ExperienceSection/";
+import { SkillSection } from "./sections/SkillSection/";
+import { EducationSection } from "./sections/EducationSection";
+import { AdditionalActivitiesSection } from "./sections/AdditionalActivitiesSection/";
+// import { ProjectSection } from "./sections/ProjectSection";
+// import { BlogSection } from "./sections/BlogSection";
+import { ContactSection } from "./sections/ContactSection/";
 import { Footer } from "@/components/footer";
 import { colors } from "@/styles/colors";
 

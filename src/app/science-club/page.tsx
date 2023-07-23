@@ -4,8 +4,6 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { TextParagraph, WhiteAndGreenText } from "@/components/text";
-import { Position } from "@/components/wrappers/position";
-import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import styled from "styled-components";
 
@@ -15,13 +13,20 @@ const ScienceClubWrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin-top: 8rem;
   margin-bottom: 4rem;
+
+  @media only screen and (max-width: 1400px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+  }
 `;
 
 const ColumnWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: start;
   width: 80vw;
@@ -52,14 +57,14 @@ export default function ScienceClub() {
             textSize="48px"
           />
           <ColumnWrapper>
-            <div
+            {/* <div
               style={{
                 backgroundColor: "pink",
                 width: 500,
                 height: 500,
                 marginTop: "5rem",
               }}
-            />
+            /> */}
             <div>
               <TextParagraph
                 text={

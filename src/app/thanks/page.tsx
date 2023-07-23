@@ -2,18 +2,9 @@
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { Position } from "@/components/wrappers/position";
 import { Text } from "@/components/text";
 import { colors } from "@/styles/colors";
-import styled from "styled-components";
-
-const ThanksWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
+import { ThanksWrapper } from "./styled";
 
 export default function Thanks() {
   return (

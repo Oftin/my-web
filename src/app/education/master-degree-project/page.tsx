@@ -4,7 +4,6 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Text } from "@/components/text";
-import { Position } from "@/components/wrappers/position";
 import { colors } from "@/styles/colors";
 import styled from "styled-components";
 import Image from "next/image";

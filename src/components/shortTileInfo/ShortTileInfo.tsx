@@ -1,14 +1,9 @@
 import Link from "next/link";
 import { Text, TextParagraph } from "../text";
 import { colors } from "@/styles/colors";
-import { Position } from "@/components/wrappers/position";
 import { scrollUserToTopView } from "@/helpers";
-
-interface ShortTileInfoProps {
-  href: string;
-  title: string;
-  shortInfo: string;
-}
+import { ContentWrapper } from "./styled";
+import { ShortTileInfoProps } from "./types";
 
 export const ShortTileInfo = ({
   href,
@@ -27,7 +22,7 @@ export const ShortTileInfo = ({
       }}
       onClick={() => scrollUserToTopView()}
     >
-      <Position>
+      <ContentWrapper>
         <Text
           text={title}
           color={colors.white}
@@ -40,7 +35,7 @@ export const ShortTileInfo = ({
           size="16px"
           styles="margin-top: 2.5rem; margin-left: 2.5rem; margin-right: 2.5rem; margin-bottom: 5rem"
         />
-      </Position>
+      </ContentWrapper>
     </Link>
   );
 };

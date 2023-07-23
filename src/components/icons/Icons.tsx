@@ -1,16 +1,15 @@
-import ArrowDown from "@/assets/icons/ArrowDown.svg";
-import ArrowLongHorizontal from "@/assets/icons/ArrowLongHorizontal.svg";
-import ArrowUp from "@/assets/icons/ArrowUp.svg";
-import ArrowBack from "@/assets/icons/ArrowBack.svg";
-import DropDownArrow from "@/assets/icons/DropDownArrow.svg";
+import ArrowDown from "@/assets/icons/arrows/ArrowDown.svg";
+import ArrowLongHorizontal from "@/assets/icons/arrows/ArrowLongHorizontal.svg";
+import ArrowUp from "@/assets/icons/arrows/ArrowUp.svg";
+import ArrowBack from "@/assets/icons/arrows/ArrowBack.svg";
+import DropDownArrow from "@/assets/icons/arrows/DropDownArrow.svg";
 import GreenDotWithRing from "@/assets/icons/GreenDotWithRing.svg";
-import HexagonIcon from "@/assets/icons/HexagonIcon.svg";
-import Support from "@/assets/icons/Support.svg";
-import IndustryRobot from "@/assets/icons/IndustryRobot.svg";
-import UnderwaterScooter from "@/assets/icons/UnderwaterScooter.svg";
-import Programming from "@/assets/icons/Programming.svg";
-import RightArrowTriangle from "@/assets/icons/RightArrowTriangle.svg";
-import DownArrowTriangle from "@/assets/icons/DownArrowTriangle.svg";
+import Support from "@/assets/icons/experience/Support.svg";
+import IndustryRobot from "@/assets/icons/experience/IndustryRobot.svg";
+import UnderwaterScooter from "@/assets/icons/experience/UnderwaterScooter.svg";
+import Programming from "@/assets/icons/experience/Programming.svg";
+import RightArrowTriangle from "@/assets/icons/arrows/RightArrowTriangle.svg";
+import DownArrowTriangle from "@/assets/icons/arrows/DownArrowTriangle.svg";
 import AI from "@/assets/icons/interests/AI.svg";
 import Electronics from "@/assets/icons/interests/Electronics.svg";
 import BusinessAnalytics from "@/assets/icons/interests/BusinessAnalytics.svg";
@@ -22,7 +21,6 @@ import Travels from "@/assets/icons/interests/Travels.svg";
 import Dancing from "@/assets/icons/interests/Dancing.svg";
 
 export const Icons = {
-  HexagonIcon,
   GreenDotWithRing,
   ArrowUp,
   ArrowDown,

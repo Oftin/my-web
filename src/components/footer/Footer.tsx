@@ -3,28 +3,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { colors } from "@/styles/colors";
 import { Text, WhiteAndGreenText } from "../text";
-import { Position } from "@/components/wrappers/position";
 import { Images } from "../images";
-import styled, { css } from "styled-components";
-
-interface FooterProps {
-  backgroundColor?: string;
-}
-
-const FooterWrapper = styled.div<{ $backgroundColor?: string }>`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-items: center;
-
-  height: 6rem;
-
-  ${({ $backgroundColor }) =>
-    $backgroundColor &&
-    css`
-      background-color: ${$backgroundColor};
-    `}
-`;
+import { FooterWrapper } from "./styled";
+import { FooterProps } from "./types";
 
 export const Footer = ({ backgroundColor }: FooterProps) => {
   const [

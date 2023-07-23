@@ -5,28 +5,9 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ElementWithDropDownDescription } from "@/components/elementWithDropDownDescription";
 import { Text } from "@/components/text";
-import { Position } from "@/components/wrappers/position";
-import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { skillTitleArray, skillsArray } from "./mockUp";
-import styled from "styled-components";
-
-const SkillsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ColumnSkills = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-
-  @media only screen and (max-width: 991px) {
-    grid-template-columns: 1fr 1fr;
-  }
-`;
+import { SkillsWrapper, ColumnSkills } from "./styled";
 
 const importSkillsTitleArray = skillTitleArray;
 const importSkillsArray = skillsArray;

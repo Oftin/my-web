@@ -10,8 +10,6 @@ import { Input, TextArea } from "@/components/inputs";
 import { Navbar } from "@/components/navbar";
 import { Text } from "@/components/text";
 import { Toast } from "@/components/toast";
-import { Position } from "@/components/wrappers/position";
-import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { sendEmailWithEmailJS } from "@/helpers";
 import styled from "styled-components";
