@@ -28,6 +28,11 @@ export const ArrowBackWrapper = styled.button`
   font: inherit;
   cursor: pointer;
   outline: inherit;
+
+  @media only screen and (max-width: 992px) {
+    visibility: hidden;
+    display: none;
+  }
 `;
 
 export const RequestButtonWrapper = styled.button`

@@ -11,6 +11,57 @@ import { Icons } from "@/components/icons";
 import { ExperienceWraper } from "./styled";
 import { experienceArray } from "./mockUp";
 import { Arrow } from "@/components/arrow";
+import styled from "styled-components";
+
+const ExperienceWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 10rem;
+  margin-bottom: 6rem;
+`;
+
+const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 992px) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr 3fr;
+  }
+`;
+
+const ArrowWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;
+
+const ArrowPosition = styled.div`
+  position: absolute;
+  height: 40%;
+  margin-top: 4rem;
+
+  @media only screen and (max-width: 1300px) {
+    height: 40%;
+  }
+`;
+
+const ImagesWrapper = styled.div`
+  @media only screen and (max-width: 992px) {
+    visibility: hidden;
+    display: none;
+  }
+`;
 
 const importExperienceArray = experienceArray;
 
@@ -38,7 +89,7 @@ export default function Experience() {
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.mirage}>
-        <Position>
+        <ExperienceWrapper>
           <Text
             text={"Experience"}
             color={colors.white}
@@ -53,14 +104,22 @@ export default function Experience() {
             const showArrowhead = exp.company === lastElement?.company;
 
             return (
-              <ExperienceWraper key={exp.company}>
-                <div
-                  style={{
-                    height: "100%",
-                  }}
-                >
-                  <Arrow orientation="vertical" showArrowhead={showArrowhead} />
-                </div>
+              <ContentWrapper key={exp.company}>
+                <ArrowWrapper>
+                  <ArrowPosition>
+                    <Arrow
+                      orientation="vertical"
+                      showArrowhead={showArrowhead}
+                    />
+                  </ArrowPosition>
+                  <Image
+                    src={Icons.GreenDotWithRing}
+                    alt=""
+                    style={{
+                      zIndex: 800,
+                    }}
+                  />
+                </ArrowWrapper>
 
                 <div style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
                   <Text text={exp.company} color={colors.white} size={"20px"} />
@@ -68,19 +127,8 @@ export default function Experience() {
                   <div
                     style={{
                       display: "inline-flex",
-                      marginLeft: "-3.5rem",
                     }}
                   >
-                    <Image
-                      src={Icons.GreenDotWithRing}
-                      alt={""}
-                      style={{
-                        margin: "auto",
-                        // width: "25px",
-                        marginRight: "1rem",
-                        zIndex: 899,
-                      }}
-                    />
                     <GreenAndWhiteText
                       firstText={exp.date}
                       secondText={exp.role}
@@ -105,30 +153,34 @@ export default function Experience() {
                   </ul>
                 </div>
 
-                {imageArray.map((el) => {
-                  const showImage = el.paretnId === exp.id;
-                  return (
-                    <>
-                      {showImage && (
-                        <Image
-                          key={el.paretnId}
-                          src={el.image}
-                          alt={""}
-                          width={150}
-                          style={{
-                            marginTop: "3rem",
-                          }}
-                        />
-                      )}
-                    </>
-                  );
-                })}
-              </ExperienceWraper>
+                <ImagesWrapper>
+                  {imageArray.map((el) => {
+                    const showImage = el.paretnId === exp.id;
+                    return (
+                      <>
+                        {showImage && (
+                          <Image
+                            key={el.paretnId}
+                            src={el.image}
+                            alt={""}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              marginTop: "3rem",
+                              maxWidth: "150px",
+                            }}
+                          />
+                        )}
+                      </>
+                    );
+                  })}
+                </ImagesWrapper>
+              </ContentWrapper>
             );
           })}
-        </Position>
+        </ExperienceWrapper>
       </PagePosition>
-      <Footer />
+      <Footer backgroundColor={colors.background.ebonyClay} />
     </>
   );
 }

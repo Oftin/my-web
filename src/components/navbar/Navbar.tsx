@@ -105,7 +105,7 @@ interface NavbarProps {
 export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
   const [mainScreen, setMainScreen] = useState<boolean>(
     // window.location.pathname === "/"
-    false
+    true
   );
   const [openHamburgerMenu, setOpenHamburgerMenu] = useState<boolean>(false);
 

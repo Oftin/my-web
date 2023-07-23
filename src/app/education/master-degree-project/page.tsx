@@ -7,6 +7,8 @@ import { Text } from "@/components/text";
 import { Position } from "@/components/wrappers/position";
 import { colors } from "@/styles/colors";
 import styled from "styled-components";
+import Image from "next/image";
+import { Images } from "@/components/images";
 
 const MasterDegreeProjectWrapper = styled.div`
   display: flex;
@@ -24,6 +26,36 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 80vw;
+`;
+
+const LeftImagesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+`;
+
+const Fig1Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80vw;
+  justify-content: center;
+  align-content: baseline;
+  margin: 2rem 0;
+  gap: 20px;
+`;
+
+const Fig3Wrapper = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  width: 80vw;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 2rem;
 `;
 
 export default function MasterDegreeProject() {
@@ -133,41 +165,34 @@ export default function MasterDegreeProject() {
                 color={colors.white}
                 size={"20px"}
               />
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "10px",
-                  width: "80vw",
-                  alignItems: "center",
-                  justifyItems: "center",
-                  margin: "2rem 0",
-                }}
-              >
-                <div>
-                  <div
+              <Fig1Wrapper>
+                <LeftImagesWrapper>
+                  <Image
+                    src={Images.MasterSpider_A}
+                    alt={""}
                     style={{
-                      width: "100px",
-                      height: "100px",
-                      backgroundColor: "pink",
+                      width: "100%",
+                      height: "100%",
                     }}
                   />
-                  <div
+                  <Image
+                    src={Images.MasterSpider_B}
+                    alt={""}
                     style={{
-                      width: "100px",
-                      height: "100px",
-                      backgroundColor: "yellow",
+                      width: "100%",
+                      height: "100%",
                     }}
                   />
-                </div>
-                <div
+                </LeftImagesWrapper>
+                <Image
+                  src={Images.MasterSpider_C}
+                  alt={""}
                   style={{
-                    width: "100px",
-                    height: "100px",
-                    backgroundColor: "green",
+                    width: "100%",
+                    height: "100%",
                   }}
                 />
-              </div>
+              </Fig1Wrapper>
               <Text
                 text={
                   "Fig. 1. Mobile platform layout: a) isometric view, b) minimum structure height, c) maximum leg spacing"
@@ -207,14 +232,13 @@ export default function MasterDegreeProject() {
                 size={"20px"}
                 styles="margin-bottom: 2rem;"
               />
-              <div
-                style={{
-                  width: "100px",
-                  height: "100px",
-                  backgroundColor: "yellow",
-                  margin: "auto",
-                }}
+
+              <Image
+                src={Images.MasterSpider_Leg}
+                alt=""
+                style={{ width: "100%", height: "100%" }}
               />
+
               <Text
                 text={"Fig. 2. View of servo system in a single leg"}
                 color={colors.white}
@@ -229,32 +253,20 @@ export default function MasterDegreeProject() {
                 size={"20px"}
                 styles="margin-bottom: 2rem;"
               />
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "3fr 1fr",
-                  gap: "10px",
-                  width: "80vw",
-                  alignItems: "center",
-                  justifyItems: "center",
-                  marginBottom: "2rem 0",
-                }}
-              >
-                <div
-                  style={{
-                    width: "300px",
-                    height: "100px",
-                    backgroundColor: "pink",
-                  }}
+
+              <Fig3Wrapper>
+                <Image
+                  src={Images.MasterSpider}
+                  alt=""
+                  style={{ width: "100%", height: "100%" }}
                 />
-                <div
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    backgroundColor: "yellow",
-                  }}
+                <Image
+                  src={Images.MasterSpider_App}
+                  alt=""
+                  style={{ width: "100%", height: "100%" }}
                 />
-              </div>
+              </Fig3Wrapper>
+
               <Text
                 text={
                   "Fig. 3 a). View of the ready-to-use mobile platform, b) arrangement of elements on the website"

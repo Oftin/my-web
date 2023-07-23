@@ -213,7 +213,7 @@ export const EducationSection = ({
               }}
             >
               <Image
-                src={Images.Spider}
+                src={Images.MasterSpider}
                 alt={""}
                 width={300}
                 height={170}
