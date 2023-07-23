@@ -14,6 +14,35 @@ import { Position } from "@/components/wrappers/position";
 import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { sendEmailWithEmailJS } from "@/helpers";
+import styled from "styled-components";
+
+const NotFoundContactWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 2rem;
+`;
+
+const TopInputs = styled.div`
+  display: grid;
+  grid-template-columns: 315px 315px;
+  gap: 20px;
+  margin: 1rem;
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 250px 250px;
+  }
+`;
+
+const TextAreaModifier = styled(TextArea)`
+  width: 650px;
+
+  @media only screen and (max-width: 700px) {
+    width: 520px;
+  }
+`;
 
 export default function NotFoundContact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
@@ -64,22 +93,17 @@ export default function NotFoundContact() {
   return (
     <>
       <Navbar />
-      <Position items="center" justify="center" styles="height: 100vh;">
+      <NotFoundContactWrapper>
         <div style={{ display: "flex", gap: 12 }}>
           <Text text="Idea for" color={colors.white} size="48px" />
           <Text text="New" color={colors.greenThemeColor} size="48px" />
           <Text text="Page" color={colors.white} size="48px" />
         </div>
 
-        <Column
-          columns={2}
-          gap={20}
-          styles="margin-top: 45px; margin-bottom: 45px;"
-        >
+        <TopInputs>
           <Input
             type="text"
             placeholder="Enter your name"
-            width="315px"
             height="60px"
             handleChange={(e: React.FormEvent<HTMLInputElement>) =>
               setName(e.currentTarget.value)
@@ -90,18 +114,16 @@ export default function NotFoundContact() {
           <Input
             type="email"
             placeholder="Enter your email"
-            width="315px"
             height="60px"
             handleChange={(e: React.FormEvent<HTMLInputElement>) =>
               setEmail(e.currentTarget.value)
             }
             disabled={disabledInputs}
           />
-        </Column>
+        </TopInputs>
 
-        <TextArea
+        <TextAreaModifier
           placeholder="Enter your idea for new page"
-          width="650px"
           height="250px"
           handleChange={(e: React.FormEvent<HTMLTextAreaElement>) =>
             setNewPageIdea(e.currentTarget.value)
@@ -125,8 +147,8 @@ export default function NotFoundContact() {
           disabled={disabledRequestButton}
         />
         <Toast toastType={typeToast} />
-      </Position>
-      <Footer />
+      </NotFoundContactWrapper>
+      <Footer backgroundColor={colors.background.ebonyClay} />
     </>
   );
 }

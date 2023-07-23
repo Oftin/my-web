@@ -348,7 +348,7 @@ export const ExperienceSection = ({
 
         <div
           style={{
-            marginTop: "4rem;",
+            marginTop: "4rem",
           }}
         >
           <CallToActionButton

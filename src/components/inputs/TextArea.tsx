@@ -3,7 +3,7 @@ import { TextAreaWrapper } from "./styled";
 
 interface TextAreaProps {
   placeholder: string;
-  width: string;
+  width?: string;
   height: string;
   styles?: string;
   disabled?: boolean;

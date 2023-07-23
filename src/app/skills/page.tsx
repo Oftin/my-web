@@ -9,6 +9,24 @@ import { Position } from "@/components/wrappers/position";
 import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { skillTitleArray, skillsArray } from "./mockUp";
+import styled from "styled-components";
+
+const SkillsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ColumnSkills = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
 
 const importSkillsTitleArray = skillTitleArray;
 const importSkillsArray = skillsArray;
@@ -18,8 +36,13 @@ export default function Skills() {
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
-        <Position>
-          <Text text={"Skills"} color={colors.greenThemeColor} size={"48px"} />
+        <SkillsWrapper>
+          <Text
+            text={"Skills"}
+            color={colors.greenThemeColor}
+            size={"48px"}
+            styles="margin-top: 8rem;"
+          />
 
           {importSkillsTitleArray.map((el) => {
             const backgroundColorForSection =
@@ -38,16 +61,27 @@ export default function Skills() {
                 style={{
                   width: "100vw",
                   backgroundColor: backgroundColorForSection,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <Position styles="width: 100%; margin-top: 6rem; margin-bottom: 10rem;">
+                <div>
                   <Text
                     text={el.title}
                     color={colors.white}
                     size={"32px"}
-                    styles="margin-bottom: 2rem"
+                    styles="margin-top: 4rem; margin-bottom: 2rem;"
                   />
-                  <Column columns={3} gap={20}>
+                </div>
+                <div
+                  style={{
+                    width: "80%",
+                    marginBottom: "6rem",
+                  }}
+                >
+                  <ColumnSkills>
                     {importSkillsArray
                       .filter((skill) => skill.parentId === el.id)
                       .map((el) => {
@@ -62,20 +96,19 @@ export default function Skills() {
                           </div>
                         );
                       })}
-                  </Column>
-                </Position>
+                  </ColumnSkills>
+                </div>
               </div>
             );
           })}
-        </Position>
 
-        <Position styles="margin-top: 6rem;">
           <Text
             text={"More skills incoming!"}
             color={colors.white}
             size={"48px"}
+            styles="margin-top: 6rem; margin-bottom: 6rem;"
           />
-        </Position>
+        </SkillsWrapper>
       </PagePosition>
       <Footer />
     </>

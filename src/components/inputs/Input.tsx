@@ -4,7 +4,7 @@ import { InputWrapper } from "./styled";
 interface InputProps {
   type: "text" | "email";
   placeholder: string;
-  width: string;
+  width?: string;
   height: string;
   styles?: string;
   disabled?: boolean;

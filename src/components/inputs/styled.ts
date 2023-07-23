@@ -3,7 +3,7 @@ import { colors } from "@/styles/colors";
 import { typography } from "@/styles/typography";
 
 export const InputWrapper = styled.input<{
-  width: string;
+  width?: string;
   height: string;
   styles?: string;
 }>`
@@ -31,7 +31,7 @@ export const InputWrapper = styled.input<{
 `;
 
 export const TextAreaWrapper = styled.textarea<{
-  width: string;
+  width?: string;
   height: string;
   styles?: string;
 }>`
@@ -41,6 +41,7 @@ export const TextAreaWrapper = styled.textarea<{
   border-radius: 8px;
   color: ${colors.white};
   background-color: ${colors.background.ebonyClay};
+  width: 100%;
 
   ${typography.text["16px"]}
   font-weight: 400;

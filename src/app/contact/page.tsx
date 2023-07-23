@@ -14,6 +14,35 @@ import { Position } from "@/components/wrappers/position";
 import { Column } from "@/components/wrappers/column";
 import { colors } from "@/styles/colors";
 import { sendEmailWithEmailJS } from "@/helpers";
+import styled from "styled-components";
+
+const ContactWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 2rem;
+`;
+
+const TopInputs = styled.div`
+  display: grid;
+  grid-template-columns: 315px 315px;
+  gap: 20px;
+  margin: 1rem;
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 250px 250px;
+  }
+`;
+
+const TextAreaModifier = styled(TextArea)`
+  width: 650px;
+
+  @media only screen and (max-width: 700px) {
+    width: 520px;
+  }
+`;
 
 export default function Contact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
@@ -64,7 +93,7 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <Position>
+      <ContactWrapper>
         <WhiteAndGreenText
           firstText="Get In"
           secondText="Touch!"
@@ -73,15 +102,10 @@ export default function Contact() {
 
         <Text text="Contact Me" color={colors.white} size="48px" />
 
-        <Column
-          columns={2}
-          gap={20}
-          styles="margin-top: 1.5rem; margin-bottom: 1.5rem;"
-        >
+        <TopInputs>
           <Input
             type="text"
             placeholder="Enter your name"
-            width="315px"
             height="60px"
             handleChange={(e: React.FormEvent<HTMLInputElement>) =>
               setName(e.currentTarget.value)
@@ -92,18 +116,16 @@ export default function Contact() {
           <Input
             type="email"
             placeholder="Enter your email"
-            width="315px"
             height="60px"
             handleChange={(e: React.FormEvent<HTMLInputElement>) =>
               setEmail(e.currentTarget.value)
             }
             disabled={disabledInputs}
           />
-        </Column>
+        </TopInputs>
 
-        <TextArea
+        <TextAreaModifier
           placeholder="Enter your message"
-          width="650px"
           height="250px"
           textValue={message}
           handleChange={(e: React.FormEvent<HTMLTextAreaElement>) =>
@@ -128,8 +150,8 @@ export default function Contact() {
           disabled={disabledRequestButton}
         />
         <Toast toastType={typeToast} />
-      </Position>
-      <Footer />
+      </ContactWrapper>
+      <Footer backgroundColor={colors.background.ebonyClay} />
     </>
   );
 }
