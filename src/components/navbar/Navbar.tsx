@@ -32,8 +32,6 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
   const currentPage = usePathname();
   const mainScreen = currentPage === "/";
 
-  console.log("currentPage: ", currentPage);
-
   const textInsideHamburgerMenu = (text: string) => {
     return (
       <span style={{ color: `${colors.greenThemeColor}` }}>

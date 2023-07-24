@@ -1,50 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { toast } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha";
+import { toast } from "react-toastify";
+import { Toast } from "@/components/toast";
 import { RequestButton } from "@/components/buttons";
 import { Footer } from "@/components/footer";
-import { Input, TextArea } from "@/components/inputs";
+import { Input } from "@/components/inputs";
 import { Navbar } from "@/components/navbar";
 import { WhiteAndGreenText, Text } from "@/components/text";
-import { Toast } from "@/components/toast";
 import { colors } from "@/styles/colors";
 import { sendEmailWithEmailJS } from "@/helpers";
-import styled from "styled-components";
-
-const ContactWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin-top: 2rem;
-`;
-
-const TopInputs = styled.div`
-  display: grid;
-  grid-template-columns: 315px 315px;
-  gap: 20px;
-  margin: 1rem;
-
-  @media only screen and (max-width: 700px) {
-    grid-template-columns: 250px 250px;
-  }
-`;
-
-const TextAreaModifier = styled(TextArea)`
-  width: 650px;
-
-  @media only screen and (max-width: 700px) {
-    width: 520px;
-  }
-`;
+import { ContactWrapper, TopInputs, TextAreaModifier } from "./styled";
 
 export default function Contact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
   const [disabledInputs, setDisabledInputs] = useState<boolean>(false);
+  const [approvedReCAPTCHA, setApprovedReCAPTCHA] = useState<boolean>(false);
   const [disabledRequestButton, setDisabledRequestButton] =
     useState<boolean>(true);
 
@@ -84,9 +57,17 @@ export default function Contact() {
 
   const onChangeReCAPTCHA = (token: string | null): void | undefined => {
     if (token) {
-      setDisabledRequestButton(false);
+      setApprovedReCAPTCHA(true);
+    } else {
+      setApprovedReCAPTCHA(false);
     }
   };
+
+  useEffect(() => {
+    setDisabledRequestButton(
+      !name.length || !email.length || !message.length || !approvedReCAPTCHA
+    );
+  }, [name.length, email.length, message.length, approvedReCAPTCHA]);
 
   return (
     <>
