@@ -4,7 +4,6 @@ import { CallToActionButton } from "@/components/buttons";
 import { WhiteAndGreenText, GreenAndWhiteText, Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
-import { scrollUserToTopView } from "@/helpers";
 import { Images } from "@/components/images";
 import { Arrow } from "@/components/arrow";
 import {
@@ -99,7 +98,6 @@ export const EducationSection = ({
                 name="Read More"
                 href="/education/engineering-degree-project"
                 styles="margin-top: 1rem"
-                onClick={() => scrollUserToTopView()}
               />
             </div>
           </StudyTime>
@@ -176,7 +174,6 @@ export const EducationSection = ({
                 name="Read More"
                 href="/education/master-degree-project"
                 styles="margin-top: 1rem;"
-                onClick={() => scrollUserToTopView()}
               />
             </div>
           </StudyTime>

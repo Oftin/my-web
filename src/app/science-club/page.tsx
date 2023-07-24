@@ -15,11 +15,7 @@ const ScienceClubWrapper = styled.div`
   min-height: 100vh;
   margin-bottom: 4rem;
 
-  @media only screen and (max-width: 1400px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  @media only screen and (max-width: 800px) {
     margin-top: 8rem;
   }
 `;
@@ -57,14 +53,6 @@ export default function ScienceClub() {
             textSize="48px"
           />
           <ColumnWrapper>
-            {/* <div
-              style={{
-                backgroundColor: "pink",
-                width: 500,
-                height: 500,
-                marginTop: "5rem",
-              }}
-            /> */}
             <div>
               <TextParagraph
                 text={

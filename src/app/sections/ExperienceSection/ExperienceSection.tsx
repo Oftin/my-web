@@ -4,7 +4,6 @@ import { Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
 import { CallToActionButton } from "@/components/buttons";
-import { scrollUserToTopView } from "@/helpers";
 import { Arrow } from "@/components/arrow";
 import {
   ExperienceSectionWrapper,
@@ -298,11 +297,7 @@ export const ExperienceSection = ({
             marginTop: "4rem",
           }}
         >
-          <CallToActionButton
-            name="Read More"
-            href="/experience"
-            onClick={() => scrollUserToTopView()}
-          />
+          <CallToActionButton name="Read More" href="/experience" />
         </div>
       </ExperienceSectionWrapper>
     </PagePosition>

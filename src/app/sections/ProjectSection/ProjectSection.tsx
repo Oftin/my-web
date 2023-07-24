@@ -3,7 +3,6 @@ import { CallToActionButton } from "@/components/buttons";
 import { ShortTileInfo } from "@/components/shortTileInfo";
 import { Text } from "@/components/text";
 import { colors } from "@/styles/colors";
-import { scrollUserToTopView } from "@/helpers";
 import { ProjectSectionWrapper, TileWrapper } from "./styled";
 import { ProjectSectionProps } from "./types";
 
@@ -57,7 +56,6 @@ export const ProjectSection = ({ backgroundColor }: ProjectSectionProps) => {
           name="All Projects"
           href="/projects"
           styles="margin-top: 5rem"
-          onClick={() => scrollUserToTopView()}
         />
       </ProjectSectionWrapper>
     </PagePosition>

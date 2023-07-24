@@ -19,7 +19,8 @@ a {
 }
 
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
+  width: 10%;
   width: 36px;
   height: 30px;
   right: 48px;
@@ -46,7 +47,9 @@ a {
 .bm-menu {
   background: #1a2028;
   border-left: 1px solid #10a38a;
-  margin-top: 41px;
+  position: absolute;
+  top: 41px;
+  width: 100%;
   box-shadow: 0px 0px 10px 0px #10a38a;
   display: flex;
   justify-content: center;

@@ -3,7 +3,6 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { CallToActionButton } from "@/components/buttons";
 import { WhiteAndGreenText, Text } from "@/components/text";
 import { colors } from "@/styles/colors";
-import { scrollUserToTopView } from "@/helpers";
 import { Images } from "@/components/images";
 import Link from "next/link";
 import { ContactSectionWrapper } from "./styled";
@@ -21,11 +20,7 @@ export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
 
         <Text text="Contact Me" color={colors.white} size="48px" />
 
-        <CallToActionButton
-          name="Contact Form"
-          href="/contact"
-          onClick={() => scrollUserToTopView()}
-        />
+        <CallToActionButton name="Contact Form" href="/contact" />
 
         <Text
           text="or"

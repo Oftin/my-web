@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Link as ReactScrollLink } from "react-scroll";
 import { PagePosition } from "@/components/wrappers/pagePosition";
-import { TextParagraph, Text } from "@/components/text";
+import { TextParagraph } from "@/components/text";
 import { TitleSection } from "@/components/titleSection";
 import { Images } from "@/components/images";
 import {

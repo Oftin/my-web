@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Text, TextParagraph } from "../text";
 import { colors } from "@/styles/colors";
-import { scrollUserToTopView } from "@/helpers";
 import { ContentWrapper } from "./styled";
 import { ShortTileInfoProps } from "./types";
 
@@ -12,7 +11,7 @@ export const ShortTileInfo = ({
 }: ShortTileInfoProps) => {
   return (
     <Link
-      href={href}
+      href={`${href}` + "#top"}
       style={{
         backgroundColor: `${colors.background.ebonyClay}`,
         width: "20rem",
@@ -20,7 +19,6 @@ export const ShortTileInfo = ({
         border: "2px solid red",
         borderRadius: "8px",
       }}
-      onClick={() => scrollUserToTopView()}
     >
       <ContentWrapper>
         <Text

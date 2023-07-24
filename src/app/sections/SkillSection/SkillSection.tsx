@@ -2,7 +2,6 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { CallToActionButton } from "@/components/buttons";
 import { Text, TextParagraph, WhiteAndGreenText } from "@/components/text";
 import { colors } from "@/styles/colors";
-import { scrollUserToTopView } from "@/helpers";
 import {
   SkillSectionWrapper,
   SkillWrapper,
@@ -43,11 +42,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
             styles="margin-bottom: 3rem;"
           />
           <ButtonForLargeScreen>
-            <CallToActionButton
-              name="Read More"
-              href="/skills"
-              onClick={() => scrollUserToTopView()}
-            />
+            <CallToActionButton name="Read More" href="/skills" />
           </ButtonForLargeScreen>
         </div>
 
@@ -99,11 +94,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
           </ul>
         </SkillWrapper>
         <ButtonForSmallScreen>
-          <CallToActionButton
-            name="Read More"
-            href="/skills"
-            onClick={() => scrollUserToTopView()}
-          />
+          <CallToActionButton name="Read More" href="/skills" />
         </ButtonForSmallScreen>
       </SkillSectionWrapper>
     </PagePosition>

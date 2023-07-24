@@ -2,7 +2,7 @@ import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
 import { useEffect, useState } from "react";
 import { Link as ReactScrollLink } from "react-scroll";
-import { WhiteAndGreenText } from "../text";
+import { WhiteAndGreenText } from "@/components/text";
 import {
   NavbarPositionFixed,
   NavbarUlWrapper,
@@ -11,8 +11,7 @@ import {
   RightSideLiVertical,
   MenuItems,
 } from "./styled";
-import { ArrowBack } from "../buttons";
-import { scrollUserToTopView } from "@/helpers";
+import { ArrowBack } from "@/components/buttons";
 import { colors } from "@/styles/colors";
 import { NavbarProps } from "./types";
 
@@ -57,7 +56,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                onClick={() => setOpenHamburgerMenu((prevState) => !prevState)}
+                onClick={() => setOpenHamburgerMenu(false)}
               >
                 <WhiteAndGreenText
                   firstText="Kamil"
@@ -66,13 +65,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 />
               </ReactScrollLink>
             ) : (
-              <Link
-                href="/"
-                onClick={() => {
-                  scrollUserToTopView();
-                  setOpenHamburgerMenu((prevState) => !prevState);
-                }}
-              >
+              <Link href="/" onClick={() => setOpenHamburgerMenu(false)}>
                 <WhiteAndGreenText
                   firstText="Kamil"
                   secondText="Bobrowki"
@@ -101,10 +94,9 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 ) : (
                   <Link
                     href={`/#${tab}`}
-                    onClick={() => {
-                      scrollUserToTopView();
-                      setOpenHamburgerMenu((prevState) => !prevState);
-                    }}
+                    onClick={() =>
+                      setOpenHamburgerMenu((prevState) => !prevState)
+                    }
                   >{`.${tab}()`}</Link>
                 )}
               </RightSideLiHorizontal>
@@ -123,10 +115,9 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                   <MenuItems key={tab}>
                     <Link
                       href={`/#${tab}`}
-                      onClick={() => {
-                        scrollUserToTopView();
-                        setOpenHamburgerMenu((prevState) => !prevState);
-                      }}
+                      onClick={() =>
+                        setOpenHamburgerMenu((prevState) => !prevState)
+                      }
                     >
                       {textInsideHamburgerMenu(tab)}
                     </Link>

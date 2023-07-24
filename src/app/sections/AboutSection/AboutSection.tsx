@@ -3,7 +3,6 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { TitleSection } from "@/components/titleSection";
 import { TextParagraph } from "@/components/text";
 import { CallToActionButton } from "@/components/buttons";
-import { scrollUserToTopView } from "@/helpers";
 import { Images } from "@/components/images";
 import { AboutSectionWrapper, LeftSide, RigthSide } from "./styled";
 import { AboutSectionProps } from "./types";
@@ -36,11 +35,7 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
             width="310px"
           />
 
-          <CallToActionButton
-            name="Read More"
-            href="/about"
-            onClick={() => scrollUserToTopView()}
-          />
+          <CallToActionButton name="Read More" href="/about" />
         </RigthSide>
       </AboutSectionWrapper>
     </PagePosition>

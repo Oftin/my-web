@@ -1,7 +1,5 @@
 import emailjs from "@emailjs/browser";
 
-export const scrollUserToTopView = () => window.scrollTo(0, 0);
-
 interface sendEmailProps {
   name: string;
   email: string;

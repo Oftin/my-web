@@ -3,7 +3,6 @@ import { CallToActionButton } from "@/components/buttons";
 import { ShortTileInfo } from "@/components/shortTileInfo";
 import { Text } from "@/components/text";
 import { colors } from "@/styles/colors";
-import { scrollUserToTopView } from "@/helpers";
 import { BlogSectionWrapper, TileWrapper } from "./styled";
 import { BlogSectionProps } from "./type";
 
@@ -57,7 +56,6 @@ export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
           name="All Articles"
           href="/blog"
           styles="margin-top: 5rem"
-          onClick={() => scrollUserToTopView()}
         />
       </BlogSectionWrapper>
     </PagePosition>
