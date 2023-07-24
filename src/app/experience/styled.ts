@@ -1,3 +1,5 @@
+import { colors } from "@/styles/colors";
+import { typography } from "@/styles/typography";
 import styled from "styled-components";
 
 export const ExperienceWrapper = styled.div`
@@ -35,7 +37,7 @@ export const ArrowWrapper = styled.div`
 
 export const ArrowPosition = styled.div`
   position: absolute;
-  height: 40%;
+  height: 45%;
   margin-top: 4rem;
 
   @media only screen and (max-width: 1300px) {
@@ -48,4 +50,9 @@ export const ImagesWrapper = styled.div`
     visibility: hidden;
     display: none;
   }
+`;
+
+export const Ul = styled.div`
+  color: ${colors.white};
+  ${typography.text["16px"]}
 `;

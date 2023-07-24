@@ -15,6 +15,7 @@ import {
   ArrowWrapper,
   ArrowPosition,
   ImagesWrapper,
+  Ul,
 } from "./styled";
 
 const importExperienceArray = experienceArray;
@@ -90,21 +91,20 @@ export default function Experience() {
                       styles="margin: 1rem 0rem;"
                     />
                   </div>
-                  <ul>
+                  <Ul>
                     {exp.listDuties.map((el) => {
                       return (
                         <li
                           key={el}
                           style={{
-                            color: `${colors.white}`,
-                            marginLeft: "1rem",
+                            paddingBottom: "0.25em",
                           }}
                         >
                           {el}
                         </li>
                       );
                     })}
-                  </ul>
+                  </Ul>
                 </div>
 
                 <ImagesWrapper>

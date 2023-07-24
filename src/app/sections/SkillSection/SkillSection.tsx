@@ -7,6 +7,7 @@ import {
   SkillWrapper,
   ButtonForLargeScreen,
   ButtonForSmallScreen,
+  Ul,
 } from "./styled";
 import { SkillSectionProps } from "./types";
 
@@ -47,15 +48,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
         </div>
 
         <SkillWrapper>
-          <ul
-            style={{
-              color: `${colors.white}`,
-              fontSize: "1.5rem",
-              lineHeight: "1,875rem",
-              fontWeight: 700,
-              listStyle: "none",
-            }}
-          >
+          <Ul>
             {firstSkillsColumn.map((skill) => {
               return (
                 <li key={skill} style={{ marginBottom: "1.25rem" }}>
@@ -68,17 +61,9 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
                 </li>
               );
             })}
-          </ul>
+          </Ul>
 
-          <ul
-            style={{
-              color: `${colors.white}`,
-              fontSize: "1.5rem",
-              lineHeight: "1,875rem",
-              fontWeight: 700,
-              listStyle: "none",
-            }}
-          >
+          <Ul>
             {secondSkillsColumn.map((skill) => {
               return (
                 <li key={skill} style={{ marginBottom: "1.25rem" }}>
@@ -91,7 +76,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
                 </li>
               );
             })}
-          </ul>
+          </Ul>
         </SkillWrapper>
         <ButtonForSmallScreen>
           <CallToActionButton name="Read More" href="/skills" />

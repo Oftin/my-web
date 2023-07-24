@@ -1,3 +1,5 @@
+import { colors } from "@/styles/colors";
+import { typography } from "@/styles/typography";
 import styled from "styled-components";
 
 export const SkillSectionWrapper = styled.div`
@@ -40,4 +42,10 @@ export const ButtonForSmallScreen = styled.div`
     visibility: hidden;
     display: none;
   }
+`;
+
+export const Ul = styled.div`
+  color: ${colors.white};
+  ${typography.text["24px"]}
+  list-style: none;
 `;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { Icons } from "@/components/icons";
 import {
   ElementWithDropDownDescriptionWrapper,
   MainPanelWrapper,
@@ -8,14 +9,9 @@ import {
   GreenDot,
   OpenDropDown,
   CloseDropDown,
+  TextWrapper,
 } from "./styled";
-import { Icons } from "../icons";
-
-interface ElementWithDropDownDescriptionProps {
-  text: string;
-  backgroundColor: string;
-  dropDownText: string;
-}
+import { ElementWithDropDownDescriptionProps } from "./types";
 
 export const ElementWithDropDownDescription = ({
   text,
@@ -33,7 +29,7 @@ export const ElementWithDropDownDescription = ({
         <SpaceBetweenElements>
           <DotAndTitleWrapper>
             <GreenDot />
-            {text}
+            <TextWrapper>{text}</TextWrapper>
           </DotAndTitleWrapper>
           <Image
             src={Icons.DropDownArrow}

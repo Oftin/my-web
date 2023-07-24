@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { colors } from "@/styles/colors";
+import { typography } from "@/styles/typography";
 
 export const ElementWithDropDownDescriptionWrapper = styled.div`
   max-width: 100%;
@@ -61,4 +62,9 @@ export const CloseDropDown = styled.div`
 
 export const OpenDropDown = styled(CloseDropDown)`
   padding: 0.75rem;
+  ${typography.text["16px"]}
+`;
+
+export const TextWrapper = styled.div`
+  ${typography.text["24px"]}
 `;
