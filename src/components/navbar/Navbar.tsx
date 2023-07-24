@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { slide as Menu } from "react-burger-menu";
-import { useEffect, useState } from "react";
 import { Link as ReactScrollLink } from "react-scroll";
 import { WhiteAndGreenText } from "@/components/text";
 import {
@@ -26,15 +27,12 @@ const webTabs = [
 ].map((e) => e.toLowerCase());
 
 export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
-  const [mainScreen, setMainScreen] = useState<boolean>(
-    // window.location.pathname === "/"
-    false
-  );
   const [openHamburgerMenu, setOpenHamburgerMenu] = useState<boolean>(false);
 
-  // useEffect(() => {
-  //   setMainScreen(window.location.pathname === "/");
-  // }, [mainScreen]);
+  const currentPage = usePathname();
+  const mainScreen = currentPage === "/";
+
+  console.log("currentPage: ", currentPage);
 
   const textInsideHamburgerMenu = (text: string) => {
     return (

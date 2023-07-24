@@ -1,28 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { colors } from "@/styles/colors";
-import { Text, WhiteAndGreenText } from "../text";
-import { Images } from "../images";
+import { Text, WhiteAndGreenText } from "@/components/text";
+import { Images } from "@/components/images";
 import { FooterWrapper } from "./styled";
 import { FooterProps } from "./types";
 
 export const Footer = ({ backgroundColor }: FooterProps) => {
-  const [
-    disappearLinkedInButtonOnMainPage,
-    setDisappearLinkedInButtonOnMainPage,
-  ] = useState(
-    // window.location.pathname !== "/"
-    true
-  );
-
-  useEffect(() => {
-    setDisappearLinkedInButtonOnMainPage(
-      // window.location.pathname !== "/"
-      true
-    );
-  }, []);
-
   return (
     <FooterWrapper $backgroundColor={backgroundColor}>
       <div
@@ -38,21 +22,19 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
         <Text text="Front-end Developer" color={colors.white} size="16px" />
       </div>
 
-      {disappearLinkedInButtonOnMainPage && (
-        <Link
-          href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
-          target="_blank"
-        >
-          <Image
-            src={Images.LinkedIn}
-            alt=""
-            width={150}
-            style={{
-              borderRadius: "8px",
-            }}
-          />
-        </Link>
-      )}
+      <Link
+        href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
+        target="_blank"
+      >
+        <Image
+          src={Images.LinkedIn}
+          alt=""
+          width={150}
+          style={{
+            borderRadius: "8px",
+          }}
+        />
+      </Link>
 
       <Text
         text="© 2023 Kamil Bobrowski. All rights reserved."
