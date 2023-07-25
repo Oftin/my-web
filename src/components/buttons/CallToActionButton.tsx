@@ -5,12 +5,14 @@ interface CallToActionButtonProps {
   name: string;
   href: string;
   styles?: string;
+  margin?: string;
 }
 
 export const CallToActionButton = ({
   name,
   href,
   styles,
+  margin,
 }: CallToActionButtonProps) => {
   return (
     <LinkStyled
@@ -19,6 +21,7 @@ export const CallToActionButton = ({
       style={{
         backgroundColor: `${colors.greenThemeColor}`,
       }}
+      $margin={margin}
     >
       {name}
     </LinkStyled>

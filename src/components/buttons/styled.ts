@@ -2,18 +2,36 @@ import Link from "next/link";
 import styled, { css } from "styled-components";
 import { colors } from "@/styles/colors";
 import { typography } from "@/styles/typography";
+import { borderRadius } from "@/styles/borderRadius";
 
-export const LinkStyled = styled(Link)<{ styles?: string }>`
-  margin-top: 2rem;
-  ${typography.text["24px"]}
+export const LinkStyled = styled(Link)<{ styles?: string; $margin?: string }>`
   color: ${colors.white};
-  border-radius: 10px;
-  padding: 20px;
+  ${borderRadius["8px"]}
+  padding: 15px;
+
+  @media only screen and (max-width: 575px) {
+    ${typography.textForScreen["bold"].from361pxTo575pxIs16px}
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.textForScreen["bold"].from768pxTo1023pxIs20px}
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.textForScreen["bold"].from1440pxIs24px}
+    padding: 20px;
+  }
 
   ${(props) =>
     props.styles &&
     css`
       ${props.styles}
+    `}
+
+  ${({ $margin }) =>
+    $margin &&
+    css`
+      margin: ${$margin};
     `}
 `;
 

@@ -19,6 +19,10 @@ export const TopInputs = styled.div`
   @media only screen and (max-width: 700px) {
     grid-template-columns: 250px 250px;
   }
+
+  @media only screen and (max-width: 550px) {
+    grid-template-columns: 150px 150px;
+  }
 `;
 
 export const TextAreaModifier = styled(TextArea)`
@@ -26,5 +30,10 @@ export const TextAreaModifier = styled(TextArea)`
 
   @media only screen and (max-width: 700px) {
     width: 520px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 320px;
+    height: 150px;
   }
 `;

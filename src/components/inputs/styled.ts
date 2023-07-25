@@ -28,6 +28,11 @@ export const InputWrapper = styled.input<{
   &:disabled {
     background-color: ${colors.disabledColor};
   }
+
+  @media only screen and (max-width: 550px) {
+    padding: 10px 20px;
+    ${typography.text["12px"]}
+  }
 `;
 
 export const TextAreaWrapper = styled.textarea<{
@@ -58,5 +63,10 @@ export const TextAreaWrapper = styled.textarea<{
 
   &:disabled {
     background-color: ${colors.disabledColor};
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding: 20px 20px;
+    ${typography.text["12px"]}
   }
 `;
