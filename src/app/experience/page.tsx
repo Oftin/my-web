@@ -3,7 +3,6 @@
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { GreenAndWhiteText, Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
 import { Image } from "@/components/Modifiers";
@@ -48,12 +47,6 @@ export default function Experience() {
           <MainText>Experience</MainText>
 
           {importExperienceArray.map((exp) => {
-            const lastElement = importExperienceArray.findLast((last) => {
-              return last;
-            });
-
-            const showArrowhead = exp.company === lastElement?.company;
-
             return (
               <ContentWrapper key={exp.company}>
                 <div>
