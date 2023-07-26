@@ -1,47 +1,37 @@
-import Image from "next/image";
-import Link from "next/link";
-import { colors } from "@/styles/colors";
-import { Text, WhiteAndGreenText } from "@/components/text";
 import { Images } from "@/components/images";
-import { FooterWrapper } from "./styled";
+import { ImageWithLink } from "@/components/Modifiers";
 import { FooterProps } from "./types";
+import {
+  FooterWrapper,
+  LeftTopText,
+  LeftBottomText,
+  FooterImage,
+  RightText,
+} from "./styled";
 
 export const Footer = ({ backgroundColor }: FooterProps) => {
   return (
     <FooterWrapper $backgroundColor={backgroundColor}>
-      <div
-        style={{
-          marginLeft: "2rem",
-        }}
-      >
-        <WhiteAndGreenText
-          firstText="Kamil"
-          secondText="Bobrowski"
-          textSize="24px"
-        />
-        <Text text="Front-end Developer" color={colors.white} size="16px" />
+      <div>
+        <LeftTopText>
+          <div>Kamil</div>
+          <div>Bobrowski</div>
+        </LeftTopText>
+        <LeftBottomText>Front-end Developer</LeftBottomText>
       </div>
 
-      <Link
-        href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
-        target="_blank"
-      >
-        <Image
+      <FooterImage>
+        <ImageWithLink
+          href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
           src={Images.LinkedIn}
-          alt=""
-          width={150}
-          style={{
-            borderRadius: "8px",
-          }}
+          alt={""}
         />
-      </Link>
+      </FooterImage>
 
-      <Text
-        text="© 2023 Kamil Bobrowski. All rights reserved."
-        color={colors.white}
-        size="12px"
-        styles="margin-right: 2rem;"
-      />
+      <RightText>
+        <div>© 2023 Kamil Bobrowski.</div>
+        <div>All rights reserved.</div>
+      </RightText>
     </FooterWrapper>
   );
 };

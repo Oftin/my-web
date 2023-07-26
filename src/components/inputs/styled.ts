@@ -1,72 +1,47 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { colors } from "@/styles/colors";
 import { typography } from "@/styles/typography";
+import { borderRadius } from "@/styles/borderRadius";
 
-export const InputWrapper = styled.input<{
-  width?: string;
-  height: string;
-  styles?: string;
-}>`
-  border: none;
-  padding: 15px 30px;
-  border-radius: 8px;
-  color: ${colors.white};
+export const InputWrapper = styled.input`
   background-color: ${colors.background.ebonyClay};
-
-  ${typography.text["16px"]}
-  font-weight: 400;
-
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-
-  ${(props) =>
-    props.styles &&
-    css`
-      ${props.styles}
-    `}
+  color: ${colors.white};
+  ${borderRadius["8px"]}
+  border: none;
 
   &:disabled {
     background-color: ${colors.disabledColor};
   }
 
-  @media only screen and (max-width: 550px) {
-    padding: 10px 20px;
-    ${typography.text["12px"]}
+  @media only screen and (max-width: 767px) {
+    ${typography.text.normal["12px"]}
+    padding: 15px 20px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.normal["16px"]}
+    padding: 15px 30px;
   }
 `;
 
-export const TextAreaWrapper = styled.textarea<{
-  width?: string;
-  height: string;
-  styles?: string;
-}>`
+export const TextAreaWrapper = styled.textarea`
+  background-color: ${colors.background.ebonyClay};
+  color: ${colors.white};
+  ${borderRadius["8px"]}
   border: none;
   resize: none;
-  padding: 30px 30px;
-  border-radius: 8px;
-  color: ${colors.white};
-  background-color: ${colors.background.ebonyClay};
-  width: 100%;
-
-  ${typography.text["16px"]}
-  font-weight: 400;
-  line-height: 2;
-
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-
-  ${(props) =>
-    props.styles &&
-    css`
-      ${props.styles}
-    `}
 
   &:disabled {
     background-color: ${colors.disabledColor};
   }
 
-  @media only screen and (max-width: 550px) {
-    padding: 20px 20px;
-    ${typography.text["12px"]}
+  @media only screen and (max-width: 767px) {
+    ${typography.text.normal["12px"]}
+    padding: 15px 20px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.normal["16px"]}
+    padding: 20px 30px;
   }
 `;

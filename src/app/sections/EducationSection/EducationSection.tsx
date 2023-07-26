@@ -1,10 +1,10 @@
-import Image from "next/image";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { CallToActionButton } from "@/components/buttons";
 import { WhiteAndGreenText, GreenAndWhiteText, Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
 import { Images } from "@/components/images";
+import { Image } from "@/components/Modifiers";
 import { Arrow } from "@/components/arrow";
 import {
   EducationSectionWrapper,
@@ -32,13 +32,9 @@ export const EducationSection = ({
             <ArrowPosition>
               <Arrow orientation="vertical" showArrowhead={false} />
             </ArrowPosition>
-            <Image
-              src={Icons.GreenDotWithRing}
-              alt=""
-              style={{
-                zIndex: 800,
-              }}
-            />
+            <div>
+              <Image src={Icons.GreenDotWithRing} alt="" />
+            </div>
           </ArrowWrapper>
 
           <StudyTime>
@@ -77,15 +73,7 @@ export const EducationSection = ({
                 marginTop: "4rem",
               }}
             >
-              <Image
-                src={Images.EngineeringRobot}
-                alt={""}
-                width={300}
-                height={170}
-                style={{
-                  borderRadius: "8px",
-                }}
-              />
+              <Image src={Images.EngineeringRobot} alt={"EngineeringRobot"} />
 
               <Text
                 text="Engineering degree project"
@@ -108,13 +96,9 @@ export const EducationSection = ({
             <ArrowPosition>
               <Arrow orientation="vertical" />
             </ArrowPosition>
-            <Image
-              src={Icons.GreenDotWithRing}
-              alt=""
-              style={{
-                zIndex: 800,
-              }}
-            />
+            <div>
+              <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />
+            </div>
           </ArrowWrapper>
 
           <StudyTime>
@@ -153,15 +137,7 @@ export const EducationSection = ({
                 marginTop: "4rem",
               }}
             >
-              <Image
-                src={Images.MasterSpider}
-                alt={""}
-                width={300}
-                height={170}
-                style={{
-                  borderRadius: "8px",
-                }}
-              />
+              <Image src={Images.MasterSpider} alt={"MasterSpider"} />
 
               <Text
                 text="Master degree project"

@@ -8,51 +8,129 @@ export const ExperienceWrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin-top: 10rem;
-  margin-bottom: 6rem;
+
+  @media only screen and (max-width: 575px) {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-top: 10rem;
+    margin-bottom: 6rem;
+  }
 `;
 
 export const ContentWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  width: 100%;
   justify-content: center;
   align-items: center;
 
-  @media only screen and (max-width: 992px) {
-    grid-template-columns: 1fr 2fr;
+  @media only screen and (max-width: 575px) {
+    grid-template-columns: 290px 10%;
+    padding: 0.5rem 0;
   }
 
-  @media only screen and (max-width: 700px) {
-    grid-template-columns: 1fr 3fr;
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    grid-template-columns: 400px 15%;
+    padding: 1rem 0;
   }
-`;
 
-export const ArrowWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-`;
-
-export const ArrowPosition = styled.div`
-  position: absolute;
-  height: 45%;
-  margin-top: 4rem;
-
-  @media only screen and (max-width: 1300px) {
-    height: 40%;
-  }
-`;
-
-export const ImagesWrapper = styled.div`
-  @media only screen and (max-width: 992px) {
-    visibility: hidden;
-    display: none;
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 550px 20%;
+    padding: 2rem 0;
   }
 `;
 
 export const Ul = styled.div`
   color: ${colors.white};
-  ${typography.text["16px"]}
+
+  @media only screen and (max-width: 575px) {
+    ${typography.text.bold["8px"]}
+    gap: 6px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.text.bold["12px"]}
+    gap: 8px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.bold["16px"]}
+    gap: 10px;
+  }
+`;
+
+export const Li = styled.li`
+  color: ${colors.white};
+  padding-bottom: 0.25em;
+`;
+
+export const MainText = styled.div`
+  color: ${colors.white};
+  margin-bottom: 2rem;
+
+  @media only screen and (max-width: 575px) {
+    ${typography.titleText["28px"]}
+    gap: 6px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.titleText["36px"]}
+    gap: 8px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.titleText["48px"]}
+    gap: 10px;
+  }
+`;
+
+export const SecondText = styled.div`
+  display: flex;
+  color: ${colors.white};
+
+  :first-child {
+    color: ${colors.greenThemeColor};
+  }
+
+  @media only screen and (max-width: 575px) {
+    ${typography.text.bold["12px"]}
+    padding-bottom: 0.125rem;
+    gap: 6px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.text.bold["16px"]}
+    padding-bottom: 0.25rem;
+    gap: 8px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.bold["20px"]}
+    padding-bottom: 0.25rem;
+    gap: 10px;
+  }
+`;
+
+export const IconWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+
+  @media only screen and (max-width: 575px) {
+    padding-top: 1.5rem;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    padding-top: 1.75rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 2rem;
+  }
 `;

@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Text, WhiteAndGreenText } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { CallToActionButton } from "@/components/buttons";
 import { Images } from "@/components/images";
+import { Image } from "@/components/Modifiers";
 import {
   AdditionalActivitiesSectionWrapper,
   TitleWrapper,
@@ -34,17 +34,7 @@ export const AdditionalActivitiesSection = ({
 
         <ContentWrapper>
           <LeftSideWrapper>
-            <Image
-              src={Images.ERC2019}
-              alt=""
-              width={590}
-              height={345}
-              style={{
-                marginTop: "5rem",
-                marginBottom: "1.5rem",
-                borderRadius: "8px",
-              }}
-            />
+            <Image src={Images.ERC2019} alt="ERC2019" />
 
             <Text
               text="International Mars Rover Competition"

@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
 import { colors } from "@/styles/colors";
 import { typography } from "@/styles/typography";
+import { borderRadius } from "@/styles/borderRadius";
 
 export const ElementWithDropDownDescriptionWrapper = styled.div`
-  max-width: 100%;
+  width: 100%;
 `;
 
 export const MainPanelWrapper = styled.div<{
@@ -11,13 +12,11 @@ export const MainPanelWrapper = styled.div<{
 }>`
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   color: ${colors.white};
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  font-weight: 700;
-  padding: 0.75em;
-  border-radius: 8px;
+  ${borderRadius["8px"]}
   cursor: pointer;
 
   ${(props) =>
@@ -29,42 +28,117 @@ export const MainPanelWrapper = styled.div<{
 
 export const SpaceBetweenElements = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem 0 0.5rem;
 `;
 
 export const DotAndTitleWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const GreenDot = styled.div`
-  width: 0.75rem;
-  height: 0.75rem;
   background-color: ${colors.greenThemeColor};
   border-radius: 0.375rem;
   margin: 0.625rem 0.75rem;
+
+  @media only screen and (max-width: 575px) {
+    width: 0.4688rem;
+    height: 0.4688rem;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
 `;
 
 export const CloseDropDown = styled.div`
-  z-index: 10;
-  max-width: 100%;
   background-color: ${colors.greenThemeColorHover};
-  margin: 0 1rem 1rem 1rem;
-  overflow-wrap: break-word;
-  padding: 0.25rem;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
   color: ${colors.white};
   align-content: center;
+  overflow-wrap: break-word;
+  margin: 0 1rem 1rem 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  z-index: 10;
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    width: 230px;
+  }
+
+  @media only screen and (min-width: 767px) and (max-width: 1023px) {
+    width: 320px;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: 280px;
+  }
 `;
 
 export const OpenDropDown = styled(CloseDropDown)`
-  padding: 0.75rem;
-  ${typography.text["16px"]}
+  @media only screen and (max-width: 575px) {
+    ${typography.text.normal["8px"]}
+    padding: 0.5rem;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.text.normal["12px"]}
+    padding: 0.75rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.normal["16px"]}
+    padding: 0.75rem;
+  }
 `;
 
 export const TextWrapper = styled.div`
-  ${typography.text["24px"]}
+  @media only screen and (max-width: 575px) {
+    ${typography.text.bold["12px"]}
+    padding: 10px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.text.bold["16px"]}
+    padding: 12px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.bold["20px"]}
+    padding: 15px;
+  }
+`;
+
+export const ImageWrapper = styled.div<{ $showDropDownText: boolean }>`
+  display: flex;
+
+  ${({ $showDropDownText }) =>
+    $showDropDownText &&
+    css`
+      rotate: 180deg;
+    `}
+
+  @media only screen and (max-width: 575px) {
+    width: 0.9375rem;
+    height: 0.9375rem;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
 `;

@@ -4,10 +4,16 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { ElementWithDropDownDescription } from "@/components/elementWithDropDownDescription";
-import { Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { skillTitleArray, skillsArray } from "./mockUp";
-import { SkillsWrapper, ColumnSkills } from "./styled";
+import {
+  SkillsWrapper,
+  MainText,
+  SecondText,
+  ColumnSkills,
+  SectionWrapper,
+  ContentWrapper,
+} from "./styled";
 
 const importSkillsTitleArray = skillTitleArray;
 const importSkillsArray = skillsArray;
@@ -18,12 +24,7 @@ export default function Skills() {
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
         <SkillsWrapper>
-          <Text
-            text={"Skills"}
-            color={colors.greenThemeColor}
-            size={"48px"}
-            styles="margin-top: 8rem;"
-          />
+          <MainText>Skills</MainText>
 
           {importSkillsTitleArray.map((el) => {
             const backgroundColorForSection =
@@ -37,58 +38,33 @@ export default function Skills() {
                 : `${colors.background.ebonyClay}`;
 
             return (
-              <div
+              <SectionWrapper
                 key={el.title}
-                style={{
-                  width: "100vw",
-                  backgroundColor: backgroundColorForSection,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
+                $backgroundColor={backgroundColorForSection}
               >
-                <div>
-                  <Text
-                    text={el.title}
-                    color={colors.white}
-                    size={"32px"}
-                    styles="margin-top: 4rem; margin-bottom: 2rem;"
-                  />
-                </div>
-                <div
-                  style={{
-                    width: "80%",
-                    marginBottom: "6rem",
-                  }}
-                >
+                <SecondText>{el.title}</SecondText>
+
+                <ContentWrapper>
                   <ColumnSkills>
                     {importSkillsArray
                       .filter((skill) => skill.parentId === el.id)
                       .map((el) => {
                         return (
-                          <div key={el.skill}>
-                            <ElementWithDropDownDescription
-                              key={el.skill}
-                              text={el.skill}
-                              dropDownText={el.description}
-                              backgroundColor={backgroundColorForTile}
-                            />
-                          </div>
+                          <ElementWithDropDownDescription
+                            key={el.skill}
+                            text={el.skill}
+                            dropDownText={el.description}
+                            backgroundColor={backgroundColorForTile}
+                          />
                         );
                       })}
                   </ColumnSkills>
-                </div>
-              </div>
+                </ContentWrapper>
+              </SectionWrapper>
             );
           })}
 
-          <Text
-            text={"More skills incoming!"}
-            color={colors.white}
-            size={"48px"}
-            styles="margin-top: 6rem; margin-bottom: 6rem;"
-          />
+          <MainText $6remTopAndBottomMargin>More skills incoming!</MainText>
         </SkillsWrapper>
       </PagePosition>
       <Footer />

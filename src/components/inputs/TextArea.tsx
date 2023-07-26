@@ -3,9 +3,6 @@ import { TextAreaWrapper } from "./styled";
 
 interface TextAreaProps {
   placeholder: string;
-  width?: string;
-  height: string;
-  styles?: string;
   disabled?: boolean;
   textValue?: string;
   handleChange?: ChangeEventHandler<HTMLTextAreaElement> | undefined;
@@ -13,9 +10,6 @@ interface TextAreaProps {
 
 export const TextArea = ({
   placeholder,
-  width,
-  height,
-  styles,
   textValue,
   handleChange,
   ...props
@@ -27,9 +21,6 @@ export const TextArea = ({
     <>
       <TextAreaWrapper
         placeholder={placeholder}
-        width={width}
-        height={height}
-        styles={styles}
         maxLength={limitWords}
         value={textValue}
         onChange={handleChange}

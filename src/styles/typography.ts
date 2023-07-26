@@ -10,25 +10,20 @@ export const textDefault = css`
   line-height: 1.4;
 `;
 
-export const normalTextForScreenDefault = css`
+export const normalTextDefault = css`
   ${defaultFamily};
   font-weight: 400;
   line-height: 1.4;
 `;
 
-export const boldTextForScreenDefault = css`
-  ${defaultFamily};
-  font-weight: 700;
-  line-height: 1.4;
-`;
-export const titleTextForScreenDefault = css`
+export const boldTextDefault = css`
   ${defaultFamily};
   font-weight: 700;
   line-height: 1.4;
 `;
 
 export const typography = {
-  text: {
+  textOld: {
     "12px": css`
       ${textDefault};
       font-size: 0.75rem;
@@ -66,88 +61,134 @@ export const typography = {
       font-size: 2rem;
     `,
   },
-  textForScreen: {
+  text: {
     normal: {
-      to360pxIs14px: css`
-        ${normalTextForScreenDefault};
+      "6px": css`
+        ${normalTextDefault};
+        font-size: 0.375rem;
+      `,
+      "8px": css`
+        ${normalTextDefault};
+        font-size: 0.5rem;
+      `,
+      "10px": css`
+        ${normalTextDefault};
+        font-size: 0.625rem;
+      `,
+      "12px": css`
+        ${normalTextDefault};
+        font-size: 0.75rem;
+      `,
+      "14px": css`
+        ${normalTextDefault};
         font-size: 0.875rem;
       `,
-      from361pxTo575pxIs16px: css`
-        ${normalTextForScreenDefault};
+      "16px": css`
+        ${normalTextDefault};
         font-size: 1rem;
       `,
-      from576pxTo767pxIs18px: css`
-        ${normalTextForScreenDefault};
+      "18px": css`
+        ${normalTextDefault};
         font-size: 1.125rem;
       `,
-      from768pxTo1023pxIs20px: css`
-        ${normalTextForScreenDefault};
+      "20px": css`
+        ${normalTextDefault};
         font-size: 1.25rem;
       `,
-      from1024pxTo1439pxIs22px: css`
-        ${normalTextForScreenDefault};
+      "22px": css`
+        ${normalTextDefault};
         font-size: 1.375rem;
       `,
-      from1440pxIs24px: css`
-        ${normalTextForScreenDefault};
+      "24px": css`
+        ${normalTextDefault};
         font-size: 1.5rem;
       `,
     },
     bold: {
-      to360pxIs14px: css`
-        ${boldTextForScreenDefault};
+      "6px": css`
+        ${boldTextDefault};
+        font-size: 0.375rem;
+      `,
+      "8px": css`
+        ${boldTextDefault};
+        font-size: 0.5rem;
+      `,
+      "10px": css`
+        ${boldTextDefault};
+        font-size: 0.625rem;
+      `,
+      "12px": css`
+        ${boldTextDefault};
+        font-size: 0.75rem;
+      `,
+      "14px": css`
+        ${boldTextDefault};
         font-size: 0.875rem;
       `,
-      from361pxTo575pxIs16px: css`
-        ${boldTextForScreenDefault};
+      "16px": css`
+        ${boldTextDefault};
         font-size: 1rem;
       `,
-      from576pxTo767pxIs18px: css`
-        ${boldTextForScreenDefault};
+      "18px": css`
+        ${boldTextDefault};
         font-size: 1.125rem;
       `,
-      from768pxTo1023pxIs20px: css`
-        ${boldTextForScreenDefault};
+      "20px": css`
+        ${boldTextDefault};
         font-size: 1.25rem;
       `,
-      from1024pxTo1439pxIs22px: css`
-        ${boldTextForScreenDefault};
+      "22px": css`
+        ${boldTextDefault};
         font-size: 1.375rem;
       `,
-      from1440pxIs24px: css`
-        ${boldTextForScreenDefault};
+      "24px": css`
+        ${boldTextDefault};
         font-size: 1.5rem;
       `,
     },
   },
-  titleTextForScreen: {
+  titleText: {
     "18px": css`
-      ${titleTextForScreenDefault};
-      font-size: 18px;
+      ${boldTextDefault};
+      font-size: 1.125rem;
     `,
     "20px": css`
-      ${titleTextForScreenDefault};
-      font-size: 20px;
+      ${boldTextDefault};
+      font-size: 1.25rem;
     `,
     "24px": css`
-      ${titleTextForScreenDefault};
-      font-size: 24px;
+      ${boldTextDefault};
+      font-size: 1.5rem;
     `,
     "28px": css`
-      ${titleTextForScreenDefault};
-      font-size: 28px;
+      ${boldTextDefault};
+      font-size: 1.75rem;
     `,
     "32px": css`
-      ${titleTextForScreenDefault};
-      font-size: 32px;
+      ${boldTextDefault};
+      font-size: 2rem;
     `,
     "36px": css`
-      ${titleTextForScreenDefault};
-      font-size: 36px;
+      ${boldTextDefault};
+      font-size: 2.25rem;
     `,
     "48px": css`
-      ${titleTextForScreenDefault};
-      font-size: 48px;
+      ${boldTextDefault};
+      font-size: 3rem;
     `,
+    notFound: {
+      small: css`
+        ${boldTextDefault};
+        font-size: 9.375rem;
+      `,
+      medium: css`
+        ${boldTextDefault};
+        font-size: 12.5rem;
+      `,
+      large: css`
+        ${boldTextDefault};
+        font-size: 18.75rem;
+      `,
+    },
   },
 };

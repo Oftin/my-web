@@ -9,10 +9,16 @@ import { RequestButton } from "@/components/buttons";
 import { Footer } from "@/components/footer";
 import { Input } from "@/components/inputs";
 import { Navbar } from "@/components/navbar";
-import { WhiteAndGreenText, Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { sendEmailWithEmailJS } from "@/helpers";
-import { ContactWrapper, TopInputs, TextAreaModifier } from "./styled";
+import {
+  ContactWrapper,
+  TopInputs,
+  TextAreaModifier,
+  ReCAPTCHAWrapper,
+  SecondText,
+  MainText,
+} from "./styled";
 
 export default function Contact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
@@ -73,19 +79,17 @@ export default function Contact() {
     <>
       <Navbar />
       <ContactWrapper>
-        <WhiteAndGreenText
-          firstText="Get In"
-          secondText="Touch!"
-          textSize="32px"
-        />
+        <SecondText>
+          Get In{" "}
+          <span style={{ color: `${colors.greenThemeColor}` }}>Touch!</span>
+        </SecondText>
 
-        <Text text="Contact Me" color={colors.white} size="48px" />
+        <MainText>Contact Me</MainText>
 
         <TopInputs>
           <Input
             type="text"
             placeholder="Enter your name"
-            height="60px"
             handleChange={(e: React.FormEvent<HTMLInputElement>) =>
               setName(e.currentTarget.value)
             }
@@ -95,7 +99,6 @@ export default function Contact() {
           <Input
             type="email"
             placeholder="Enter your email"
-            height="60px"
             handleChange={(e: React.FormEvent<HTMLInputElement>) =>
               setEmail(e.currentTarget.value)
             }
@@ -105,7 +108,6 @@ export default function Contact() {
 
         <TextAreaModifier
           placeholder="Enter your message"
-          height="250px"
           textValue={message}
           handleChange={(e: React.FormEvent<HTMLTextAreaElement>) =>
             setMessage(e.currentTarget.value)
@@ -113,15 +115,13 @@ export default function Contact() {
           disabled={disabledInputs}
         />
 
-        <ReCAPTCHA
-          sitekey={process.env.RECAPTCHA_SITE_KEY!}
-          onChange={onChangeReCAPTCHA}
-          theme="dark"
-          style={{
-            marginTop: "1.5rem",
-            borderRadius: "20px",
-          }}
-        />
+        <ReCAPTCHAWrapper>
+          <ReCAPTCHA
+            sitekey={process.env.RECAPTCHA_SITE_KEY!}
+            onChange={onChangeReCAPTCHA}
+            theme="dark"
+          />
+        </ReCAPTCHAWrapper>
 
         <RequestButton
           name="Send Message"

@@ -9,10 +9,15 @@ import { RequestButton } from "@/components/buttons";
 import { Footer } from "@/components/footer";
 import { Input } from "@/components/inputs";
 import { Navbar } from "@/components/navbar";
-import { Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { sendEmailWithEmailJS } from "@/helpers";
-import { NotFoundContactWrapper, TopInputs, TextAreaModifier } from "./styled";
+import {
+  NotFoundContactWrapper,
+  TopInputs,
+  TextAreaModifier,
+  ReCAPTCHAWrapper,
+  MainText,
+} from "./styled";
 
 export default function NotFoundContact() {
   const [typeToast, setTypeToast] = useState<"success" | "fail">("success");
@@ -73,17 +78,16 @@ export default function NotFoundContact() {
     <>
       <Navbar />
       <NotFoundContactWrapper>
-        <div style={{ display: "flex", gap: 12 }}>
-          <Text text="Idea for" color={colors.white} size="48px" />
-          <Text text="New" color={colors.greenThemeColor} size="48px" />
-          <Text text="Page" color={colors.white} size="48px" />
-        </div>
+        <MainText>
+          <div>Idea for</div>
+          <span style={{ color: `${colors.greenThemeColor}` }}>New</span>
+          <div>Page</div>
+        </MainText>
 
         <TopInputs>
           <Input
             type="text"
             placeholder="Enter your name"
-            height="60px"
             handleChange={(e: React.FormEvent<HTMLInputElement>) =>
               setName(e.currentTarget.value)
             }
@@ -93,7 +97,6 @@ export default function NotFoundContact() {
           <Input
             type="email"
             placeholder="Enter your email"
-            height="60px"
             handleChange={(e: React.FormEvent<HTMLInputElement>) =>
               setEmail(e.currentTarget.value)
             }
@@ -103,22 +106,23 @@ export default function NotFoundContact() {
 
         <TextAreaModifier
           placeholder="Enter your idea for new page"
-          height="250px"
           handleChange={(e: React.FormEvent<HTMLTextAreaElement>) =>
             setNewPageIdea(e.currentTarget.value)
           }
           disabled={disabledInputs}
         />
 
-        <ReCAPTCHA
-          sitekey={process.env.RECAPTCHA_SITE_KEY!}
-          onChange={onChangeReCAPTCHA}
-          theme="dark"
-          style={{
-            marginTop: "1.5rem",
-            borderRadius: "20px",
-          }}
-        />
+        <ReCAPTCHAWrapper>
+          <ReCAPTCHA
+            sitekey={process.env.RECAPTCHA_SITE_KEY!}
+            onChange={onChangeReCAPTCHA}
+            theme="dark"
+            style={{
+              marginTop: "1.5rem",
+              borderRadius: "20px",
+            }}
+          />
+        </ReCAPTCHAWrapper>
 
         <RequestButton
           name="Send Message"

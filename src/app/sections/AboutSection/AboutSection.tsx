@@ -1,9 +1,9 @@
-import Image from "next/image";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { TitleSection } from "@/components/titleSection";
 import { TextParagraph } from "@/components/text";
 import { CallToActionButton } from "@/components/buttons";
 import { Images } from "@/components/images";
+import { Image } from "@/components/Modifiers";
 import { AboutSectionWrapper, LeftSide, RigthSide } from "./styled";
 import { AboutSectionProps } from "./types";
 
@@ -12,14 +12,7 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
     <PagePosition backgroundColor={backgroundColor} paddingPlus id="about">
       <AboutSectionWrapper>
         <LeftSide>
-          <Image
-            src={Images.ERC2019MyPhoto}
-            alt=""
-            width={500}
-            style={{
-              borderRadius: "8px",
-            }}
-          />
+          <Image src={Images.ERC2019MyPhoto} alt="ERC2019MyPhoto" />
         </LeftSide>
 
         <RigthSide>

@@ -28,7 +28,7 @@ export const TextParagraphWrapper = styled.p<{
   ${({ $size }) =>
     $size &&
     css`
-      ${typography.text[`${$size}`]}
+      ${typography.textOld[`${$size}`]}
     `}
 
   ${({ $width }) =>
@@ -59,7 +59,7 @@ export const TextStyle = styled.div<{
   ${({ $size }) =>
     $size &&
     css`
-      ${typography.text[`${$size}`]}
+      ${typography.textOld[`${$size}`]}
     `};
 
   ${({ $centerText }) =>

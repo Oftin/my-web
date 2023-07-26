@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Link as ReactScrollLink } from "react-scroll";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { TextParagraph } from "@/components/text";
@@ -11,6 +10,7 @@ import {
   RigthSide,
 } from "./styled";
 import { HelloSectionProps } from "./types";
+import { Image } from "@/components/Modifiers";
 
 export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
   <PagePosition backgroundColor={backgroundColor} paddingPlus id="hello">
@@ -35,14 +35,7 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
       </LeftSide>
 
       <RigthSide>
-        <Image
-          src={Images.MyMainPhoto}
-          alt="Hexagon Icon"
-          width={500}
-          style={{
-            borderRadius: "8px",
-          }}
-        />
+        <Image src={Images.MyMainPhoto} alt={"MyMainPhoto"} />
       </RigthSide>
     </HelloSectionWrapper>
   </PagePosition>

@@ -35,7 +35,7 @@ export const RigthSide = styled.div`
 `;
 
 export const ContactButton = styled.div`
-  ${typography.text["24px"]}
+  ${typography.textOld["24px"]}
   border-radius: 10px;
   margin-top: 2rem;
   padding: 20px;

@@ -10,15 +10,15 @@ export const LinkStyled = styled(Link)<{ styles?: string; $margin?: string }>`
   padding: 15px;
 
   @media only screen and (max-width: 575px) {
-    ${typography.textForScreen["bold"].from361pxTo575pxIs16px}
+    ${typography.text.bold["16px"]}
   }
 
   @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.textForScreen["bold"].from768pxTo1023pxIs20px}
+    ${typography.text.bold["20px"]}
   }
 
   @media only screen and (min-width: 768px) {
-    ${typography.textForScreen["bold"].from1440pxIs24px}
+    ${typography.text.bold["24px"]}
     padding: 20px;
   }
 
@@ -54,20 +54,30 @@ export const ArrowBackWrapper = styled.button`
 `;
 
 export const RequestButtonWrapper = styled.button`
-  width: 285px;
-  height: 85px;
-  padding: auto;
   background-color: ${colors.greenThemeColor};
   color: ${colors.white};
-  font-size: 24px;
-  font-weight: 700;
+  ${borderRadius["8px"]}
+  padding: 15px;
   border: none;
-  border-radius: 8px;
-  margin-top: 1.5rem;
   cursor: pointer;
 
   &:disabled {
     background-color: grey;
     cursor: default;
+  }
+
+  @media only screen and (max-width: 575px) {
+    ${typography.text.bold["16px"]}
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.text.bold["20px"]}
+    margin-top: 1rem;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.bold["24px"]}
+    padding: 20px;
+    margin-top: 1.5rem;
   }
 `;

@@ -1,21 +1,21 @@
 "use client";
 
-import Image from "next/image";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { GreenAndWhiteText, Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
-import { Arrow } from "@/components/arrow";
+import { Image } from "@/components/Modifiers";
 import { experienceArray } from "./mockUp";
 import {
   ExperienceWrapper,
   ContentWrapper,
-  ArrowWrapper,
-  ArrowPosition,
-  ImagesWrapper,
   Ul,
+  Li,
+  MainText,
+  SecondText,
+  IconWrapper,
 } from "./styled";
 
 const importExperienceArray = experienceArray;
@@ -45,12 +45,8 @@ export default function Experience() {
       <Navbar />
       <PagePosition backgroundColor={colors.background.mirage}>
         <ExperienceWrapper>
-          <Text
-            text={"Experience"}
-            color={colors.white}
-            size={"48px"}
-            styles="margin-bottom: 4rem;"
-          />
+          <MainText>Experience</MainText>
+
           {importExperienceArray.map((exp) => {
             const lastElement = importExperienceArray.findLast((last) => {
               return last;
@@ -60,75 +56,36 @@ export default function Experience() {
 
             return (
               <ContentWrapper key={exp.company}>
-                <ArrowWrapper>
-                  <ArrowPosition>
-                    <Arrow
-                      orientation="vertical"
-                      showArrowhead={showArrowhead}
-                    />
-                  </ArrowPosition>
-                  <Image
-                    src={Icons.GreenDotWithRing}
-                    alt=""
-                    style={{
-                      zIndex: 800,
-                    }}
-                  />
-                </ArrowWrapper>
+                <div>
+                  <SecondText>{exp.company}</SecondText>
+                  <SecondText>
+                    <div>{exp.date}</div>
+                    <div>{exp.role}</div>
+                  </SecondText>
 
-                <div style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
-                  <Text text={exp.company} color={colors.white} size={"20px"} />
-
-                  <div
-                    style={{
-                      display: "inline-flex",
-                    }}
-                  >
-                    <GreenAndWhiteText
-                      firstText={exp.date}
-                      secondText={exp.role}
-                      textSize={"20px"}
-                      styles="margin: 1rem 0rem;"
-                    />
-                  </div>
                   <Ul>
                     {exp.listDuties.map((el) => {
-                      return (
-                        <li
-                          key={el}
-                          style={{
-                            paddingBottom: "0.25em",
-                          }}
-                        >
-                          {el}
-                        </li>
-                      );
+                      return <Li key={el}>{el}s</Li>;
                     })}
                   </Ul>
                 </div>
 
-                <ImagesWrapper>
-                  {imageArray.map((el) => {
-                    const showImage = el.paretnId === exp.id;
-                    return (
-                      <>
-                        {showImage && (
+                {imageArray.map((el) => {
+                  const showImage = el.paretnId === exp.id;
+                  return (
+                    <>
+                      {showImage && (
+                        <IconWrapper>
                           <Image
                             key={el.paretnId}
                             src={el.image}
-                            alt={""}
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              marginTop: "3rem",
-                              maxWidth: "150px",
-                            }}
+                            alt={"svgIcon"}
                           />
-                        )}
-                      </>
-                    );
-                  })}
-                </ImagesWrapper>
+                        </IconWrapper>
+                      )}
+                    </>
+                  );
+                })}
               </ContentWrapper>
             );
           })}

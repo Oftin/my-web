@@ -39,7 +39,7 @@ export const RightSideLiHorizontal = styled.li`
   display: flex;
   cursor: pointer;
   margin-left: 1rem;
-  ${typography.text["24px"]}
+  ${typography.textOld["24px"]}
   color: ${colors.white};
 
   &:hover {
@@ -56,7 +56,7 @@ export const RightSideLiVertical = styled.li`
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  ${typography.text["36px"]}
+  ${typography.textOld["36px"]}
   color: ${colors.white};
   justify-content: center;
   align-items: center;

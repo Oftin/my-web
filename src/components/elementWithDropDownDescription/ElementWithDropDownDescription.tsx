@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { useState } from "react";
 import { Icons } from "@/components/icons";
+import { Image } from "@/components/Modifiers";
 import {
   ElementWithDropDownDescriptionWrapper,
   MainPanelWrapper,
@@ -10,6 +10,7 @@ import {
   OpenDropDown,
   CloseDropDown,
   TextWrapper,
+  ImageWrapper,
 } from "./styled";
 import { ElementWithDropDownDescriptionProps } from "./types";
 
@@ -31,15 +32,9 @@ export const ElementWithDropDownDescription = ({
             <GreenDot />
             <TextWrapper>{text}</TextWrapper>
           </DotAndTitleWrapper>
-          <Image
-            src={Icons.DropDownArrow}
-            alt={""}
-            width={30}
-            height={30}
-            style={{
-              rotate: showDropDownText ? "" : "180deg",
-            }}
-          />
+          <ImageWrapper $showDropDownText={showDropDownText}>
+            <Image src={Icons.DropDownArrow} alt={"DropDownArrow"} />
+          </ImageWrapper>
         </SpaceBetweenElements>
       </MainPanelWrapper>
       {showDropDownText ? (

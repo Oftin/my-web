@@ -46,6 +46,6 @@ export const ButtonForSmallScreen = styled.div`
 
 export const Ul = styled.div`
   color: ${colors.white};
-  ${typography.text["24px"]}
+  ${typography.textOld["24px"]}
   list-style: none;
 `;

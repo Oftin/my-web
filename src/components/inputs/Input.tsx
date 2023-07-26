@@ -4,9 +4,6 @@ import { InputWrapper } from "./styled";
 interface InputProps {
   type: "text" | "email";
   placeholder: string;
-  width?: string;
-  height: string;
-  styles?: string;
   disabled?: boolean;
   handleChange?: ChangeEventHandler<HTMLInputElement> | undefined;
 }
@@ -14,9 +11,6 @@ interface InputProps {
 export const Input = ({
   type,
   placeholder,
-  width,
-  height,
-  styles,
   handleChange,
   ...props
 }: InputProps) => {
@@ -24,9 +18,6 @@ export const Input = ({
     <InputWrapper
       type={type}
       placeholder={placeholder}
-      width={width}
-      height={height}
-      styles={styles}
       required
       onChange={handleChange}
       {...props}

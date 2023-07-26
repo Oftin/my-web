@@ -1,82 +1,26 @@
 "use client";
 
-import Image from "next/image";
 import { Navbar } from "@/components/navbar";
-import { TextParagraph, WhiteAndGreenText, Text } from "@/components/text";
 import { Footer } from "@/components/footer";
 import { colors } from "@/styles/colors";
 import { Images } from "@/components/images";
+import { Image } from "@/components/Modifiers";
 import { Icons } from "@/components/icons";
 import { PagePosition } from "@/components/wrappers/pagePosition";
-import styled from "styled-components";
-
-const AboutWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 7rem 2rem;
-
-  @media only screen and (min-width: 992px) {
-    margin-top: 12rem;
-  }
-`;
-
-const ColumnWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  height: 100%;
-  width: 100%;
-
-  @media only screen and (max-width: 992px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-`;
-
-const WhiteAndGreenTextWrapper = styled.div`
-  @media only screen and (max-width: 992px) {
-    display: flex;
-    justify-content: center;
-  }
-`;
-
-const ImageWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-
-  @media only screen and (max-width: 992px) {
-    order: 1;
-  }
-`;
-
-const InterestsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 6rem;
-`;
-
-const InterestsTileWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  margin-top: 2rem;
-
-  @media only screen and (max-width: 992px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const InterestTile = styled.div`
-  border-radius: 12px;
-  box-shadow: 0px 0px 10px 2px ${colors.greenThemeColor};
-  padding: 24px;
-`;
+import {
+  AboutWrapper,
+  ColumnWrapper,
+  TitleWrapper,
+  ImageWrapper,
+  InterestsWrapper,
+  InterestsTileWrapper,
+  InterestTile,
+  TileItem,
+  MainText,
+  SecondText,
+  ThirdText,
+  TextParagraph,
+} from "./styled";
 
 const leftInterestsColumn = [
   {
@@ -142,72 +86,45 @@ export default function About() {
         <AboutWrapper>
           <ColumnWrapper>
             <ImageWrapper>
-              <Image
-                src={Images.ERC2019MyPhoto}
-                alt=""
-                style={{ width: "100%", height: "100%", borderRadius: "8px" }}
-                layout="responsive"
-              />
+              <Image src={Images.ERC2019MyPhoto} alt="ERC2019MyPhoto" />
             </ImageWrapper>
             <div>
-              <WhiteAndGreenTextWrapper>
-                <WhiteAndGreenText
-                  firstText="About"
-                  secondText="Me"
-                  textSize="48px"
-                  styles="margin-bottom: 1rem;"
-                />
-              </WhiteAndGreenTextWrapper>
-              <TextParagraph
-                text={
-                  "The main word that describes me is an optimist. Because of that, I decided to rebrand myself as a programmer. With great passion for modern technology, especially artificial intelligence, I constantly try to improve my growing asset of skills. I have a master's degree in Automation and Robotics. Instead of problems, I see challenges and that is the mindset I am trying ro apply to my personal life and career path."
-                }
-                size="24px"
-                styles="margin-bottom: 1rem;"
-              />
+              <TitleWrapper>
+                <MainText>
+                  <div>About</div>
+                  <div>Me</div>
+                </MainText>
+              </TitleWrapper>
 
-              <TextParagraph
-                text={
-                  "I love new challenges, implementing my own ideas and helping people."
-                }
-                size="24px"
-              />
+              <TextParagraph>
+                The main word that describes me is an optimist. Because of that,
+                I decided to rebrand myself as a programmer. With great passion
+                for modern technology, especially artificial intelligence, I
+                constantly try to improve my growing asset of skills. I have a
+                master&apos;s degree in Automation and Robotics. Instead of
+                problems, I see challenges and that is the mindset I am trying
+                ro apply to my personal life and career path.
+              </TextParagraph>
+
+              <TextParagraph>
+                I love new challenges, implementing my own ideas and helping
+                people.
+              </TextParagraph>
             </div>
           </ColumnWrapper>
+
           <InterestsWrapper>
-            <Text
-              text={"Interests"}
-              color={colors.white}
-              size={"48px"}
-              styles="margin-bottom: 2rem;"
-            />
+            <SecondText>Interests</SecondText>
             <InterestsTileWrapper>
               <InterestTile>
                 {leftInterestsColumn.map((el) => {
                   return (
-                    <div
-                      key={el.interest}
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        margin: "1rem",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Image
-                        src={el.icon}
-                        alt={""}
-                        height={30}
-                        style={{
-                          margin: "1rem",
-                        }}
-                      />
-                      <Text
-                        text={el.interest}
-                        color={colors.white}
-                        size={"20px"}
-                      />
-                    </div>
+                    <TileItem key={el.interest}>
+                      <div style={{ width: "30px", margin: "1rem" }}>
+                        <Image src={el.icon} alt={"svgIcon"} />
+                      </div>
+                      <ThirdText>{el.interest}</ThirdText>
+                    </TileItem>
                   );
                 })}
               </InterestTile>
@@ -215,29 +132,12 @@ export default function About() {
               <InterestTile>
                 {rightInterestsColumn.map((el) => {
                   return (
-                    <div
-                      key={el.interest}
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        margin: "1rem",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Image
-                        src={el.icon}
-                        alt={""}
-                        height={30}
-                        style={{
-                          margin: "1rem",
-                        }}
-                      />
-                      <Text
-                        text={el.interest}
-                        color={colors.white}
-                        size={"20px"}
-                      />
-                    </div>
+                    <TileItem key={el.interest}>
+                      <div style={{ width: "30px", margin: "1rem" }}>
+                        <Image src={el.icon} alt={"svgIcon"} />
+                      </div>
+                      <ThirdText>{el.interest}</ThirdText>
+                    </TileItem>
                   );
                 })}
               </InterestTile>
