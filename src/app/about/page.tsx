@@ -121,7 +121,7 @@ export default function About() {
                   return (
                     <TileItem key={el.interest}>
                       <div style={{ width: "30px", margin: "1rem" }}>
-                        <Image src={el.icon} alt={"svgIcon"} />
+                        <Image src={el.icon} alt="svgIcon" />
                       </div>
                       <ThirdText>{el.interest}</ThirdText>
                     </TileItem>
@@ -134,7 +134,7 @@ export default function About() {
                   return (
                     <TileItem key={el.interest}>
                       <div style={{ width: "30px", margin: "1rem" }}>
-                        <Image src={el.icon} alt={"svgIcon"} />
+                        <Image src={el.icon} alt="svgIcon" />
                       </div>
                       <ThirdText>{el.interest}</ThirdText>
                     </TileItem>

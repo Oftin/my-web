@@ -22,7 +22,7 @@ export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {
         <SecondText>or</SecondText>
 
         <ImageWithLink
-          href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
+          href="https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"
           src={Images.LinkedIn}
           alt="LinkedIn"
           margin="1rem"

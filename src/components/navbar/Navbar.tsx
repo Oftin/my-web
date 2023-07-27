@@ -66,7 +66,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
           <LeftSideLi>
             {mainScreen ? (
               <ReactScrollLink
-                to={"hello"}
+                to="hello"
                 spy={true}
                 smooth={true}
                 duration={500}
@@ -95,7 +95,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
             <RightSideLiVertical>
               <Menu
                 right
-                width={"100%"}
+                width="100%"
                 isOpen={openHamburgerMenu}
                 onOpen={() => setOpenHamburgerMenu((prevState) => !prevState)}
               >
@@ -104,6 +104,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                     <MenuItems key={tab}>
                       {mainScreen ? (
                         <ReactScrollLink
+                          href={`/#${tab}`}
                           to={`${tab}`}
                           spy={true}
                           smooth={true}

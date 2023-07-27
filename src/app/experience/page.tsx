@@ -73,7 +73,7 @@ export default function Experience() {
                           <Image
                             key={el.paretnId}
                             src={el.image}
-                            alt={"svgIcon"}
+                            alt="svgIcon"
                           />
                         </IconWrapper>
                       )}

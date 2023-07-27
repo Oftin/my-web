@@ -211,7 +211,7 @@ export const ExperienceSection = ({
                   </TextParagraph>
                 </div>
                 <IconWrapper>
-                  <Image src={exp.svg} alt={"svgIcon"} />
+                  <Image src={exp.svg} alt="svgIcon" />
                 </IconWrapper>
               </SmallScreenContentWrapper>
             );

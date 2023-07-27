@@ -35,13 +35,13 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
           problems.
         </TextParagraph>
 
-        <ContactButton to={"contact"} spy={true} smooth={true} duration={500}>
+        <ContactButton to="contact" spy={true} smooth={true} duration={500}>
           Contact Me
         </ContactButton>
       </LeftSide>
 
       <RigthSide>
-        <Image src={Images.MyMainPhoto} alt={"MyMainPhoto"} />
+        <Image src={Images.MyMainPhoto} alt="MyMainPhoto" />
       </RigthSide>
     </HelloSectionWrapper>
   </PagePosition>

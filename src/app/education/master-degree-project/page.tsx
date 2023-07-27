@@ -100,10 +100,10 @@ export default function MasterDegreeProject() {
 
             <Fig1Wrapper>
               <LeftImagesWrapper>
-                <Image src={Images.MasterSpider_A} alt={"MasterSpider_A"} />
-                <Image src={Images.MasterSpider_B} alt={"MasterSpider_B"} />
+                <Image src={Images.MasterSpider_A} alt="MasterSpider_A" />
+                <Image src={Images.MasterSpider_B} alt="MasterSpider_B" />
               </LeftImagesWrapper>
-              <Image src={Images.MasterSpider_C} alt={"MasterSpider_C"} />
+              <Image src={Images.MasterSpider_C} alt="MasterSpider_C" />
             </Fig1Wrapper>
 
             <TextParagraph>

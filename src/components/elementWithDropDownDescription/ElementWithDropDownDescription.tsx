@@ -33,7 +33,7 @@ export const ElementWithDropDownDescription = ({
             <TextWrapper>{text}</TextWrapper>
           </DotAndTitleWrapper>
           <ImageWrapper $showDropDownText={showDropDownText}>
-            <Image src={Icons.DropDownArrow} alt={"DropDownArrow"} />
+            <Image src={Icons.DropDownArrow} alt="DropDownArrow" />
           </ImageWrapper>
         </SpaceBetweenElements>
       </MainPanelWrapper>

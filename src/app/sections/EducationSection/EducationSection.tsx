@@ -50,7 +50,7 @@ export const EducationSection = ({
           </StudyStage>
 
           <ImageWithButtonWrapper>
-            <Image src={Images.EngineeringRobot} alt={"EngineeringRobot"} />
+            <Image src={Images.EngineeringRobot} alt="EngineeringRobot" />
 
             <TextParagraph>Engineering degree project</TextParagraph>
 
@@ -85,7 +85,7 @@ export const EducationSection = ({
           </StudyStage>
 
           <ImageWithButtonWrapper>
-            <Image src={Images.MasterSpider} alt={"MasterSpider"} />
+            <Image src={Images.MasterSpider} alt="MasterSpider" />
 
             <TextParagraph>Master degree project</TextParagraph>
 

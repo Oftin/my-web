@@ -22,9 +22,9 @@ export const Footer = ({ backgroundColor }: FooterProps) => {
 
       <FooterImage>
         <ImageWithLink
-          href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
+          href="https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"
           src={Images.LinkedIn}
-          alt={""}
+          alt=""
         />
       </FooterImage>
 
