@@ -47,6 +47,11 @@ export const ContentWrapper = styled.div`
   }
 `;
 
+export const TextWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
 export const Ul = styled.div`
   color: ${colors.white};
 

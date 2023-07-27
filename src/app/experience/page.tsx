@@ -10,6 +10,7 @@ import { experienceArray } from "./mockUp";
 import {
   ExperienceWrapper,
   ContentWrapper,
+  TextWrapper,
   Ul,
   Li,
   MainText,
@@ -49,7 +50,7 @@ export default function Experience() {
           {importExperienceArray.map((exp) => {
             return (
               <ContentWrapper key={exp.company}>
-                <div>
+                <TextWrapper>
                   <SecondText>{exp.company}</SecondText>
                   <SecondText>
                     <div>{exp.date}</div>
@@ -61,7 +62,7 @@ export default function Experience() {
                       return <Li key={el}>{el}s</Li>;
                     })}
                   </Ul>
-                </div>
+                </TextWrapper>
 
                 {imageArray.map((el) => {
                   const showImage = el.paretnId === exp.id;
