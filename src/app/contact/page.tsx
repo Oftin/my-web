@@ -130,7 +130,7 @@ export default function Contact() {
         />
         <Toast toastType={typeToast} />
       </ContactWrapper>
-      <Footer backgroundColor={colors.background.ebonyClay} />
+      <Footer />
     </>
   );
 }

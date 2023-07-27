@@ -64,7 +64,7 @@ export default function ScienceClub() {
           </ContentWrapper>
         </ScienceClubWrapper>
       </PagePosition>
-      <Footer backgroundColor={colors.background.ebonyClay} />
+      <Footer />
     </>
   );
 }

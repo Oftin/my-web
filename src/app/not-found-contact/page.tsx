@@ -131,7 +131,7 @@ export default function NotFoundContact() {
         />
         <Toast toastType={typeToast} />
       </NotFoundContactWrapper>
-      <Footer backgroundColor={colors.background.ebonyClay} />
+      <Footer />
     </>
   );
 }

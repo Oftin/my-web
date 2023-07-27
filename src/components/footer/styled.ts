@@ -1,8 +1,8 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { typography } from "@/styles/typography";
 import { colors } from "@/styles/colors";
 
-export const FooterWrapper = styled.div<{ $backgroundColor?: string }>`
+export const FooterWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -10,12 +10,12 @@ export const FooterWrapper = styled.div<{ $backgroundColor?: string }>`
   padding-bottom: 0;
   margin-bottom: 0;
   height: 100%;
+  border-top: 1px solid ${colors.greenThemeColor};
+  background-color: ${colors.background.mirage};
 
-  ${({ $backgroundColor }) =>
-    $backgroundColor &&
-    css`
-      background-color: ${$backgroundColor};
-    `}
+  &:hover {
+    box-shadow: 0px 0px 10px 0px ${colors.greenThemeColor};
+  }
 
   @media only screen and (max-width: 575px) {
     min-height: 4rem;

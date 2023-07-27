@@ -85,7 +85,7 @@ export default function Experience() {
           })}
         </ExperienceWrapper>
       </PagePosition>
-      <Footer backgroundColor={colors.background.ebonyClay} />
+      <Footer />
     </>
   );
 }

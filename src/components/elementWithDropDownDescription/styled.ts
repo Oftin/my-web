@@ -67,20 +67,27 @@ export const CloseDropDown = styled.div`
   align-content: center;
   overflow-wrap: break-word;
   margin: 0 1rem 1rem 1rem;
-  padding-bottom: 0.5rem;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   z-index: 10;
 
+  @media only screen and (max-width: 575px) {
+    width: 140px;
+    padding-bottom: 0.25rem;
+  }
+
   @media only screen and (min-width: 576px) and (max-width: 767px) {
     width: 230px;
+    padding-bottom: 0.25rem;
   }
 
   @media only screen and (min-width: 767px) and (max-width: 1023px) {
     width: 320px;
+    padding-bottom: 0.5rem;
   }
   @media only screen and (min-width: 1024px) {
     width: 280px;
+    padding-bottom: 0.5rem;
   }
 `;
 

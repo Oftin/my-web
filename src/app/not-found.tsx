@@ -32,7 +32,7 @@ export default function NotFound() {
           />
         </NotFoundWrapper>
       </PagePosition>
-      <Footer backgroundColor={colors.background.mirage} />
+      <Footer />
     </>
   );
 }

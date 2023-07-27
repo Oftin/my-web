@@ -1,6 +1,5 @@
 import { Images } from "@/components/images";
 import { ImageWithLink } from "@/components/Modifiers";
-import { FooterProps } from "./types";
 import {
   FooterWrapper,
   LeftTopText,
@@ -9,9 +8,9 @@ import {
   RightText,
 } from "./styled";
 
-export const Footer = ({ backgroundColor }: FooterProps) => {
+export const Footer = () => {
   return (
-    <FooterWrapper $backgroundColor={backgroundColor}>
+    <FooterWrapper>
       <div>
         <LeftTopText>
           <div>Kamil</div>

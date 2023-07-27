@@ -2,7 +2,6 @@
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { colors } from "@/styles/colors";
 import { ThanksWrapper, MainText, SecondText } from "./styled";
 
 export default function Thanks() {
@@ -14,7 +13,7 @@ export default function Thanks() {
         <SecondText>for</SecondText>
         <MainText>Message!</MainText>
       </ThanksWrapper>
-      <Footer backgroundColor={colors.background.ebonyClay} />
+      <Footer />
     </>
   );
 }

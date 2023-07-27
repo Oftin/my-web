@@ -2,7 +2,6 @@
 
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { colors } from "@/styles/colors";
 import { Images } from "@/components/images";
 import { Image } from "@/components/Modifiers";
 import { Icons } from "@/components/icons";
@@ -145,7 +144,7 @@ export default function About() {
           </InterestsWrapper>
         </AboutWrapper>
       </PagePosition>
-      <Footer backgroundColor={colors.background.ebonyClay} />
+      <Footer />
     </>
   );
 }
