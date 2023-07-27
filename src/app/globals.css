@@ -21,10 +21,27 @@ a {
 .bm-burger-button {
   position: absolute;
   width: 10%;
-  width: 36px;
-  height: 30px;
-  right: 48px;
-  top: 24px;
+
+  @media only screen and (max-width: 575px) {
+    width: 24px;
+    height: 18px;
+    right: 48px;
+    top: 30px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    width: 30px;
+    height: 24px;
+    right: 48px;
+    top: 30px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 36px;
+    height: 30px;
+    right: 48px;
+    top: 24px;
+  }
 }
 
 .bm-burger-bars {

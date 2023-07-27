@@ -1,11 +1,12 @@
-import Link from "next/link";
 import styled, { css } from "styled-components";
 import { colors } from "@/styles/colors";
 import { typography } from "@/styles/typography";
 import { borderRadius } from "@/styles/borderRadius";
 
-export const LinkStyled = styled(Link)<{ styles?: string; $margin?: string }>`
+export const Button = styled.button<{ styles?: string; $margin?: string }>`
   color: ${colors.white};
+  background-color: ${colors.greenThemeColor};
+  border: none;
   ${borderRadius["8px"]}
   padding: 15px;
 

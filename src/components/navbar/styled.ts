@@ -73,7 +73,7 @@ export const RightSideLiVertical = styled.li`
 `;
 
 export const MenuItems = styled.div`
-  margin: 1rem;
+  margin: 0.25rem;
 `;
 
 export const MainText = styled.div`
@@ -97,5 +97,25 @@ export const MainText = styled.div`
   @media only screen and (min-width: 768px) {
     ${typography.text.bold["24px"]}
     gap: 10px;
+  }
+`;
+
+export const Button = styled.button`
+  border: none;
+  background: none;
+  cursor: pointer;
+`;
+
+export const SpanWrapper = styled.span`
+  color: ${colors.greenThemeColor};
+  ${typography.text.bold["24px"]}
+`;
+
+export const SpanInside = styled.span`
+  color: ${colors.white};
+  ${typography.text.bold["24px"]}
+
+  &:hover {
+    color: ${colors.greenThemeColor};
   }
 `;

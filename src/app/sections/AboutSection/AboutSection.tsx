@@ -28,7 +28,7 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
             width="310px"
           />
 
-          <CallToActionButton name="Read More" href="/about" />
+          <CallToActionButton name="Read More" href="/about#top" />
         </RigthSide>
       </AboutSectionWrapper>
     </PagePosition>

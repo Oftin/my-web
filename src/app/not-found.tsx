@@ -26,7 +26,10 @@ export default function NotFound() {
             <div>send mail with this idea to me!</div>
           </ThirdText>
 
-          <CallToActionButton name="Contact Form" href="/not-found-contact" />
+          <CallToActionButton
+            name="Contact Form"
+            href="/not-found-contact#top"
+          />
         </NotFoundWrapper>
       </PagePosition>
       <Footer backgroundColor={colors.background.mirage} />

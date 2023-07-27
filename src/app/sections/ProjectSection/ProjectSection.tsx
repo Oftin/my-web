@@ -54,7 +54,7 @@ export const ProjectSection = ({ backgroundColor }: ProjectSectionProps) => {
 
         <CallToActionButton
           name="All Projects"
-          href="/projects"
+          href="/projects#top"
           styles="margin-top: 5rem"
         />
       </ProjectSectionWrapper>

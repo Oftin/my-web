@@ -82,7 +82,7 @@ export const AdditionalActivitiesSection = ({
             })}
 
             <div style={{ marginTop: "5rem" }}>
-              <CallToActionButton name="Read More" href="/science-club" />
+              <CallToActionButton name="Read More" href="/science-club#top" />
             </div>
           </RightSideWrapper>
         </ContentWrapper>

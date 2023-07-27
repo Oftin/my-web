@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { slide as Menu } from "react-burger-menu";
 import { Link as ReactScrollLink } from "react-scroll";
@@ -11,9 +11,11 @@ import {
   RightSideLiVertical,
   MenuItems,
   MainText,
+  Button,
+  SpanWrapper,
+  SpanInside,
 } from "./styled";
 import { ArrowBack } from "@/components/buttons";
-import { colors } from "@/styles/colors";
 import { NavbarProps } from "./types";
 
 const webTabs = [
@@ -30,6 +32,8 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
   const [openHamburgerMenu, setOpenHamburgerMenu] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(0);
 
+  const router = useRouter();
+
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
@@ -42,12 +46,12 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
   const currentPage = usePathname();
   const mainScreen = currentPage === "/";
 
-  const textInsideHamburgerMenu = (text: string) => {
+  const programingTextStyle = (text: string) => {
     return (
-      <span style={{ color: `${colors.greenThemeColor}` }}>
-        .<span style={{ color: `${colors.white}` }}>{text}</span>
+      <SpanWrapper>
+        .<SpanInside>{text}</SpanInside>
         ()
-      </span>
+      </SpanWrapper>
     );
   };
 
@@ -74,12 +78,16 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 </MainText>
               </ReactScrollLink>
             ) : (
-              <Link href="/" onClick={() => setOpenHamburgerMenu(false)}>
+              <Button
+                onClick={() => {
+                  router.push("/");
+                }}
+              >
                 <MainText>
                   <div>Kamil</div>
                   <div>Bobrowki</div>
                 </MainText>
-              </Link>
+              </Button>
             )}
           </LeftSideLi>
 
@@ -94,14 +102,14 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 {webTabs.map((tab) => {
                   return (
                     <MenuItems key={tab}>
-                      <Link
-                        href={`/#${tab}`}
-                        onClick={() =>
-                          setOpenHamburgerMenu((prevState) => !prevState)
-                        }
+                      <Button
+                        onClick={() => {
+                          setOpenHamburgerMenu((prevState) => !prevState);
+                          router.push(`/#${tab}`);
+                        }}
                       >
-                        {textInsideHamburgerMenu(tab)}
-                      </Link>
+                        {programingTextStyle(tab)}
+                      </Button>
                     </MenuItems>
                   );
                 })}
@@ -123,15 +131,17 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                           setOpenHamburgerMenu((prevState) => !prevState)
                         }
                       >
-                        {`.${tab}()`}
+                        {programingTextStyle(tab)}
                       </ReactScrollLink>
                     ) : (
-                      <Link
-                        href={`/#${tab}`}
-                        onClick={() =>
-                          setOpenHamburgerMenu((prevState) => !prevState)
-                        }
-                      >{`.${tab}()`}</Link>
+                      <Button
+                        onClick={() => {
+                          setOpenHamburgerMenu((prevState) => !prevState);
+                          router.push(`/#${tab}`);
+                        }}
+                      >
+                        {programingTextStyle(tab)}
+                      </Button>
                     )}
                   </RightSideLiHorizontal>
                 );

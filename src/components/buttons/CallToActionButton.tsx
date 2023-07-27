@@ -1,9 +1,8 @@
 import { useRouter } from "next/navigation";
-// import { LinkStyled } from "./styled";
-// import { colors } from "@/styles/colors";
+import { Button } from "./styled";
 
 interface CallToActionButtonProps {
-  name: string;
+  name?: string;
   href: string;
   styles?: string;
   margin?: string;
@@ -17,18 +16,15 @@ export const CallToActionButton = ({
 }: CallToActionButtonProps) => {
   const router = useRouter();
 
-  console.log(styles, margin);
-
   return (
-    // <LinkStyled
-    //   styles={styles}
-    //   href={`${href}` + "#top"}
-    //   style={{
-    //     backgroundColor: `${colors.greenThemeColor}`,
-    //   }}
-    //   $margin={margin}
-    // >
-    <button onClick={() => router.push(href)}>{name}</button>
-    // </LinkStyled>
+    <Button
+      styles={styles}
+      onClick={() => {
+        router.push(href);
+      }}
+      $margin={margin}
+    >
+      {name}
+    </Button>
   );
 };

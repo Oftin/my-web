@@ -54,7 +54,7 @@ export const BlogSection = ({ backgroundColor }: BlogSectionProps) => {
 
         <CallToActionButton
           name="All Articles"
-          href="/blog"
+          href="/blog#top"
           styles="margin-top: 5rem"
         />
       </BlogSectionWrapper>

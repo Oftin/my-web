@@ -84,7 +84,7 @@ export const EducationSection = ({
 
               <CallToActionButton
                 name="Read More"
-                href="/education/engineering-degree-project"
+                href="/education/engineering-degree-project#top"
                 styles="margin-top: 1rem"
               />
             </div>
@@ -148,7 +148,7 @@ export const EducationSection = ({
 
               <CallToActionButton
                 name="Read More"
-                href="/education/master-degree-project"
+                href="/education/master-degree-project#top"
                 styles="margin-top: 1rem;"
               />
             </div>

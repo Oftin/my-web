@@ -297,7 +297,7 @@ export const ExperienceSection = ({
             marginTop: "4rem",
           }}
         >
-          <CallToActionButton name="Read More" href="/experience" />
+          <CallToActionButton name="Read More" href="/experience#top" />
         </div>
       </ExperienceSectionWrapper>
     </PagePosition>

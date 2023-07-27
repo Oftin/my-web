@@ -43,7 +43,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
             styles="margin-bottom: 3rem;"
           />
           <ButtonForLargeScreen>
-            <CallToActionButton name="Read More" href="/skills" />
+            <CallToActionButton name="Read More" href="/skills#top" />
           </ButtonForLargeScreen>
         </div>
 
@@ -79,7 +79,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
           </Ul>
         </SkillWrapper>
         <ButtonForSmallScreen>
-          <CallToActionButton name="Read More" href="/skills" />
+          <CallToActionButton name="Read More" href="/skills#top" />
         </ButtonForSmallScreen>
       </SkillSectionWrapper>
     </PagePosition>

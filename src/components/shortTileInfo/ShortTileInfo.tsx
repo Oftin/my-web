@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Text, TextParagraph } from "../text";
+import { useRouter } from "next/navigation";
+import { Text, TextParagraph } from "@/components/text";
 import { colors } from "@/styles/colors";
-import { ContentWrapper } from "./styled";
+import { ContentWrapper, Button } from "./styled";
 import { ShortTileInfoProps } from "./types";
 
 export const ShortTileInfo = ({
@@ -9,15 +9,12 @@ export const ShortTileInfo = ({
   title,
   shortInfo,
 }: ShortTileInfoProps) => {
+  const router = useRouter();
+
   return (
-    <Link
-      href={`${href}` + "#top"}
-      style={{
-        backgroundColor: `${colors.background.ebonyClay}`,
-        width: "20rem",
-        height: "fit-content",
-        border: "2px solid red",
-        borderRadius: "8px",
+    <Button
+      onClick={() => {
+        router.push(href);
       }}
     >
       <ContentWrapper>
@@ -34,6 +31,6 @@ export const ShortTileInfo = ({
           styles="margin-top: 2.5rem; margin-left: 2.5rem; margin-right: 2.5rem; margin-bottom: 5rem"
         />
       </ContentWrapper>
-    </Link>
+    </Button>
   );
 };
