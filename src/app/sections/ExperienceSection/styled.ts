@@ -11,6 +11,7 @@ export const ExperienceSectionWrapper = styled.div`
   padding-top: 6em;
   padding-bottom: 6em;
   width: 80vw;
+  max-width: 1200px;
 
   @media only screen and (min-width: 992px) {
     height: 100vh;
