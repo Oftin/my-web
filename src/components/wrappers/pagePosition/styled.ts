@@ -12,4 +12,5 @@ export const PagePositionWrapper = styled.div<{
   width: 100vw;
 
   background-color: ${(props) => props.$backgroundColor};
+  margin-bottom: auto;
 `;
