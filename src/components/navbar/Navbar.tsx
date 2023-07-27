@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { slide as Menu } from "react-burger-menu";
 import { Link as ReactScrollLink } from "react-scroll";
@@ -28,6 +28,16 @@ const webTabs = [
 
 export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
   const [openHamburgerMenu, setOpenHamburgerMenu] = useState<boolean>(false);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const currentPage = usePathname();
   const mainScreen = currentPage === "/";
@@ -39,6 +49,10 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
         ()
       </span>
     );
+  };
+
+  const turnOnHamburgerMenu = () => {
+    return windowWidth <= 992;
   };
 
   return (
@@ -69,57 +83,61 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
             )}
           </LeftSideLi>
 
-          {webTabs.map((tab) => {
-            return (
-              <RightSideLiHorizontal key={tab}>
-                {mainScreen ? (
-                  <ReactScrollLink
-                    to={`${tab}`}
-                    spy={true}
-                    smooth={true}
-                    offset={tab === "skills" ? -200 : undefined}
-                    duration={500}
-                    onClick={() =>
-                      setOpenHamburgerMenu((prevState) => !prevState)
-                    }
-                  >
-                    {`.${tab}()`}
-                  </ReactScrollLink>
-                ) : (
-                  <Link
-                    href={`/#${tab}`}
-                    onClick={() =>
-                      setOpenHamburgerMenu((prevState) => !prevState)
-                    }
-                  >{`.${tab}()`}</Link>
-                )}
-              </RightSideLiHorizontal>
-            );
-          })}
-
-          <RightSideLiVertical>
-            <Menu
-              right
-              width={"100%"}
-              isOpen={openHamburgerMenu}
-              onOpen={() => setOpenHamburgerMenu((prevState) => !prevState)}
-            >
+          {turnOnHamburgerMenu() ? (
+            <RightSideLiVertical>
+              <Menu
+                right
+                width={"100%"}
+                isOpen={openHamburgerMenu}
+                onOpen={() => setOpenHamburgerMenu((prevState) => !prevState)}
+              >
+                {webTabs.map((tab) => {
+                  return (
+                    <MenuItems key={tab}>
+                      <Link
+                        href={`/#${tab}`}
+                        onClick={() =>
+                          setOpenHamburgerMenu((prevState) => !prevState)
+                        }
+                      >
+                        {textInsideHamburgerMenu(tab)}
+                      </Link>
+                    </MenuItems>
+                  );
+                })}
+              </Menu>
+            </RightSideLiVertical>
+          ) : (
+            <>
               {webTabs.map((tab) => {
                 return (
-                  <MenuItems key={tab}>
-                    <Link
-                      href={`/#${tab}`}
-                      onClick={() =>
-                        setOpenHamburgerMenu((prevState) => !prevState)
-                      }
-                    >
-                      {textInsideHamburgerMenu(tab)}
-                    </Link>
-                  </MenuItems>
+                  <RightSideLiHorizontal key={tab}>
+                    {mainScreen ? (
+                      <ReactScrollLink
+                        to={`${tab}`}
+                        spy={true}
+                        smooth={true}
+                        offset={tab === "skills" ? -200 : undefined}
+                        duration={500}
+                        onClick={() =>
+                          setOpenHamburgerMenu((prevState) => !prevState)
+                        }
+                      >
+                        {`.${tab}()`}
+                      </ReactScrollLink>
+                    ) : (
+                      <Link
+                        href={`/#${tab}`}
+                        onClick={() =>
+                          setOpenHamburgerMenu((prevState) => !prevState)
+                        }
+                      >{`.${tab}()`}</Link>
+                    )}
+                  </RightSideLiHorizontal>
                 );
               })}
-            </Menu>
-          </RightSideLiVertical>
+            </>
+          )}
         </NavbarUlWrapper>
       </NavbarPositionFixed>
       {showArrowBack && <ArrowBack />}

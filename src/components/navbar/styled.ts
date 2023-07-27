@@ -58,11 +58,6 @@ export const RightSideLiHorizontal = styled.li`
   &:hover {
     color: ${colors.greenThemeColor};
   }
-
-  @media only screen and (max-width: 992px) {
-    visibility: hidden;
-    display: none;
-  }
 `;
 
 export const RightSideLiVertical = styled.li`
@@ -75,11 +70,6 @@ export const RightSideLiVertical = styled.li`
   align-items: center;
   justify-items: center;
   align-content: center;
-
-  @media only screen and (min-width: 991px) {
-    visibility: hidden;
-    display: none;
-  }
 `;
 
 export const MenuItems = styled.div`
