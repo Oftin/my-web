@@ -1,13 +1,13 @@
-import { Link as ReactScrollLink } from "react-scroll";
 import { PagePosition } from "@/components/wrappers/pagePosition";
-import { TextParagraph } from "@/components/text";
-import { TitleSection } from "@/components/titleSection";
 import { Images } from "@/components/images";
 import {
   HelloSectionWrapper,
   LeftSide,
   ContactButton,
   RigthSide,
+  MainText,
+  SecondText,
+  TextParagraph,
 } from "./styled";
 import { HelloSectionProps } from "./types";
 import { Image } from "@/components/Modifiers";
@@ -16,22 +16,28 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
   <PagePosition backgroundColor={backgroundColor} paddingPlus id="hello">
     <HelloSectionWrapper>
       <LeftSide>
-        <TitleSection
-          upperText="Hello, I'm"
-          mainText="Kamil Bobrowski"
-          lowerText="Front-end Developer"
-          width="390px"
-        />
+        <SecondText>
+          <div>Hello,</div>
+          <div>I&apos;m</div>
+        </SecondText>
+        <MainText>
+          <div>Kamil</div>
+          <div>Bobrowski</div>
+        </MainText>
+        <SecondText>
+          <div>Front-end</div>
+          <div>Developer</div>
+        </SecondText>
 
-        <TextParagraph
-          text="Optimistic programmer, passionate about modern technologies. I continuously develop my skills and see challenges where others see problems."
-          size="16px"
-          width="385px"
-        />
+        <TextParagraph>
+          Optimistic programmer, passionate about modern technologies. I
+          continuously develop my skills and see challenges where others see
+          problems.
+        </TextParagraph>
 
-        <ReactScrollLink to={"contact"} spy={true} smooth={true} duration={500}>
-          <ContactButton>Contact Me</ContactButton>
-        </ReactScrollLink>
+        <ContactButton to={"contact"} spy={true} smooth={true} duration={500}>
+          Contact Me
+        </ContactButton>
       </LeftSide>
 
       <RigthSide>

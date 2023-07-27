@@ -3,7 +3,6 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { slide as Menu } from "react-burger-menu";
 import { Link as ReactScrollLink } from "react-scroll";
-import { WhiteAndGreenText } from "@/components/text";
 import {
   NavbarPositionFixed,
   NavbarUlWrapper,
@@ -11,6 +10,7 @@ import {
   RightSideLiHorizontal,
   RightSideLiVertical,
   MenuItems,
+  MainText,
 } from "./styled";
 import { ArrowBack } from "@/components/buttons";
 import { colors } from "@/styles/colors";
@@ -54,19 +54,17 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 duration={500}
                 onClick={() => setOpenHamburgerMenu(false)}
               >
-                <WhiteAndGreenText
-                  firstText="Kamil"
-                  secondText="Bobrowki"
-                  textSize="32px"
-                />
+                <MainText>
+                  <div>Kamil</div>
+                  <div>Bobrowki</div>
+                </MainText>
               </ReactScrollLink>
             ) : (
               <Link href="/" onClick={() => setOpenHamburgerMenu(false)}>
-                <WhiteAndGreenText
-                  firstText="Kamil"
-                  secondText="Bobrowki"
-                  textSize="32px"
-                />
+                <MainText>
+                  <div>Kamil</div>
+                  <div>Bobrowki</div>
+                </MainText>
               </Link>
             )}
           </LeftSideLi>

@@ -6,6 +6,7 @@ export const NavbarPositionFixed = styled.nav`
   position: fixed;
   width: 100vw;
   z-index: 999;
+  top: -1px;
 
   background-color: ${colors.background.mirage};
   border-bottom: 1px solid ${colors.greenThemeColor};
@@ -18,15 +19,27 @@ export const NavbarPositionFixed = styled.nav`
 export const NavbarUlWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  min-height: 5rem;
-  margin-left: 8rem;
-  margin-right: 8rem;
   list-style-type: none;
+  height: 5rem;
 
-  @media only screen and (max-width: 1200px) {
-    margin-left: 3rem;
-    margin-right: 3rem;
+  @media only screen and (max-width: 575px) {
+    ${typography.text.bold["16px"]}
+    padding: 0 10vw;
+    gap: 6px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.text.bold["20px"]}
+    padding: 0 10vw;
+    gap: 8px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.bold["24px"]}
+    padding: 0 10vw;
+    gap: 10px;
   }
 `;
 
@@ -71,4 +84,28 @@ export const RightSideLiVertical = styled.li`
 
 export const MenuItems = styled.div`
   margin: 1rem;
+`;
+
+export const MainText = styled.div`
+  display: flex;
+  color: ${colors.white};
+
+  :last-child {
+    color: ${colors.greenThemeColor};
+  }
+
+  @media only screen and (max-width: 575px) {
+    ${typography.text.bold["16px"]}
+    gap: 6px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    ${typography.text.bold["20px"]}
+    gap: 8px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    ${typography.text.bold["24px"]}
+    gap: 10px;
+  }
 `;

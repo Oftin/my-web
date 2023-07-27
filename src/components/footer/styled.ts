@@ -99,11 +99,9 @@ export const RightText = styled.div`
 `;
 
 export const FooterImage = styled.div`
-  @media only screen and (max-width: 575px) {
-    height: 30px;
-  }
+  width: 60%;
 
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    height: 40px;
+  @media only screen and (min-width: 768px) {
+    width: 150px;
   }
 `;
