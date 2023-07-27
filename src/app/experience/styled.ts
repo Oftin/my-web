@@ -29,6 +29,7 @@ export const ContentWrapper = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
+  height: 100%;
 
   @media only screen and (max-width: 575px) {
     grid-template-columns: 290px 10%;
