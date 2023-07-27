@@ -102,14 +102,28 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                 {webTabs.map((tab) => {
                   return (
                     <MenuItems key={tab}>
-                      <Button
-                        onClick={() => {
-                          setOpenHamburgerMenu((prevState) => !prevState);
-                          router.push(`#${tab}`);
-                        }}
-                      >
-                        {programingTextStyle(tab)}
-                      </Button>
+                      {mainScreen ? (
+                        <ReactScrollLink
+                          to={`${tab}`}
+                          spy={true}
+                          smooth={true}
+                          duration={500}
+                          onClick={() =>
+                            setOpenHamburgerMenu((prevState) => !prevState)
+                          }
+                        >
+                          {programingTextStyle(tab)}
+                        </ReactScrollLink>
+                      ) : (
+                        <Button
+                          onClick={() => {
+                            setOpenHamburgerMenu((prevState) => !prevState);
+                            router.push(`/#${tab}`);
+                          }}
+                        >
+                          {programingTextStyle(tab)}
+                        </Button>
+                      )}
                     </MenuItems>
                   );
                 })}
@@ -118,6 +132,8 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
           ) : (
             <>
               {webTabs.map((tab) => {
+                console.log("tab: ", tab);
+
                 return (
                   <RightSideLiHorizontal key={tab}>
                     {mainScreen ? (
