@@ -1,10 +1,15 @@
 import { PagePosition } from "@/components/wrappers/pagePosition";
-import { TitleSection } from "@/components/titleSection";
-import { TextParagraph } from "@/components/text";
 import { CallToActionButton } from "@/components/buttons";
 import { Images } from "@/components/images";
 import { Image } from "@/components/Modifiers";
-import { AboutSectionWrapper, LeftSide, RigthSide } from "./styled";
+import {
+  AboutSectionWrapper,
+  LeftSide,
+  RigthSide,
+  MainText,
+  SecondText,
+  TextParagraph,
+} from "./styled";
 import { AboutSectionProps } from "./types";
 
 export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
@@ -16,17 +21,19 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
         </LeftSide>
 
         <RigthSide>
-          <TitleSection
-            upperText="My Intro"
-            mainText="About Me"
-            width="240px"
-          />
+          <SecondText>
+            <div>My</div>
+            <div>Intro</div>
+          </SecondText>
+          <MainText>
+            <div>About</div>
+            <div>Me</div>
+          </MainText>
 
-          <TextParagraph
-            text="I'm a master of science in Automation and Robotics. I studied at the University of Silesia."
-            size="16px"
-            width="310px"
-          />
+          <TextParagraph>
+            I&apos;m a master of science in Automation and Robotics. I studied
+            at the University of Silesia.
+          </TextParagraph>
 
           <CallToActionButton name="Read More" href="/about#top" />
         </RigthSide>

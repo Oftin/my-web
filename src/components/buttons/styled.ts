@@ -7,6 +7,7 @@ export const Button = styled.button<{ styles?: string; $margin?: string }>`
   color: ${colors.white};
   background-color: ${colors.greenThemeColor};
   border: none;
+  cursor: pointer;
   ${borderRadius["8px"]}
   padding: 15px;
 

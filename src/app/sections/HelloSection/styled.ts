@@ -23,11 +23,12 @@ export const HelloSectionWrapper = styled.div`
   @media only screen and (min-width: 576px) and (max-width: 1023px) {
     padding-top: 20vw;
     padding-bottom: 10vw;
+    gap: 50px;
   }
 
   @media only screen and (min-width: 1024px) {
     flex-direction: row;
-    gap: 200px;
+    gap: 100px;
   }
 `;
 

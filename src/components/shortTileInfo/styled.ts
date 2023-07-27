@@ -15,4 +15,5 @@ export const Button = styled.button`
   height: fit-content;
   border: 2px solid red;
   ${borderRadius["8px"]}
+  cursor: pointer;
 `;
