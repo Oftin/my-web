@@ -32,7 +32,7 @@ export const AboutSection = ({ backgroundColor }: AboutSectionProps) => {
 
           <TextParagraph>
             I&apos;m a master of science in Automation and Robotics. I studied
-            at the University of Silesia.
+            at the Silesian University of Technology.
           </TextParagraph>
 
           <CallToActionButton name="Read More" href="/about#top" />

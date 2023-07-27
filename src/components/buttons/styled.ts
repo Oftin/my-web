@@ -9,18 +9,19 @@ export const Button = styled.button<{ styles?: string; $margin?: string }>`
   border: none;
   cursor: pointer;
   ${borderRadius["8px"]}
-  padding: 15px;
 
   @media only screen and (max-width: 575px) {
-    ${typography.text.bold["16px"]}
+    ${typography.text.bold["12px"]}
+    padding: 12px;
   }
 
   @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["20px"]}
+    ${typography.text.bold["16px"]}
+    padding: 12px;
   }
 
   @media only screen and (min-width: 768px) {
-    ${typography.text.bold["24px"]}
+    ${typography.text.bold["20px"]}
     padding: 20px;
   }
 

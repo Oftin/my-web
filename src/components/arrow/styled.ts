@@ -8,6 +8,7 @@ export const ArrowWrapper = styled.div<{ orientation: string }>`
       display: flex;
       flex-direction: row;
       width: 100%;
+      max-width: 1440px;
     `};
 
   ${({ orientation }) =>
@@ -32,19 +33,19 @@ export const WhiteArrow = styled.div<{
     orientation === "vertical" && $showArrowhead
       ? css`
           width: 2px;
-          height: 100%;
+          height: 90vh;
           background-color: ${colors.white};
         `
       : css`
           width: 2px;
-          height: 100%;
+          height: 90vw;
           background-color: ${colors.white};
         `};
 
   ${({ orientation }) =>
     orientation === "horizontal" &&
     css`
-      width: 85%;
+      width: 85vw;
       height: 2px;
       background-color: ${colors.white};
       margin-right: -2px;

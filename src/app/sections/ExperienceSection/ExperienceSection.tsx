@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Text } from "@/components/text";
 import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
+import { Image } from "@/components/Modifiers";
 import { CallToActionButton } from "@/components/buttons";
 import { Arrow } from "@/components/arrow";
 import {
@@ -14,6 +14,11 @@ import {
   FourColumns,
   FiveRows,
   TextPosition,
+  MainText,
+  SecondText,
+  TextParagraph,
+  IconWrapper,
+  SmallScreenContentWrapper,
 } from "./styled";
 import { ExperienceSectionProps } from "./types";
 
@@ -28,17 +33,7 @@ const horizontalArray = [
         centerText
       />
     ),
-    third: (
-      <Image
-        src={Icons.GreenDotWithRing}
-        alt=""
-        style={{
-          zIndex: 800,
-          width: "26px",
-          height: "26px",
-        }}
-      />
-    ),
+    third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
     fourth: <Image src={Icons.ArrowDown} alt="" />,
     fifth: (
       <TextPosition>
@@ -75,15 +70,7 @@ const horizontalArray = [
       </TextPosition>
     ),
     second: <Image src={Icons.ArrowUp} alt="" />,
-    third: (
-      <Image
-        src={Icons.GreenDotWithRing}
-        alt=""
-        style={{
-          zIndex: 800,
-        }}
-      />
-    ),
+    third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
     fourth: (
       <Text
         text="2019-09 - 2020-05"
@@ -104,15 +91,7 @@ const horizontalArray = [
         centerText
       />
     ),
-    third: (
-      <Image
-        src={Icons.GreenDotWithRing}
-        alt=""
-        style={{
-          zIndex: 800,
-        }}
-      />
-    ),
+    third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
     fourth: <Image src={Icons.ArrowDown} alt="" />,
     fifth: (
       <TextPosition>
@@ -144,18 +123,10 @@ const horizontalArray = [
       </TextPosition>
     ),
     second: <Image src={Icons.ArrowUp} alt="" />,
-    third: (
-      <Image
-        src={Icons.GreenDotWithRing}
-        alt=""
-        style={{
-          zIndex: 800,
-        }}
-      />
-    ),
+    third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
     fourth: (
       <Text
-        text="2021-10 - 2023-07"
+        text="2021-10 - 2023-08"
         color={colors.greenThemeColor}
         size="20px"
         centerText
@@ -167,28 +138,28 @@ const horizontalArray = [
 
 const verticalArray = [
   {
-    company: "UPC Polska",
-    date: "2017-10 - 2019-08",
-    role: "Technical Support Engineer",
-    showArrowhead: false,
-  },
-  {
-    company: "RW Swiss Automation",
-    date: "2019-09 - 2020-05",
-    role: "Robotic Engineer",
-    showArrowhead: false,
+    company: "LEOCODE",
+    date: "2021-10 - 2023-08",
+    role: "Junior React Developer",
+    svg: Icons.Programming,
   },
   {
     company: "SR Robotics",
     date: "2021-05 - 2021-06",
     role: "Technical support",
-    showArrowhead: false,
+    svg: Icons.UnderwaterScooter,
   },
   {
-    company: "LEOCODE",
-    date: "2021-10 - 2023-06",
-    role: "Junior React Developer",
-    showArrowhead: true,
+    company: "RW Swiss Automation",
+    date: "2019-09 - 2020-05",
+    role: "Robotic Engineer",
+    svg: Icons.IndustryRobot,
+  },
+  {
+    company: "UPC Polska",
+    date: "2017-10 - 2019-08",
+    role: "Technical Support Engineer",
+    svg: Icons.Support,
   },
 ];
 
@@ -199,8 +170,8 @@ export const ExperienceSection = ({
     <PagePosition backgroundColor={backgroundColor} paddingPlus id="experience">
       <ExperienceSectionWrapper>
         <Heading>
-          <Text text="Last" color={colors.greenThemeColor} size="32px" />
-          <Text text="Experience" color={colors.white} size="48px" />
+          <SecondText>Last</SecondText>
+          <MainText>Experience</MainText>
         </Heading>
 
         <TimeLineHorizontalForLargeScreenWidth>
@@ -226,79 +197,27 @@ export const ExperienceSection = ({
         <TimeLineVerticalForSmallScreenWidth>
           {verticalArray.map((exp) => {
             return (
-              <>
-                <div
-                  key={exp.company}
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    position: "relative",
-                    placeItems: "end",
-                  }}
-                >
-                  <div
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      position: "absolute",
-                      left: "30%",
-                    }}
-                  >
-                    <Arrow
-                      orientation="vertical"
-                      showArrowhead={exp.showArrowhead}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      position: "absolute",
-                      top: "41%",
-                      left: "75.5%",
-                    }}
-                  >
-                    <Image
-                      src={Icons.GreenDotWithRing}
-                      alt={""}
-                      style={{
-                        zIndex: 899,
-                      }}
-                    />
-                  </div>
+              <SmallScreenContentWrapper key={exp.company + 1}>
+                <div>
+                  <TextParagraph $color={colors.white}>
+                    {exp.role}
+                  </TextParagraph>
+                  <TextParagraph $color={colors.greenThemeColor}>
+                    {exp.date}
+                  </TextParagraph>
+                  <TextParagraph $color={colors.grayText}>
+                    {exp.company}
+                  </TextParagraph>
                 </div>
-
-                <div
-                  key={exp.company + 1}
-                  style={{
-                    margin: "2rem 0",
-                  }}
-                >
-                  <Text text={exp.role} color={colors.white} size={"20px"} />
-                  <Text
-                    text={exp.date}
-                    color={colors.greenThemeColor}
-                    size={"20px"}
-                    styles="margin: 0.5rem 0;"
-                  />
-                  <Text
-                    text={exp.company}
-                    color={colors.grayText}
-                    size={"20px"}
-                  />
-                </div>
-              </>
+                <IconWrapper>
+                  <Image src={exp.svg} alt={"svgIcon"} />
+                </IconWrapper>
+              </SmallScreenContentWrapper>
             );
           })}
         </TimeLineVerticalForSmallScreenWidth>
 
-        <div
-          style={{
-            marginTop: "4rem",
-          }}
-        >
-          <CallToActionButton name="Read More" href="/experience#top" />
-        </div>
+        <CallToActionButton name="Read More" href="/experience#top" />
       </ExperienceSectionWrapper>
     </PagePosition>
   );
