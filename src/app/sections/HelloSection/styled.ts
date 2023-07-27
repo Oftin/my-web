@@ -46,6 +46,7 @@ export const ContactButton = styled(ReactScrollLink)`
   color: ${colors.white};
   background-color: ${colors.greenThemeColor};
   ${borderRadius["8px"]}
+  cursor: pointer;
 
   @media only screen and (max-width: 575px) {
     ${typography.text.bold["12px"]}
