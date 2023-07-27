@@ -9,7 +9,7 @@ export const EducationSectionWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 6em;
-  padding-bottom: 6em;
+  padding-bottom: 3em;
 `;
 
 export const TitleWrapper = styled.div`
@@ -29,8 +29,18 @@ export const StudyTime = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+
+  @media only screen and (max-width: 575px) {
+    margin: 1.5rem 0;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    margin: 2rem 0;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin: 3rem 0;
+  }
 `;
 
 export const MainText = styled.div`

@@ -43,6 +43,7 @@ export const TimeLineVerticalForSmallScreenWidth = styled.div`
 
 export const Heading = styled.div`
   width: 100%;
+  margin-bottom: 2rem;
 `;
 
 export const ArrowWrapper = styled.div`
@@ -137,6 +138,7 @@ export const TextParagraph = styled.div<{ $color: string }>`
   @media only screen and (min-width: 576px) and (max-width: 767px) {
     ${typography.text.bold["16px"]}
   }
+
   @media only screen and (min-width: 768px) {
     ${typography.text.bold["20px"]}
   }
@@ -162,4 +164,8 @@ export const SmallScreenContentWrapper = styled.div`
   align-items: center;
   width: 100%;
   margin: 1rem 0;
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-top: 2rem;
 `;

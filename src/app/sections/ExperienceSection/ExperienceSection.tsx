@@ -19,6 +19,7 @@ import {
   TextParagraph,
   IconWrapper,
   SmallScreenContentWrapper,
+  ButtonWrapper,
 } from "./styled";
 import { ExperienceSectionProps } from "./types";
 
@@ -217,7 +218,9 @@ export const ExperienceSection = ({
           })}
         </TimeLineVerticalForSmallScreenWidth>
 
-        <CallToActionButton name="Read More" href="/experience#top" />
+        <ButtonWrapper>
+          <CallToActionButton name="Read More" href="/experience#top" />
+        </ButtonWrapper>
       </ExperienceSectionWrapper>
     </PagePosition>
   );

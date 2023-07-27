@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { CallToActionButton } from "@/components/buttons";
-import { Text, TextParagraph, WhiteAndGreenText } from "@/components/text";
 import { colors } from "@/styles/colors";
 import {
   SkillSectionWrapper,
@@ -8,6 +8,12 @@ import {
   ButtonForLargeScreen,
   ButtonForSmallScreen,
   Ul,
+  MainText,
+  SecondText,
+  SkillNumber,
+  SkillName,
+  TextParagraph,
+  LeftSide,
 } from "./styled";
 import { SkillSectionProps } from "./types";
 
@@ -21,43 +27,88 @@ const firstSkillsColumn = [
 const secondSkillsColumn = ["Styled Component", "Git & GitHub", "Cypress"];
 
 export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const smallScreen = () => {
+    return windowWidth <= 1023;
+  };
+
   return (
     <PagePosition backgroundColor={backgroundColor} paddingPlus id="skills">
       <SkillSectionWrapper>
-        <div>
-          <WhiteAndGreenText
-            firstText="Favorite"
-            secondText="Skills"
-            textSize="32px"
-          />
-          <Text
-            text="My Skills"
-            color={colors.greenThemeColor}
-            size="48px"
-            styles="margin-bottom: 1.25rem"
-          />
-          <TextParagraph
-            text={`"I always do what I can't, so I can figureout how to do it" ~ Pablo Picasso`}
-            size="20px"
-            width="410px"
-            styles="margin-bottom: 3rem;"
-          />
+        <LeftSide>
+          <SecondText>
+            <div>Favorite</div>
+            <div>Skills</div>
+          </SecondText>
+          <MainText>
+            <div>My</div>
+            <div>Skills</div>
+          </MainText>
+
+          <TextParagraph>
+            &quot;I always do what I can&apos;t, so I can figureout how to do
+            it&quot; ~ Pablo Picasso
+          </TextParagraph>
+
           <ButtonForLargeScreen>
             <CallToActionButton name="Read More" href="/skills#top" />
           </ButtonForLargeScreen>
-        </div>
+        </LeftSide>
 
         <SkillWrapper>
           <Ul>
             {firstSkillsColumn.map((skill) => {
               return (
-                <li key={skill} style={{ marginBottom: "1.25rem" }}>
-                  <span style={{ color: `${colors.greenThemeColor}` }}>
-                    {`0${
-                      firstSkillsColumn.findIndex((el) => el === skill) + 1
-                    }.`}{" "}
-                  </span>
-                  {skill}
+                <li
+                  key={skill}
+                  style={{
+                    display: "flex",
+                    marginBottom: "1.25rem",
+                    gap: "10px",
+                  }}
+                >
+                  {smallScreen() ? (
+                    <>
+                      <span
+                        style={{
+                          color: `${colors.greenThemeColor}`,
+                          width: "100%",
+                          textAlign: "end",
+                        }}
+                      >
+                        <SkillNumber>
+                          {`0${
+                            firstSkillsColumn.findIndex((el) => el === skill) +
+                            1
+                          }.`}
+                        </SkillNumber>
+                      </span>
+                      <SkillName>{skill}</SkillName>{" "}
+                    </>
+                  ) : (
+                    <SkillName>
+                      <span
+                        style={{
+                          color: `${colors.greenThemeColor}`,
+                        }}
+                      >
+                        {`0${
+                          firstSkillsColumn.findIndex((el) => el === skill) + 1
+                        }. `}
+                      </span>
+                      {skill}
+                    </SkillName>
+                  )}
                 </li>
               );
             })}
@@ -66,18 +117,52 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
           <Ul>
             {secondSkillsColumn.map((skill) => {
               return (
-                <li key={skill} style={{ marginBottom: "1.25rem" }}>
-                  <span style={{ color: `${colors.greenThemeColor}` }}>
-                    {`0${
-                      secondSkillsColumn.findIndex((el) => el === skill) + 5
-                    }.`}{" "}
-                  </span>
-                  {skill}
+                <li
+                  key={skill}
+                  style={{
+                    display: "flex",
+                    marginBottom: "1.25rem",
+                    gap: "10px",
+                  }}
+                >
+                  {smallScreen() ? (
+                    <>
+                      <span
+                        style={{
+                          color: `${colors.greenThemeColor}`,
+                          width: "100%",
+                          textAlign: "end",
+                        }}
+                      >
+                        <SkillNumber>
+                          {`0${
+                            secondSkillsColumn.findIndex((el) => el === skill) +
+                            5
+                          }.`}
+                        </SkillNumber>
+                      </span>
+                      <SkillName>{skill}</SkillName>
+                    </>
+                  ) : (
+                    <SkillName>
+                      <span
+                        style={{
+                          color: `${colors.greenThemeColor}`,
+                        }}
+                      >
+                        {`0${
+                          secondSkillsColumn.findIndex((el) => el === skill) + 5
+                        }.`}
+                      </span>
+                      {skill}
+                    </SkillName>
+                  )}
                 </li>
               );
             })}
           </Ul>
         </SkillWrapper>
+
         <ButtonForSmallScreen>
           <CallToActionButton name="Read More" href="/skills#top" />
         </ButtonForSmallScreen>

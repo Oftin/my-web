@@ -125,7 +125,6 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         to={`${tab}`}
                         spy={true}
                         smooth={true}
-                        offset={tab === "skills" ? -200 : undefined}
                         duration={500}
                         onClick={() =>
                           setOpenHamburgerMenu((prevState) => !prevState)
