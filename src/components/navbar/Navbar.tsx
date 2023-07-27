@@ -105,7 +105,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       <Button
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
-                          router.push(`/#${tab}`);
+                          router.push(`#${tab}`);
                         }}
                       >
                         {programingTextStyle(tab)}
