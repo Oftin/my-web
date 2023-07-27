@@ -11,27 +11,36 @@ import {
 
 export const Footer = ({ backgroundColor }: FooterProps) => {
   return (
-    <FooterWrapper $backgroundColor={backgroundColor}>
-      <div>
-        <LeftTopText>
-          <div>Kamil</div>
-          <div>Bobrowski</div>
-        </LeftTopText>
-        <LeftBottomText>Front-end Developer</LeftBottomText>
-      </div>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateRows: "1fr auto",
+        minHeight: "100%",
+        backgroundColor: `${backgroundColor}`,
+      }}
+    >
+      <FooterWrapper $backgroundColor={backgroundColor}>
+        <div>
+          <LeftTopText>
+            <div>Kamil</div>
+            <div>Bobrowski</div>
+          </LeftTopText>
+          <LeftBottomText>Front-end Developer</LeftBottomText>
+        </div>
 
-      <FooterImage>
-        <ImageWithLink
-          href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
-          src={Images.LinkedIn}
-          alt={""}
-        />
-      </FooterImage>
+        <FooterImage>
+          <ImageWithLink
+            href={"https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"}
+            src={Images.LinkedIn}
+            alt={""}
+          />
+        </FooterImage>
 
-      <RightText>
-        <div>© 2023 Kamil Bobrowski.</div>
-        <div>All rights reserved.</div>
-      </RightText>
-    </FooterWrapper>
+        <RightText>
+          <div>© 2023 Kamil Bobrowski.</div>
+          <div>All rights reserved.</div>
+        </RightText>
+      </FooterWrapper>
+    </div>
   );
 };

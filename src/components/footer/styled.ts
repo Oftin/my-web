@@ -7,6 +7,9 @@ export const FooterWrapper = styled.div<{ $backgroundColor?: string }>`
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  height: 100%;
 
   ${({ $backgroundColor }) =>
     $backgroundColor &&
@@ -15,15 +18,15 @@ export const FooterWrapper = styled.div<{ $backgroundColor?: string }>`
     `}
 
   @media only screen and (max-width: 575px) {
-    height: 4rem;
+    min-height: 4rem;
   }
 
   @media only screen and (min-width: 576px) and (max-width: 767px) {
-    height: 5rem;
+    min-height: 5rem;
   }
 
   @media only screen and (min-width: 768px) {
-    height: 6rem;
+    min-height: 6rem;
   }
 `;
 
