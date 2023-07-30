@@ -31,7 +31,7 @@ export const HelloSection = ({ backgroundColor }: HelloSectionProps) => (
 
         <TextParagraph>
           Optimistic programmer, passionate about modern technologies. I
-          continuously develop my skills and see challenges where others see
+          continuously develop my skills and seeing challenges where others see
           problems.
         </TextParagraph>
 

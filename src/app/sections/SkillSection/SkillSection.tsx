@@ -56,7 +56,7 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
           </MainText>
 
           <TextParagraph>
-            &quot;I always do what I can&apos;t, so I can figureout how to do
+            &quot;I always do what I can&apos;t, so I can figure out how to do
             it&quot; ~ Pablo Picasso
           </TextParagraph>
 

@@ -80,3 +80,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.bm-overlay {
+  background: none !important;
+}

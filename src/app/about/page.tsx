@@ -102,7 +102,7 @@ export default function About() {
                 constantly try to improve my growing asset of skills. I have a
                 master&apos;s degree in Automation and Robotics. Instead of
                 problems, I see challenges and that is the mindset I am trying
-                ro apply to my personal life and career path.
+                to apply to my personal life and career path.
               </TextParagraph>
 
               <TextParagraph>
