@@ -104,7 +104,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                     <MenuItems key={tab}>
                       {mainScreen ? (
                         <ReactScrollLink
-                          href={`/#${tab}`}
+                          href={`/`}
                           to={`${tab}`}
                           spy={true}
                           smooth={true}
@@ -133,8 +133,6 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
           ) : (
             <>
               {webTabs.map((tab) => {
-                console.log("tab: ", tab);
-
                 return (
                   <RightSideLiHorizontal key={tab}>
                     {mainScreen ? (

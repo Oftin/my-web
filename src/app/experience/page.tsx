@@ -59,7 +59,7 @@ export default function Experience() {
 
                   <Ul>
                     {exp.listDuties.map((el) => {
-                      return <Li key={el}>{el}s</Li>;
+                      return <Li key={el}>{el}</Li>;
                     })}
                   </Ul>
                 </TextWrapper>

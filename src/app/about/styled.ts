@@ -11,6 +11,7 @@ export const AboutWrapper = styled.div`
   align-self: center;
   margin: 7rem 0;
   width: 80vw;
+  max-width: 1200px;
 
   @media only screen and (min-width: 992px) {
     margin-top: 12rem;
@@ -20,7 +21,7 @@ export const AboutWrapper = styled.div`
 export const ColumnWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 20px;
   height: 100%;
   width: 100%;
 
