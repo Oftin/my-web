@@ -166,8 +166,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
           )}
         </NavbarUlWrapper>
       </NavbarPositionFixed>
-      {/* {showArrowBack && <ArrowBack />} */}
-      <ArrowBack />
+      {showArrowBack && <ArrowBack />}
     </>
   );
 };
