@@ -119,9 +119,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         <Button
                           onClick={() => {
                             setOpenHamburgerMenu((prevState) => !prevState);
-                            router.push(
-                              `https://www.kamil-bobrowski.com/#${tab}`
-                            );
+                            window.location.href = `https://www.kamil-bobrowski.com/#${tab}`;
                           }}
                         >
                           {programingTextStyle(tab)}
@@ -153,9 +151,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       <Button
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
-                          router.push(
-                            `https://www.kamil-bobrowski.com/#${tab}`
-                          );
+                          window.location.href = `https://www.kamil-bobrowski.com/#${tab}`;
                         }}
                       >
                         {programingTextStyle(tab)}
