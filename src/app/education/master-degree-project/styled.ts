@@ -110,7 +110,7 @@ interface TextParagraphProps {
 }
 
 export const TextParagraph = styled.div<TextParagraphProps>`
-  color: ${colors.white};
+  color: ${colors.grayText};
 
   ${({ $turnOffMarginBottom }) =>
     !$turnOffMarginBottom &&

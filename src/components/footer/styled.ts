@@ -83,7 +83,7 @@ export const RightText = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  color: ${colors.white};
+  color: ${colors.grayText};
 
   @media only screen and (max-width: 575px) {
     ${typography.text.bold["6px"]}

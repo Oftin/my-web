@@ -69,7 +69,7 @@ export const SecondText = styled.div`
 `;
 
 export const TextParagraph = styled.div`
-  color: ${colors.white};
+  color: ${colors.grayText};
   margin-bottom: 1.5rem;
 
   @media only screen and (max-width: 575px) {

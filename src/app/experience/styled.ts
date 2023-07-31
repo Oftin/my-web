@@ -72,7 +72,7 @@ export const Ul = styled.div`
 `;
 
 export const Li = styled.li`
-  color: ${colors.white};
+  color: ${colors.grayText};
   padding-bottom: 0.25em;
 `;
 

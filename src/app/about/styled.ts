@@ -150,7 +150,7 @@ export const SecondText = styled.div`
 `;
 
 export const ThirdText = styled.div`
-  color: ${colors.white};
+  color: ${colors.grayText};
 
   @media only screen and (max-width: 575px) {
     ${typography.text.bold["12px"]}
@@ -170,7 +170,7 @@ interface TextParagraphProps {
 }
 
 export const TextParagraph = styled.div<TextParagraphProps>`
-  color: ${colors.white};
+  color: ${colors.grayText};
 
   ${({ $turnOffMarginBottom }) =>
     !$turnOffMarginBottom &&

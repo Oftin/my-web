@@ -13,8 +13,8 @@ import {
   MenuItems,
   MainText,
   Button,
-  SpanWrapper,
-  SpanInside,
+  AWrapper,
+  AInside,
 } from "./styled";
 import { ArrowBack } from "@/components/buttons";
 import { NavbarProps } from "./types";
@@ -49,10 +49,10 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
 
   const programingTextStyle = (text: string) => {
     return (
-      <SpanWrapper>
-        .<SpanInside>{text}</SpanInside>
+      <AWrapper>
+        .<AInside>{text}</AInside>
         ()
-      </SpanWrapper>
+      </AWrapper>
     );
   };
 
@@ -118,6 +118,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         </ReactScrollLink>
                       ) : (
                         <Link
+                          legacyBehavior
                           href={`/#${tab}`}
                           onClick={() => {
                             setOpenHamburgerMenu((prevState) => !prevState);
@@ -158,6 +159,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       </ReactScrollLink>
                     ) : (
                       <Link
+                        legacyBehavior
                         href={`/#${tab}`}
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
