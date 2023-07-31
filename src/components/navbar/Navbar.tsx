@@ -118,14 +118,10 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         </ReactScrollLink>
                       ) : (
                         <Link
-                          href={`/#${tab}`}
-                          shallow={true}
-                          scroll={true}
+                          href={`https://www.kamil-bobrowski.com/#${tab}`}
                           onClick={() => {
-                            router.prefetch("/");
                             setOpenHamburgerMenu((prevState) => !prevState);
                           }}
-                          passHref={true}
                         >
                           {programingTextStyle(tab)}
                         </Link>
@@ -154,14 +150,10 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       </ReactScrollLink>
                     ) : (
                       <Link
-                        href={`/#${tab}`}
-                        shallow={true}
-                        scroll={true}
+                        href={`https://www.kamil-bobrowski.com/#${tab}`}
                         onClick={() => {
-                          router.prefetch("/");
                           setOpenHamburgerMenu((prevState) => !prevState);
                         }}
-                        passHref={true}
                       >
                         {programingTextStyle(tab)}
                       </Link>
