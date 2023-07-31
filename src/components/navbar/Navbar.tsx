@@ -15,8 +15,6 @@ import {
   SpanWrapper,
   SpanInside,
 } from "./styled";
-import { ArrowBack } from "@/components/buttons";
-import { NavbarProps } from "./types";
 
 const webTabs = [
   "About",
@@ -28,11 +26,9 @@ const webTabs = [
   "Contact",
 ].map((e) => e.toLowerCase());
 
-export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
+export const Navbar = () => {
   const [openHamburgerMenu, setOpenHamburgerMenu] = useState<boolean>(false);
   const [windowWidth, setWindowWidth] = useState<number>(0);
-
-  console.log(showArrowBack);
 
   const router = useRouter();
 
@@ -62,83 +58,50 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
   };
 
   return (
-    <>
-      <NavbarPositionFixed>
-        <NavbarUlWrapper>
-          <LeftSideLi>
-            {mainScreen ? (
-              <ReactScrollLink
-                to="hello"
-                spy={true}
-                smooth={true}
-                duration={500}
-                onClick={() => setOpenHamburgerMenu(false)}
-              >
-                <MainText>
-                  <div>Kamil</div>
-                  <div>Bobrowki</div>
-                </MainText>
-              </ReactScrollLink>
-            ) : (
-              <Button
-                onClick={() => {
-                  router.push("/");
-                }}
-              >
-                <MainText>
-                  <div>Kamil</div>
-                  <div>Bobrowki</div>
-                </MainText>
-              </Button>
-            )}
-          </LeftSideLi>
-
-          {turnOnHamburgerMenu() ? (
-            <RightSideLiVertical>
-              <Menu
-                right
-                width="100%"
-                isOpen={openHamburgerMenu}
-                onOpen={() => setOpenHamburgerMenu((prevState) => !prevState)}
-              >
-                {webTabs.map((tab) => {
-                  return (
-                    <MenuItems key={tab}>
-                      {mainScreen ? (
-                        <ReactScrollLink
-                          href={`/`}
-                          to={`${tab}`}
-                          spy={true}
-                          smooth={true}
-                          duration={500}
-                          onClick={() =>
-                            setOpenHamburgerMenu((prevState) => !prevState)
-                          }
-                        >
-                          {programingTextStyle(tab)}
-                        </ReactScrollLink>
-                      ) : (
-                        <Button
-                          onClick={() => {
-                            setOpenHamburgerMenu((prevState) => !prevState);
-                            window.location.href = `https://www.kamil-bobrowski.com/#${tab}`;
-                          }}
-                        >
-                          {programingTextStyle(tab)}
-                        </Button>
-                      )}
-                    </MenuItems>
-                  );
-                })}
-              </Menu>
-            </RightSideLiVertical>
+    <NavbarPositionFixed>
+      <NavbarUlWrapper>
+        <LeftSideLi>
+          {mainScreen ? (
+            <ReactScrollLink
+              to="hello"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={() => setOpenHamburgerMenu(false)}
+            >
+              <MainText>
+                <div>Kamil</div>
+                <div>Bobrowki</div>
+              </MainText>
+            </ReactScrollLink>
           ) : (
-            <>
+            <Button
+              onClick={() => {
+                router.push("/");
+              }}
+            >
+              <MainText>
+                <div>Kamil</div>
+                <div>Bobrowki</div>
+              </MainText>
+            </Button>
+          )}
+        </LeftSideLi>
+
+        {turnOnHamburgerMenu() ? (
+          <RightSideLiVertical>
+            <Menu
+              right
+              width="100%"
+              isOpen={openHamburgerMenu}
+              onOpen={() => setOpenHamburgerMenu((prevState) => !prevState)}
+            >
               {webTabs.map((tab) => {
                 return (
-                  <RightSideLiHorizontal key={tab}>
+                  <MenuItems key={tab}>
                     {mainScreen ? (
                       <ReactScrollLink
+                        href={`/`}
                         to={`${tab}`}
                         spy={true}
                         smooth={true}
@@ -159,14 +122,44 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         {programingTextStyle(tab)}
                       </Button>
                     )}
-                  </RightSideLiHorizontal>
+                  </MenuItems>
                 );
               })}
-            </>
-          )}
-        </NavbarUlWrapper>
-      </NavbarPositionFixed>
-      {showArrowBack && <ArrowBack />}
-    </>
+            </Menu>
+          </RightSideLiVertical>
+        ) : (
+          <>
+            {webTabs.map((tab) => {
+              return (
+                <RightSideLiHorizontal key={tab}>
+                  {mainScreen ? (
+                    <ReactScrollLink
+                      to={`${tab}`}
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      onClick={() =>
+                        setOpenHamburgerMenu((prevState) => !prevState)
+                      }
+                    >
+                      {programingTextStyle(tab)}
+                    </ReactScrollLink>
+                  ) : (
+                    <Button
+                      onClick={() => {
+                        setOpenHamburgerMenu((prevState) => !prevState);
+                        window.location.href = `https://www.kamil-bobrowski.com/#${tab}`;
+                      }}
+                    >
+                      {programingTextStyle(tab)}
+                    </Button>
+                  )}
+                </RightSideLiHorizontal>
+              );
+            })}
+          </>
+        )}
+      </NavbarUlWrapper>
+    </NavbarPositionFixed>
   );
 };

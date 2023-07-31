@@ -7,7 +7,7 @@ import { ThanksWrapper, MainText, SecondText } from "./styled";
 export default function Thanks() {
   return (
     <>
-      <Navbar showArrowBack={false} />
+      <Navbar />
       <ThanksWrapper>
         <MainText>Thanks</MainText>
         <SecondText>for</SecondText>

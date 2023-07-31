@@ -38,24 +38,6 @@ export const Button = styled.button<{ styles?: string; $margin?: string }>`
     `}
 `;
 
-export const ArrowBackWrapper = styled.button`
-  position: absolute;
-  top: 6rem;
-  margin-left: 8rem;
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-
-  @media only screen and (max-width: 992px) {
-    visibility: hidden;
-    display: none;
-  }
-`;
-
 export const RequestButtonWrapper = styled.button`
   background-color: ${colors.greenThemeColor};
   color: ${colors.white};
