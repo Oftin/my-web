@@ -119,6 +119,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       ) : (
                         <Link
                           href={`https://www.kamil-bobrowski.com/#${tab}`}
+                          scroll={false}
                           onClick={() => {
                             setOpenHamburgerMenu((prevState) => !prevState);
                           }}
@@ -151,6 +152,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                     ) : (
                       <Link
                         href={`https://www.kamil-bobrowski.com/#${tab}`}
+                        scroll={false}
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
                         }}
