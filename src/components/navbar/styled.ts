@@ -106,12 +106,12 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const AWrapper = styled.a`
+export const SpanWrapper = styled.span`
   color: ${colors.greenThemeColor};
   ${typography.text.bold["24px"]}
 `;
 
-export const AInside = styled.a`
+export const SpanInside = styled.span`
   color: ${colors.white};
   ${typography.text.bold["24px"]}
 

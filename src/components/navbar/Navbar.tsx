@@ -13,8 +13,8 @@ import {
   MenuItems,
   MainText,
   Button,
-  AWrapper,
-  AInside,
+  SpanWrapper,
+  SpanInside,
 } from "./styled";
 import { ArrowBack } from "@/components/buttons";
 import { NavbarProps } from "./types";
@@ -49,10 +49,10 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
 
   const programingTextStyle = (text: string) => {
     return (
-      <AWrapper>
-        .<AInside>{text}</AInside>
+      <SpanWrapper>
+        .<SpanInside>{text}</SpanInside>
         ()
-      </AWrapper>
+      </SpanWrapper>
     );
   };
 
