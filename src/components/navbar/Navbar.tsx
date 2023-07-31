@@ -119,7 +119,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       ) : (
                         <Link
                           href={`/#${tab}`}
-                          scroll={false}
+                          scroll={true}
                           onClick={() => {
                             setOpenHamburgerMenu((prevState) => !prevState);
                           }}
@@ -161,7 +161,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                     ) : (
                       <Link
                         href={`/#${tab}`}
-                        scroll={false}
+                        scroll={true}
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
                         }}
