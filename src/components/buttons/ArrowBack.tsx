@@ -7,9 +7,7 @@ export const ArrowBack = () => {
   // const router = useRouter();
 
   const goUserBack = () => {
-    window.history.back();
-    event?.stopPropagation();
-    // router.back()
+    window?.history.back();
   };
 
   return (
