@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
@@ -117,15 +116,16 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                           {programingTextStyle(tab)}
                         </ReactScrollLink>
                       ) : (
-                        <Link
-                          href={`https://www.kamil-bobrowski.com/#${tab}`}
-                          scroll={false}
+                        <Button
                           onClick={() => {
                             setOpenHamburgerMenu((prevState) => !prevState);
+                            router.push(
+                              `https://www.kamil-bobrowski.com/#${tab}`
+                            );
                           }}
                         >
                           {programingTextStyle(tab)}
-                        </Link>
+                        </Button>
                       )}
                     </MenuItems>
                   );
@@ -150,15 +150,16 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         {programingTextStyle(tab)}
                       </ReactScrollLink>
                     ) : (
-                      <Link
-                        href={`https://www.kamil-bobrowski.com/#${tab}`}
-                        scroll={false}
+                      <Button
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
+                          router.push(
+                            `https://www.kamil-bobrowski.com/#${tab}`
+                          );
                         }}
                       >
                         {programingTextStyle(tab)}
-                      </Link>
+                      </Button>
                     )}
                   </RightSideLiHorizontal>
                 );
