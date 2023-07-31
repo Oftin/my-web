@@ -1,5 +1,4 @@
-// import { useState, useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { slide as Menu } from "react-burger-menu";
@@ -31,18 +30,20 @@ const webTabs = [
 
 export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
   const [openHamburgerMenu, setOpenHamburgerMenu] = useState<boolean>(false);
-  // const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
+
+  console.log(showArrowBack);
 
   const router = useRouter();
 
-  // useEffect(() => {
-  //   function handleResize() {
-  //     setWindowWidth(window.innerWidth);
-  //   }
-  //   window.addEventListener("resize", handleResize);
-  //   handleResize();
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const currentPage = usePathname();
   const mainScreen = currentPage === "/";
@@ -56,9 +57,9 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
     );
   };
 
-  // const turnOnHamburgerMenu = () => {
-  //   return windowWidth <= 992;
-  // };
+  const turnOnHamburgerMenu = () => {
+    return windowWidth <= 992;
+  };
 
   return (
     <>
@@ -92,7 +93,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
             )}
           </LeftSideLi>
 
-          {true ? (
+          {turnOnHamburgerMenu() ? (
             <RightSideLiVertical>
               <Menu
                 right
@@ -165,7 +166,8 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
           )}
         </NavbarUlWrapper>
       </NavbarPositionFixed>
-      {showArrowBack && <ArrowBack />}
+      {/* {showArrowBack && <ArrowBack />} */}
+      <ArrowBack />
     </>
   );
 };
