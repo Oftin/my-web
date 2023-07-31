@@ -1,13 +1,15 @@
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { Icons } from "@/components/icons";
 import { ArrowBackWrapper } from "./styled";
 
 export const ArrowBack = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const goUserBack = () => {
-    router.back();
+    window.history.back();
+    event?.stopPropagation();
+    // router.back()
   };
 
   return (
