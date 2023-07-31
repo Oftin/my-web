@@ -4,7 +4,7 @@ import { ArrowBackWrapper } from "./styled";
 
 export const ArrowBack = () => {
   const goUserBack = () => {
-    window.history.go(-1);
+    window.history.back();
   };
 
   return (
