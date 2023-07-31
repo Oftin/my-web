@@ -118,11 +118,11 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         </ReactScrollLink>
                       ) : (
                         <Link
-                          legacyBehavior
                           href={`/#${tab}`}
                           onClick={() => {
                             setOpenHamburgerMenu((prevState) => !prevState);
                           }}
+                          prefetch
                         >
                           {programingTextStyle(tab)}
                         </Link>
@@ -159,11 +159,11 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       </ReactScrollLink>
                     ) : (
                       <Link
-                        legacyBehavior
                         href={`/#${tab}`}
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
                         }}
+                        prefetch
                       >
                         {programingTextStyle(tab)}
                       </Link>
