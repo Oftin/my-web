@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
@@ -116,14 +117,22 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                           {programingTextStyle(tab)}
                         </ReactScrollLink>
                       ) : (
-                        <Button
+                        <Link
+                          href={`/#${tab}`}
                           onClick={() => {
                             setOpenHamburgerMenu((prevState) => !prevState);
-                            router.push(`/#${tab}`);
                           }}
                         >
                           {programingTextStyle(tab)}
-                        </Button>
+                        </Link>
+                        // <Button
+                        //   onClick={() => {
+                        //     setOpenHamburgerMenu((prevState) => !prevState);
+                        //     router.push(`/#${tab}`);
+                        //   }}
+                        // >
+                        //   {programingTextStyle(tab)}
+                        // </Button>
                       )}
                     </MenuItems>
                   );
@@ -148,14 +157,23 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         {programingTextStyle(tab)}
                       </ReactScrollLink>
                     ) : (
-                      <Button
+                      <Link
+                        href={`/#${tab}`}
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
-                          router.push(`/#${tab}`);
                         }}
                       >
                         {programingTextStyle(tab)}
-                      </Button>
+                      </Link>
+
+                      // <Button
+                      //   onClick={() => {
+                      //     setOpenHamburgerMenu((prevState) => !prevState);
+                      //     router.push(`/#${tab}`);
+                      //   }}
+                      // >
+                      //   {programingTextStyle(tab)}
+                      // </Button>
                     )}
                   </RightSideLiHorizontal>
                 );
