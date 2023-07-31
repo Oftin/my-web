@@ -122,7 +122,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                           onClick={() => {
                             setOpenHamburgerMenu((prevState) => !prevState);
                           }}
-                          prefetch
+                          passHref={true}
                         >
                           {programingTextStyle(tab)}
                         </Link>
@@ -163,7 +163,7 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                         onClick={() => {
                           setOpenHamburgerMenu((prevState) => !prevState);
                         }}
-                        prefetch
+                        passHref={true}
                       >
                         {programingTextStyle(tab)}
                       </Link>
