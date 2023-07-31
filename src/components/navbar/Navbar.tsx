@@ -119,22 +119,16 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                       ) : (
                         <Link
                           href={`/#${tab}`}
+                          shallow={true}
                           scroll={true}
                           onClick={() => {
+                            router.prefetch("/");
                             setOpenHamburgerMenu((prevState) => !prevState);
                           }}
                           passHref={true}
                         >
                           {programingTextStyle(tab)}
                         </Link>
-                        // <Button
-                        //   onClick={() => {
-                        //     setOpenHamburgerMenu((prevState) => !prevState);
-                        //     router.push(`/#${tab}`);
-                        //   }}
-                        // >
-                        //   {programingTextStyle(tab)}
-                        // </Button>
                       )}
                     </MenuItems>
                   );
@@ -161,23 +155,16 @@ export const Navbar = ({ showArrowBack = true }: NavbarProps) => {
                     ) : (
                       <Link
                         href={`/#${tab}`}
+                        shallow={true}
                         scroll={true}
                         onClick={() => {
+                          router.prefetch("/");
                           setOpenHamburgerMenu((prevState) => !prevState);
                         }}
                         passHref={true}
                       >
                         {programingTextStyle(tab)}
                       </Link>
-
-                      // <Button
-                      //   onClick={() => {
-                      //     setOpenHamburgerMenu((prevState) => !prevState);
-                      //     router.push(`/#${tab}`);
-                      //   }}
-                      // >
-                      //   {programingTextStyle(tab)}
-                      // </Button>
                     )}
                   </RightSideLiHorizontal>
                 );
