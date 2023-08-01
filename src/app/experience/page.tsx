@@ -22,19 +22,19 @@ const importExperienceArray = experienceArray;
 
 const imageArray = [
   {
-    image: Icons.Support,
+    image: Icons.Programming,
     paretnId: 1,
   },
   {
-    image: Icons.IndustryRobot,
+    image: Icons.UnderwaterScooter,
     paretnId: 2,
   },
   {
-    image: Icons.UnderwaterScooter,
+    image: Icons.IndustryRobot,
     paretnId: 3,
   },
   {
-    image: Icons.Programming,
+    image: Icons.Support,
     paretnId: 4,
   },
 ];
