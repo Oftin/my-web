@@ -71,7 +71,7 @@ export const Navbar = () => {
             >
               <MainText>
                 <div>Kamil</div>
-                <div>Bobrowki</div>
+                <div>Bobrowski</div>
               </MainText>
             </ReactScrollLink>
           ) : (
@@ -82,7 +82,7 @@ export const Navbar = () => {
             >
               <MainText>
                 <div>Kamil</div>
-                <div>Bobrowki</div>
+                <div>Bobrowski</div>
               </MainText>
             </Button>
           )}
