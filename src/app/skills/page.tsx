@@ -6,10 +6,9 @@ import { Navbar } from "@/components/navbar";
 import { ElementWithDropDownDescription } from "@/components/elementWithDropDownDescription";
 import { colors } from "@/styles/colors";
 import { skillTitleArray, skillsArray } from "./mockUp";
+import { MainText, SecondText } from "@/components/text";
 import {
   SkillsWrapper,
-  MainText,
-  SecondText,
   ColumnSkills,
   SectionWrapper,
   ContentWrapper,
@@ -24,7 +23,7 @@ export default function Skills() {
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
         <SkillsWrapper>
-          <MainText>Skills</MainText>
+          <MainText $marginTop="8rem">Skills</MainText>
 
           {importSkillsTitleArray.map((el) => {
             const backgroundColorForSection =
@@ -42,7 +41,9 @@ export default function Skills() {
                 key={el.title}
                 $backgroundColor={backgroundColorForSection}
               >
-                <SecondText>{el.title}</SecondText>
+                <SecondText $marginTop="4rem" $marginBottom="2rem">
+                  {el.title}
+                </SecondText>
 
                 <ContentWrapper>
                   <ColumnSkills>
@@ -64,7 +65,9 @@ export default function Skills() {
             );
           })}
 
-          <MainText $6remTopAndBottomMargin>More skills incoming!</MainText>
+          <MainText $marginTop="6rem" $marginBottom="6rem">
+            More skills incoming!
+          </MainText>
         </SkillsWrapper>
       </PagePosition>
       <Footer />

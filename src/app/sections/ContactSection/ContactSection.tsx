@@ -3,7 +3,8 @@ import { CallToActionButton } from "@/components/buttons";
 import { colors } from "@/styles/colors";
 import { Images } from "@/components/images";
 import { ImageWithLink } from "@/components/Modifiers";
-import { ContactSectionWrapper, MainText, SecondText } from "./styled";
+import { MainText, SecondText } from "@/components/text";
+import { ContactSectionWrapper } from "./styled";
 import { ContactSectionProps } from "./types";
 
 export const ContactSection = ({ backgroundColor }: ContactSectionProps) => {

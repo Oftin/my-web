@@ -1,6 +1,4 @@
-import styled, { css } from "styled-components";
-import { typography } from "@/styles/typography";
-import { colors } from "@/styles/colors";
+import styled from "styled-components";
 
 export const MasterDegreeProjectWrapper = styled.div`
   display: flex;
@@ -48,85 +46,4 @@ export const Fig3Wrapper = styled.div`
   align-items: center;
   justify-items: center;
   margin-bottom: 2rem;
-`;
-
-export const MainText = styled.div`
-  text-align: center;
-  color: ${colors.white};
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["24px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["32px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["36px"]}
-  }
-`;
-
-export const SecondText = styled.div`
-  text-align: center;
-  color: ${colors.greenThemeColor};
-  margin: 0.25rem 0 2rem 0;
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["16px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["20px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.text.bold["24px"]}
-  }
-`;
-
-export const TitleParagraph = styled.div`
-  color: ${colors.greenThemeColor};
-  margin-bottom: 0.5rem;
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["16px"]}
-    align-self: center;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["20px"]}
-    align-self: center;
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.text.bold["24px"]}
-    align-self: start;
-  }
-`;
-
-interface TextParagraphProps {
-  $turnOffMarginBottom?: boolean;
-}
-
-export const TextParagraph = styled.div<TextParagraphProps>`
-  color: ${colors.grayText};
-
-  ${({ $turnOffMarginBottom }) =>
-    !$turnOffMarginBottom &&
-    css`
-      margin-bottom: 1.5rem;
-    `}
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["12px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["16px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.text.bold["20px"]}
-  }
 `;

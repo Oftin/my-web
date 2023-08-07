@@ -7,6 +7,12 @@ import { Image } from "@/components/Modifiers";
 import { Icons } from "@/components/icons";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import {
+  MainText,
+  SecondText,
+  ThirdText,
+  TextParagraph,
+} from "@/components/text";
+import {
   AboutWrapper,
   ColumnWrapper,
   TitleWrapper,
@@ -15,11 +21,8 @@ import {
   InterestsTileWrapper,
   InterestTile,
   TileItem,
-  MainText,
-  SecondText,
-  ThirdText,
-  TextParagraph,
 } from "./styled";
+import { colors } from "@/styles/colors";
 
 const leftInterestsColumn = [
   {
@@ -105,7 +108,7 @@ export default function About() {
                 to apply to my personal life and career path.
               </TextParagraph>
 
-              <TextParagraph>
+              <TextParagraph $marginTop="1rem">
                 I love new challenges, implementing my own ideas and helping
                 people.
               </TextParagraph>
@@ -122,7 +125,9 @@ export default function About() {
                       <div style={{ width: "30px", margin: "1rem" }}>
                         <Image src={el.icon} alt="svgIcon" />
                       </div>
-                      <ThirdText>{el.interest}</ThirdText>
+                      <ThirdText $color={colors.grayText}>
+                        {el.interest}
+                      </ThirdText>
                     </TileItem>
                   );
                 })}
@@ -135,7 +140,9 @@ export default function About() {
                       <div style={{ width: "30px", margin: "1rem" }}>
                         <Image src={el.icon} alt="svgIcon" />
                       </div>
-                      <ThirdText>{el.interest}</ThirdText>
+                      <ThirdText $color={colors.grayText}>
+                        {el.interest}
+                      </ThirdText>
                     </TileItem>
                   );
                 })}

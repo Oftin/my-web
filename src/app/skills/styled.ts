@@ -1,6 +1,4 @@
 import styled, { css } from "styled-components";
-import { typography } from "@/styles/typography";
-import { colors } from "@/styles/colors";
 
 export const SkillsWrapper = styled.div`
   display: flex;
@@ -49,46 +47,4 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 80vw;
-`;
-
-export const MainText = styled.div<{ $6remTopAndBottomMargin?: boolean }>`
-  color: ${colors.white};
-  margin-top: 8rem;
-
-  ${({ $6remTopAndBottomMargin }) =>
-    $6remTopAndBottomMargin &&
-    css`
-      margin-top: 6rem;
-      margin-bottom: 6rem;
-    `}
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["28px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["36px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["48px"]}
-  }
-`;
-
-export const SecondText = styled.div`
-  color: ${colors.white};
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["18px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["24px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["32px"]}
-  }
 `;

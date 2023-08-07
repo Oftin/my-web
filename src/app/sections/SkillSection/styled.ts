@@ -76,54 +76,6 @@ export const Ul = styled.div`
   width: 100%;
 `;
 
-export const MainText = styled.div`
-  display: flex;
-  color: ${colors.white};
-
-  :last-child {
-    color: ${colors.greenThemeColor};
-  }
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["28px"]}
-    gap: 6px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["36px"]}
-    gap: 8px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["48px"]}
-    gap: 10px;
-  }
-`;
-
-export const SecondText = styled.div`
-  display: flex;
-  color: ${colors.white};
-
-  :last-child {
-    color: ${colors.greenThemeColor};
-  }
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["18px"]}
-    gap: 6px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["24px"]}
-    gap: 8px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["32px"]}
-    gap: 10px;
-  }
-`;
-
 export const SkillNumber = styled.div`
   text-align: end;
 
@@ -167,30 +119,5 @@ export const SkillName = styled.div`
   @media only screen and (min-width: 1440px) {
     text-align: start;
     gap: 10px;
-  }
-`;
-
-export const TextParagraph = styled.div`
-  color: ${colors.grayText};
-  margin: 1rem 0;
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["12px"]}
-    width: 250px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["16px"]}
-    width: 300px;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    ${typography.text.bold["20px"]}
-    width: 400px;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    ${typography.text.bold["20px"]}
-    max-width: 400px;
   }
 `;

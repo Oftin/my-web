@@ -67,20 +67,3 @@ export const SecondText = styled.div`
     gap: 10px;
   }
 `;
-
-export const TextParagraph = styled.div`
-  color: ${colors.grayText};
-  margin-bottom: 1.5rem;
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["12px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["16px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.text.bold["20px"]}
-  }
-`;
