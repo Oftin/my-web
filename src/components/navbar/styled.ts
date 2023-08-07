@@ -76,7 +76,7 @@ export const MenuItems = styled.div`
   margin: 0.25rem;
 `;
 
-export const MainText = styled.div`
+export const NameAndSurnameText = styled.div`
   display: flex;
   color: ${colors.white};
 

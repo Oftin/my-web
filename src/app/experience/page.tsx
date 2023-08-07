@@ -7,14 +7,14 @@ import { colors } from "@/styles/colors";
 import { Icons } from "@/components/icons";
 import { Image } from "@/components/Modifiers";
 import { experienceArray } from "./mockUp";
+import { MainText } from "@/components/text";
 import {
   ExperienceWrapper,
   ContentWrapper,
   TextWrapper,
   Ul,
   Li,
-  MainText,
-  SecondText,
+  DetailText,
   IconWrapper,
 } from "./styled";
 
@@ -45,17 +45,17 @@ export default function Experience() {
       <Navbar />
       <PagePosition backgroundColor={colors.background.mirage}>
         <ExperienceWrapper>
-          <MainText>Experience</MainText>
+          <MainText $marginBottom="2rem">Experience</MainText>
 
           {importExperienceArray.map((exp) => {
             return (
               <ContentWrapper key={exp.company}>
                 <TextWrapper>
-                  <SecondText>{exp.company}</SecondText>
-                  <SecondText>
+                  <DetailText>{exp.company}</DetailText>
+                  <DetailText>
                     <div>{exp.date}</div>
                     <div>{exp.role}</div>
-                  </SecondText>
+                  </DetailText>
 
                   <Ul>
                     {exp.listDuties.map((el) => {

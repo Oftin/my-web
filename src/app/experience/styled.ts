@@ -1,6 +1,6 @@
+import styled from "styled-components";
 import { colors } from "@/styles/colors";
 import { typography } from "@/styles/typography";
-import styled from "styled-components";
 
 export const ExperienceWrapper = styled.div`
   display: flex;
@@ -76,27 +76,7 @@ export const Li = styled.li`
   padding-bottom: 0.25em;
 `;
 
-export const MainText = styled.div`
-  color: ${colors.white};
-  margin-bottom: 2rem;
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["28px"]}
-    gap: 6px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["36px"]}
-    gap: 8px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["48px"]}
-    gap: 10px;
-  }
-`;
-
-export const SecondText = styled.div`
+export const DetailText = styled.div`
   display: flex;
   color: ${colors.white};
 

@@ -2,17 +2,15 @@ import { useState, useEffect } from "react";
 import { PagePosition } from "@/components/wrappers/pagePosition";
 import { CallToActionButton } from "@/components/buttons";
 import { colors } from "@/styles/colors";
+import { MainText, SecondText, TextParagraph } from "@/components/text";
 import {
   SkillSectionWrapper,
   SkillWrapper,
   ButtonForLargeScreen,
   ButtonForSmallScreen,
   Ul,
-  MainText,
-  SecondText,
   SkillNumber,
   SkillName,
-  TextParagraph,
   LeftSide,
 } from "./styled";
 import { SkillSectionProps } from "./types";
@@ -55,7 +53,11 @@ export const SkillSection = ({ backgroundColor }: SkillSectionProps) => {
             <div>Skills</div>
           </MainText>
 
-          <TextParagraph>
+          <TextParagraph
+            $width={["250px", "300px", "400px", "400px"]}
+            $marginTop="1rem"
+            $marginBottom={["1rem", "1rem", "1rem", "1rem"]}
+          >
             &quot;I always do what I can&apos;t, so I can figure out how to do
             it&quot; ~ Pablo Picasso
           </TextParagraph>

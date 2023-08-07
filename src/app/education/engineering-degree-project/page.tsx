@@ -6,11 +6,8 @@ import { PagePosition } from "@/components/wrappers/pagePosition";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { colors } from "@/styles/colors";
-import {
-  EngineeringDegreeProjectWrapper,
-  MainText,
-  SecondText,
-} from "./styled";
+import { PageTitleMainText, PageTitleSecondText } from "@/components/text";
+import { EngineeringDegreeProjectWrapper } from "./styled";
 
 export default function EngineeringDegreeProject() {
   const [windowWidth, setWindowWidth] = useState<number>(0);
@@ -61,8 +58,13 @@ export default function EngineeringDegreeProject() {
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
         <EngineeringDegreeProjectWrapper>
-          <MainText>Engineering degree project</MainText>
-          <SecondText>Model of a robotic station with control</SecondText>
+          <PageTitleMainText>Engineering degree project</PageTitleMainText>
+          <PageTitleSecondText
+            $color={colors.greenThemeColor}
+            $margin="0.25rem 0 2rem 0;"
+          >
+            Model of a robotic station with control
+          </PageTitleSecondText>
           <YouTube
             videoId="V4SdvO030xA"
             opts={opts}

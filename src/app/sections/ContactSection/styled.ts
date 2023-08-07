@@ -1,6 +1,4 @@
-import styled, { css } from "styled-components";
-import { typography } from "@/styles/typography";
-import { colors } from "@/styles/colors";
+import styled from "styled-components";
 
 export const ContactSectionWrapper = styled.div`
   display: flex;
@@ -8,42 +6,4 @@ export const ContactSectionWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: calc(100vh + 80px);
-`;
-
-export const MainText = styled.div`
-  color: ${colors.white};
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["28px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["36px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["48px"]}
-  }
-`;
-
-export const SecondText = styled.div<{ margin?: string }>`
-  color: ${colors.white};
-
-  ${({ margin }) =>
-    margin &&
-    css`
-      margin: ${margin};
-    `}
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["18px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["24px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["32px"]}
-  }
 `;

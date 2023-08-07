@@ -2,16 +2,20 @@
 
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
-import { ThanksWrapper, MainText, SecondText } from "./styled";
+import {
+  ThanksWrapper,
+  MainTextForThanks,
+  SecondTextForThanks,
+} from "./styled";
 
 export default function Thanks() {
   return (
     <>
       <Navbar />
       <ThanksWrapper>
-        <MainText>Thanks</MainText>
-        <SecondText>for</SecondText>
-        <MainText>Message!</MainText>
+        <MainTextForThanks>Thanks</MainTextForThanks>
+        <SecondTextForThanks>for</SecondTextForThanks>
+        <MainTextForThanks>Message!</MainTextForThanks>
       </ThanksWrapper>
       <Footer />
     </>
