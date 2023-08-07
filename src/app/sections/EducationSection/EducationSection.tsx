@@ -3,13 +3,11 @@ import { CallToActionButton } from "@/components/buttons";
 import { colors } from "@/styles/colors";
 import { Images } from "@/components/images";
 import { Image } from "@/components/Modifiers";
+import { MainText, SecondText, TextParagraph } from "@/components/text";
 import {
   EducationSectionWrapper,
   TitleWrapper,
   StudyTime,
-  MainText,
-  SecondText,
-  TextParagraph,
   StudyStage,
   ImageWithButtonWrapper,
 } from "./styled";
@@ -18,31 +16,37 @@ import { EducationSectionProps } from "./types";
 export const EducationSection = ({
   backgroundColor,
 }: EducationSectionProps) => {
+  const gapsForTextParagraphs = ["2px", "4px", "6px", "6px"];
+
   return (
     <PagePosition backgroundColor={backgroundColor} paddingPlus id="education">
       <EducationSectionWrapper>
         <TitleWrapper>
-          <SecondText>University</SecondText>
+          <SecondText $color={colors.greenThemeColor}>University</SecondText>
           <MainText>Education</MainText>
         </TitleWrapper>
 
         <StudyTime>
           <StudyStage>
-            <TextParagraph>
+            <TextParagraph $color={colors.white} $displayFlex>
               Silesian University of Technology in Gliwice (Poland)
             </TextParagraph>
 
             <TextParagraph
-              $firsrColor={colors.greenThemeColor}
-              $secondColor={colors.white}
+              $color={colors.greenThemeColor}
+              $lastChildColor={colors.white}
+              $gap={gapsForTextParagraphs}
+              $displayFlex
             >
               <div>2016-10 - 2020-02</div>
               <div>Bachelor of Engineering</div>
             </TextParagraph>
 
             <TextParagraph
-              $firsrColor={colors.white}
-              $secondColor={colors.greenThemeColor}
+              $color={colors.white}
+              $lastChildColor={colors.greenThemeColor}
+              $gap={gapsForTextParagraphs}
+              $displayFlex
             >
               <div>Faculty of Mechanical Engineering -</div>
               <div>Automation and Robotics</div>
@@ -52,7 +56,9 @@ export const EducationSection = ({
           <ImageWithButtonWrapper>
             <Image src={Images.EngineeringRobot} alt="EngineeringRobot" />
 
-            <TextParagraph>Engineering degree project</TextParagraph>
+            <TextParagraph $color={colors.white}>
+              Engineering degree project
+            </TextParagraph>
 
             <CallToActionButton
               name="Read More"
@@ -63,21 +69,25 @@ export const EducationSection = ({
 
         <StudyTime>
           <StudyStage>
-            <TextParagraph>
+            <TextParagraph $color={colors.white} $displayFlex>
               Silesian University of Technology in Gliwice (Poland)
             </TextParagraph>
 
             <TextParagraph
-              $firsrColor={colors.greenThemeColor}
-              $secondColor={colors.white}
+              $color={colors.greenThemeColor}
+              $lastChildColor={colors.white}
+              $gap={gapsForTextParagraphs}
+              $displayFlex
             >
               <div>2020-03 - 2021-11</div>
               <div>Master of Engineering</div>
             </TextParagraph>
 
             <TextParagraph
-              $firsrColor={colors.white}
-              $secondColor={colors.greenThemeColor}
+              $color={colors.white}
+              $lastChildColor={colors.greenThemeColor}
+              $gap={gapsForTextParagraphs}
+              $displayFlex
             >
               <div>Faculty of Mechanical Engineering -</div>
               <div>Automation and Robotics</div>
@@ -87,7 +97,9 @@ export const EducationSection = ({
           <ImageWithButtonWrapper>
             <Image src={Images.MasterSpider} alt="MasterSpider" />
 
-            <TextParagraph>Master degree project</TextParagraph>
+            <TextParagraph $color={colors.white}>
+              Master degree project
+            </TextParagraph>
 
             <CallToActionButton
               name="Read More"

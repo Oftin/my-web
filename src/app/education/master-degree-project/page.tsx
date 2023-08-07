@@ -7,32 +7,39 @@ import { colors } from "@/styles/colors";
 import { Images } from "@/components/images";
 import { Image } from "@/components/Modifiers";
 import {
+  TitleParagraph,
+  TextParagraph,
+  PageTitleMainText,
+  PageTitleSecondText,
+} from "@/components/text";
+import {
   MasterDegreeProjectWrapper,
   ContentWrapper,
   LeftImagesWrapper,
   Fig1Wrapper,
   Fig3Wrapper,
-  MainText,
-  SecondText,
-  TitleParagraph,
-  TextParagraph,
 } from "./styled";
 
 export default function MasterDegreeProject() {
+  const marginBottomForTextParagraph = ["1.5rem", "1.5rem", "1.5rem", "1.5rem"];
+
   return (
     <>
       <Navbar />
       <PagePosition backgroundColor={colors.background.ebonyClay}>
         <MasterDegreeProjectWrapper>
-          <MainText>Master degree project</MainText>
-          <SecondText>
+          <PageTitleMainText>Master degree project</PageTitleMainText>
+          <PageTitleSecondText
+            $color={colors.greenThemeColor}
+            $margin="0.25rem 0 2rem 0"
+          >
             Mobile platform for security constrol in rooms
-          </SecondText>
+          </PageTitleSecondText>
 
           <ContentWrapper>
             <TitleParagraph>Abstract</TitleParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The aim of the work was to design, manufacture, and program a
               mobile platform for security control in rooms. Autodesk Inventor
               computer software environment was used to carry out the task. The
@@ -45,14 +52,14 @@ export default function MasterDegreeProject() {
 
             <TitleParagraph>Introduction</TitleParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               Mobile platforms make it possible to work from a safe distance for
               human life and health while performing hazardous activities. Among
               them are inspections of the premises of buildings with possible
               biological contamination that are in danger of collapse.
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The performance of complex tasks by a mobile platform is made
               possible by mounted equipment designed to collect information from
               the environment and transmit it to a control device, and an
@@ -63,7 +70,7 @@ export default function MasterDegreeProject() {
               the specifics of the task being performed.
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The design process of the mobile platform was preceded by a review
               of commercial solutions, in order to prepare as universal a design
               as possible.
@@ -72,18 +79,18 @@ export default function MasterDegreeProject() {
             <TitleParagraph>Design process</TitleParagraph>
 
             <div style={{ width: "100%" }}>
-              <TextParagraph $turnOffMarginBottom>
+              <TextParagraph>
                 The following design assumptions were made during the
                 development of the mobile concept:
               </TextParagraph>
-              <TextParagraph $turnOffMarginBottom>
+              <TextParagraph>
                 a) stability of the platform on a level, sloping and sandy
                 surface,
               </TextParagraph>
-              <TextParagraph $turnOffMarginBottom>
+              <TextParagraph>
                 b) the ability to climb and overcome various obstacles,
               </TextParagraph>
-              <TextParagraph>
+              <TextParagraph $marginBottom={marginBottomForTextParagraph}>
                 c) stability of movement and as even pressure on the ground as
                 possible.
               </TextParagraph>
@@ -106,12 +113,12 @@ export default function MasterDegreeProject() {
               <Image src={Images.MasterSpider_C} alt="MasterSpider_C" />
             </Fig1Wrapper>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               Fig. 1. Mobile platform layout: a) isometric view, b) minimum
               structure height, c) maximum leg spacing
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The designed components were created using incremental
               manufacturing technology (so-called 3D printing). This technology
               makes it possible to produce complex parts of irregular shape in a
@@ -124,7 +131,7 @@ export default function MasterDegreeProject() {
 
             <TitleParagraph>Control system</TitleParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               An Arduino Uno and a Raspberry Pi 3B+ were used to control the
               design, which allowed the system&apos;s tasks to be split between
               two boards and eased the task of software development. A servo
@@ -137,7 +144,7 @@ export default function MasterDegreeProject() {
               was placed inside the mobile platform.
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               Figure 2 shows the arrangement of servos in one of the legs of the
               platform mobile platform. Lifting of the leg is made possible by
               the horizontal arrangement of two motors. The motor located in the
@@ -147,11 +154,14 @@ export default function MasterDegreeProject() {
 
             <Image src={Images.MasterSpider_Leg} alt="MasterSpider_Leg" />
 
-            <TextParagraph style={{ marginTop: "1.5rem" }}>
+            <TextParagraph
+              $marginTop="1.5rem"
+              $marginBottom={marginBottomForTextParagraph}
+            >
               Fig. 2. View of servo system in a single leg
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               Fig. 3 shows a ready-to-run model of the mobile platform with the
               with the installed electronics.
             </TextParagraph>
@@ -161,12 +171,12 @@ export default function MasterDegreeProject() {
               <Image src={Images.MasterSpider_App} alt="MasterSpider_App" />
             </Fig3Wrapper>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               Fig. 3 a). View of the ready-to-use mobile platform, b)
               arrangement of elements on the website
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The mobile platform is controlled using a dedicated website (Fig.
               3b), displayed on the screen of a mobile device such as a
               smartphone or tablet. The The website displays real-time
@@ -178,7 +188,7 @@ export default function MasterDegreeProject() {
               concentration of flammable gas flammable.
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The website was designed using the React.js library, which is an
               extension of the JavaScript programming language. The appearance
               of the site is responsible for the Cascading Style Sheet (CSS),
@@ -189,7 +199,7 @@ export default function MasterDegreeProject() {
               language (HTML).
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The motion sequences were written in C++ and were uploaded to the
               memory of the Arduino Uno board. The triggering of a particular
               action is done on the screen, where the action is then transferred
@@ -199,7 +209,7 @@ export default function MasterDegreeProject() {
 
             <TitleParagraph>Summary</TitleParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The aim of the study was to develop a mobile platform for remote
               security control in the premises. It was decided to go for a
               stable structure that has a total of six points of support, with a
@@ -210,14 +220,14 @@ export default function MasterDegreeProject() {
               for during target operation.
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The mobile platform was made using 3D printing technology. All
               supporting elements were made from PLA filament, which is
               lightweight and safe for the user during the printing process and
               does not emit gases that irritate the respiratory tract.
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               The system was split into two different microcontrollers. This
               made it possible to speed up the the process of programming and
               compiling the entire system, along with the division of
@@ -229,7 +239,7 @@ export default function MasterDegreeProject() {
               computer platform
             </TextParagraph>
 
-            <TextParagraph>
+            <TextParagraph $marginBottom={marginBottomForTextParagraph}>
               An intuitive-to-use interface for operating the platform from
               mobile devices such as smartphones and tablets has also been
               designed.

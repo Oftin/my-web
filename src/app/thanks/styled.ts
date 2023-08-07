@@ -10,7 +10,7 @@ export const ThanksWrapper = styled.div`
   height: 100vh;
 `;
 
-export const MainText = styled.div`
+export const MainTextForThanks = styled.div`
   color: ${colors.white};
 
   @media only screen and (max-width: 575px) {
@@ -26,7 +26,7 @@ export const MainText = styled.div`
   }
 `;
 
-export const SecondText = styled.div`
+export const SecondTextForThanks = styled.div`
   color: ${colors.greenThemeColor};
 
   @media only screen and (max-width: 575px) {

@@ -1,6 +1,4 @@
-import styled, { css } from "styled-components";
-import { typography } from "@/styles/typography";
-import { colors } from "@/styles/colors";
+import styled from "styled-components";
 
 export const ExperienceSectionWrapper = styled.div`
   display: flex;
@@ -83,66 +81,6 @@ export const TextPosition = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
-`;
-
-export const MainText = styled.div`
-  display: flex;
-  color: ${colors.greenThemeColor};
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["28px"]}
-    gap: 6px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["36px"]}
-    gap: 8px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["48px"]}
-    gap: 10px;
-  }
-`;
-
-export const SecondText = styled.div`
-  display: flex;
-  color: ${colors.white};
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["18px"]}
-    gap: 6px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["24px"]}
-    gap: 8px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["32px"]}
-    gap: 10px;
-  }
-`;
-
-export const TextParagraph = styled.div<{ $color: string }>`
-  ${({ $color }) =>
-    $color &&
-    css`
-      color: ${$color};
-    `}
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["12px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["16px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.text.bold["20px"]}
-  }
 `;
 
 export const IconWrapper = styled.div`

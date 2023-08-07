@@ -10,7 +10,7 @@ export const NotFoundWrapper = styled.div`
   height: 100vh;
 `;
 
-export const MainText = styled.div`
+export const MainTextForNorFound = styled.div`
   display: flex;
   color: ${colors.white};
 
@@ -30,7 +30,7 @@ export const MainText = styled.div`
   }
 `;
 
-export const SecondText = styled.div`
+export const SecondTextForNorFound = styled.div`
   color: ${colors.greenThemeColor};
 
   @media only screen and (max-width: 575px) {
@@ -46,7 +46,7 @@ export const SecondText = styled.div`
   }
 `;
 
-export const ThirdText = styled.div<{ margin?: string }>`
+export const ThirdTextForNorFound = styled.div<{ margin?: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;

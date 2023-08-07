@@ -3,15 +3,13 @@ import { CallToActionButton } from "@/components/buttons";
 import { Images } from "@/components/images";
 import { Image } from "@/components/Modifiers";
 import { AdditionalActivitiesSectionProps } from "./types";
+import { MainText, SecondText, TextParagraph } from "@/components/text";
 import {
   AdditionalActivitiesSectionWrapper,
   TitleWrapper,
   ContentWrapper,
   LeftSideWrapper,
   RightSideWrapper,
-  MainText,
-  SecondText,
-  TextParagraph,
   ImageWrapper,
 } from "./styled";
 import { colors } from "@/styles/colors";
@@ -19,6 +17,9 @@ import { colors } from "@/styles/colors";
 export const AdditionalActivitiesSection = ({
   backgroundColor,
 }: AdditionalActivitiesSectionProps) => {
+  const widthsForTextParagraphs = ["300px", "400px", "500px", "500px"];
+  const gapsForTextParagraphs = ["6px", "8px", "10px", "10px"];
+
   return (
     <PagePosition backgroundColor={backgroundColor} paddingPlus>
       <AdditionalActivitiesSectionWrapper>
@@ -39,29 +40,61 @@ export const AdditionalActivitiesSection = ({
               <Image src={Images.ERC2019} alt="ERC2019" />
             </ImageWrapper>
 
-            <TextParagraph>International Mars Rover Competition</TextParagraph>
-            <TextParagraph>ERC 2019</TextParagraph>
+            <TextParagraph $color={colors.white}>
+              International Mars Rover Competition
+            </TextParagraph>
+            <TextParagraph $color={colors.white}>ERC 2019</TextParagraph>
           </LeftSideWrapper>
 
           <RightSideWrapper>
-            <TextParagraph>
+            <TextParagraph
+              $color={colors.white}
+              $lastChildColor={colors.greenThemeColor}
+              $displayFlex
+              $justifyContent="center"
+              $alignItems="center"
+              $width={widthsForTextParagraphs}
+              $gap={gapsForTextParagraphs}
+            >
               <div>Science club:</div>
               <div>AI-METH Silesian Phoenix</div>
             </TextParagraph>
 
             <div>
-              <TextParagraph>The team built a Mars Rover at the</TextParagraph>
-              <TextParagraph>
+              <TextParagraph
+                $color={colors.white}
+                $displayFlex
+                $justifyContent="center"
+                $alignItems="center"
+                $width={widthsForTextParagraphs}
+              >
+                The team built a Mars Rover at the
+              </TextParagraph>
+              <TextParagraph
+                $color={colors.white}
+                $displayFlex
+                $justifyContent="center"
+                $alignItems="center"
+                $width={widthsForTextParagraphs}
+              >
                 Silesian University of Technology in 2019
               </TextParagraph>
             </div>
 
-            <TextParagraph>My tasks in the team:</TextParagraph>
+            <TextParagraph $color={colors.white}>
+              My tasks in the team:
+            </TextParagraph>
 
             <div>
               {["3D Modeling", "Programing", "Mechanics"].map((el) => {
                 return (
-                  <TextParagraph key={el} $color={colors.greenThemeColor}>
+                  <TextParagraph
+                    key={el}
+                    $color={colors.greenThemeColor}
+                    $displayFlex
+                    $justifyContent="center"
+                    $alignItems="center"
+                  >
                     {el}
                   </TextParagraph>
                 );

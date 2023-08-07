@@ -5,6 +5,7 @@ import { Icons } from "@/components/icons";
 import { Image } from "@/components/Modifiers";
 import { CallToActionButton } from "@/components/buttons";
 import { Arrow } from "@/components/arrow";
+import { MainText, SecondText, TextParagraph } from "@/components/text";
 import {
   ExperienceSectionWrapper,
   TimeLineHorizontalForLargeScreenWidth,
@@ -14,9 +15,6 @@ import {
   FourColumns,
   FiveRows,
   TextPosition,
-  MainText,
-  SecondText,
-  TextParagraph,
   IconWrapper,
   SmallScreenContentWrapper,
   ButtonWrapper,
@@ -172,7 +170,7 @@ export const ExperienceSection = ({
       <ExperienceSectionWrapper>
         <Heading>
           <SecondText>Last</SecondText>
-          <MainText>Experience</MainText>
+          <MainText $color={colors.greenThemeColor}>Experience</MainText>
         </Heading>
 
         <TimeLineHorizontalForLargeScreenWidth>
@@ -206,9 +204,7 @@ export const ExperienceSection = ({
                   <TextParagraph $color={colors.greenThemeColor}>
                     {exp.date}
                   </TextParagraph>
-                  <TextParagraph $color={colors.grayText}>
-                    {exp.company}
-                  </TextParagraph>
+                  <TextParagraph>{exp.company}</TextParagraph>
                 </div>
                 <IconWrapper>
                   <Image src={exp.svg} alt="svgIcon" />

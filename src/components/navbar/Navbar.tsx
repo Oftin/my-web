@@ -10,7 +10,7 @@ import {
   RightSideLiHorizontal,
   RightSideLiVertical,
   MenuItems,
-  MainText,
+  NameAndSurnameText,
   Button,
   SpanWrapper,
   SpanInside,
@@ -69,10 +69,10 @@ export const Navbar = () => {
               duration={500}
               onClick={() => setOpenHamburgerMenu(false)}
             >
-              <MainText>
+              <NameAndSurnameText>
                 <div>Kamil</div>
                 <div>Bobrowski</div>
-              </MainText>
+              </NameAndSurnameText>
             </ReactScrollLink>
           ) : (
             <Button
@@ -80,10 +80,10 @@ export const Navbar = () => {
                 router.push("/");
               }}
             >
-              <MainText>
+              <NameAndSurnameText>
                 <div>Kamil</div>
                 <div>Bobrowski</div>
-              </MainText>
+              </NameAndSurnameText>
             </Button>
           )}
         </LeftSideLi>

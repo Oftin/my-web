@@ -1,5 +1,4 @@
-import styled, { css } from "styled-components";
-import { typography } from "@/styles/typography";
+import styled from "styled-components";
 import { colors } from "@/styles/colors";
 import { borderRadius } from "@/styles/borderRadius";
 
@@ -106,87 +105,5 @@ export const TileItem = styled.div`
 
   @media only screen and (min-width: 768px) {
     margin: 1rem;
-  }
-`;
-
-export const MainText = styled.div`
-  display: flex;
-  color: ${colors.white};
-
-  :last-child {
-    color: ${colors.greenThemeColor};
-  }
-
-  @media only screen and (max-width: 575px) {
-    ${typography.titleText["28px"]}
-    gap: 6px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.titleText["36px"]}
-    gap: 8px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.titleText["48px"]}
-    gap: 10px;
-  }
-`;
-
-export const SecondText = styled.div`
-  color: ${colors.white};
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["16px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["20px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.text.bold["24px"]}
-  }
-`;
-
-export const ThirdText = styled.div`
-  color: ${colors.grayText};
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["12px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["16px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.text.bold["20px"]}
-  }
-`;
-
-interface TextParagraphProps {
-  $turnOffMarginBottom?: boolean;
-}
-
-export const TextParagraph = styled.div<TextParagraphProps>`
-  color: ${colors.grayText};
-
-  ${({ $turnOffMarginBottom }) =>
-    !$turnOffMarginBottom &&
-    css`
-      margin-bottom: 1rem;
-    `}
-
-  @media only screen and (max-width: 575px) {
-    ${typography.text.bold["12px"]}
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    ${typography.text.bold["16px"]}
-  }
-
-  @media only screen and (min-width: 768px) {
-    ${typography.text.bold["20px"]}
   }
 `;

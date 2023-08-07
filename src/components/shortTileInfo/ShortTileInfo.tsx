@@ -25,11 +25,9 @@ export const ShortTileInfo = ({
           styles="margin-top: 2.5rem"
         />
 
-        <TextParagraph
-          text={shortInfo}
-          size="16px"
-          styles="margin-top: 2.5rem; margin-left: 2.5rem; margin-right: 2.5rem; margin-bottom: 5rem"
-        />
+        <TextParagraph $margin="2.5rem 2.5rem 5rem 2.5rem">
+          {shortInfo}
+        </TextParagraph>
       </ContentWrapper>
     </Button>
   );
