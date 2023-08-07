@@ -208,6 +208,7 @@ export const TitleParagraph = styled.div`
 export const TextParagraph = styled.div<{
   $color?: string;
   $width?: string[];
+  $margin?: string;
   $marginTop?: string;
   $marginBottom?: string[];
   $displayFlex?: boolean;
@@ -252,6 +253,12 @@ export const TextParagraph = styled.div<{
     $marginTop &&
     css`
       margin-top: ${$marginTop};
+    `}
+
+  ${({ $margin }) =>
+    $margin &&
+    css`
+      margin: ${$margin};
     `}
 
   @media only screen and (max-width: 575px) {
