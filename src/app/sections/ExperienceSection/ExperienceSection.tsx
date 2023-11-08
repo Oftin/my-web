@@ -24,113 +24,50 @@ import { ExperienceSectionProps } from "./types";
 const horizontalArray = [
   {
     first: "",
-    second: (
-      <Text
-        text="2017-10 - 2019-08"
-        color={colors.greenThemeColor}
-        size="20px"
-        centerText
-      />
-    ),
+    second: <Text text="2017-10 - 2019-08" color={colors.greenThemeColor} size="20px" centerText />,
     third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
     fourth: <Image src={Icons.ArrowDown} alt="" />,
     fifth: (
       <TextPosition>
-        <Text
-          text="Technical Support Engineer"
-          color={colors.white}
-          size="20px"
-          centerText
-        />
-        <Text
-          text="UPC Polska"
-          color={colors.grayText}
-          size="20px"
-          centerText
-        />
+        <Text text="Technical Support Engineer" color={colors.white} size="20px" centerText />
+        <Text text="UPC Polska" color={colors.grayText} size="20px" centerText />
       </TextPosition>
     ),
   },
   {
     first: (
       <TextPosition>
-        <Text
-          text="Robotic Engineer"
-          color={colors.white}
-          size="20px"
-          centerText
-        />
-        <Text
-          text="RW Swiss Automation"
-          color={colors.grayText}
-          size="20px"
-          centerText
-        />
+        <Text text="Robotic Engineer" color={colors.white} size="20px" centerText />
+        <Text text="RW Swiss Automation" color={colors.grayText} size="20px" centerText />
       </TextPosition>
     ),
     second: <Image src={Icons.ArrowUp} alt="" />,
     third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
-    fourth: (
-      <Text
-        text="2019-09 - 2020-05"
-        color={colors.greenThemeColor}
-        size="20px"
-        centerText
-      />
-    ),
+    fourth: <Text text="2019-09 - 2020-05" color={colors.greenThemeColor} size="20px" centerText />,
     fifth: "",
   },
   {
     first: "",
-    second: (
-      <Text
-        text="2021-05 - 2021-06"
-        color={colors.greenThemeColor}
-        size="20px"
-        centerText
-      />
-    ),
+    second: <Text text="2021-05 - 2021-06" color={colors.greenThemeColor} size="20px" centerText />,
     third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
     fourth: <Image src={Icons.ArrowDown} alt="" />,
     fifth: (
       <TextPosition>
-        <Text
-          text="Technical support"
-          color={colors.white}
-          size="20px"
-          centerText
-        />
-        <Text
-          text="SR Robotics"
-          color={colors.grayText}
-          size="20px"
-          centerText
-        />
+        <Text text="Technical support" color={colors.white} size="20px" centerText />
+        <Text text="SR Robotics" color={colors.grayText} size="20px" centerText />
       </TextPosition>
     ),
   },
   {
     first: (
       <TextPosition>
-        <Text
-          text="Junior React Developer"
-          color={colors.white}
-          size="20px"
-          centerText
-        />
+        <Text text="Junior React Developer" color={colors.white} size="20px" centerText />
         <Text text="LEOCODE" color={colors.grayText} size="20px" centerText />
       </TextPosition>
     ),
     second: <Image src={Icons.ArrowUp} alt="" />,
     third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
-    fourth: (
-      <Text
-        text="2021-10 - 2023-08"
-        color={colors.greenThemeColor}
-        size="20px"
-        centerText
-      />
-    ),
+    fourth: <Text text="2021-10 - now" color={colors.greenThemeColor} size="20px" centerText />,
     fifth: "",
   },
 ];
@@ -138,7 +75,7 @@ const horizontalArray = [
 const verticalArray = [
   {
     company: "LEOCODE",
-    date: "2021-10 - 2023-08",
+    date: "2021-10 - now",
     role: "Junior React Developer",
     svg: Icons.Programming,
   },
@@ -162,9 +99,7 @@ const verticalArray = [
   },
 ];
 
-export const ExperienceSection = ({
-  backgroundColor,
-}: ExperienceSectionProps) => {
+export const ExperienceSection = ({ backgroundColor }: ExperienceSectionProps) => {
   return (
     <PagePosition backgroundColor={backgroundColor} paddingPlus id="experience">
       <ExperienceSectionWrapper>
@@ -198,12 +133,8 @@ export const ExperienceSection = ({
             return (
               <SmallScreenContentWrapper key={exp.company + 1}>
                 <div>
-                  <TextParagraph $color={colors.white}>
-                    {exp.role}
-                  </TextParagraph>
-                  <TextParagraph $color={colors.greenThemeColor}>
-                    {exp.date}
-                  </TextParagraph>
+                  <TextParagraph $color={colors.white}>{exp.role}</TextParagraph>
+                  <TextParagraph $color={colors.greenThemeColor}>{exp.date}</TextParagraph>
                   <TextParagraph>{exp.company}</TextParagraph>
                 </div>
                 <IconWrapper>

@@ -152,6 +152,11 @@ export const skillsArray: SkillsArrayType[] = [
   },
   {
     parentId: 1,
+    skill: "Redux Toolkit",
+    description: "I use to manage state in applications.",
+  },
+  {
+    parentId: 1,
     skill: "Axios",
     description: "Creating service requests.",
   },
