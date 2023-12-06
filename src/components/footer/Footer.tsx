@@ -1,12 +1,6 @@
 import { Images } from "@/components/images";
 import { ImageWithLink } from "@/components/Modifiers";
-import {
-  FooterWrapper,
-  LeftTopText,
-  LeftBottomText,
-  FooterImage,
-  RightText,
-} from "./styled";
+import { FooterWrapper, LeftTopText, LeftBottomText, FooterImage, RightText } from "./styled";
 
 export const Footer = () => {
   return (
@@ -16,15 +10,11 @@ export const Footer = () => {
           <div>Kamil</div>
           <div>Bobrowski</div>
         </LeftTopText>
-        <LeftBottomText>Front-end Developer</LeftBottomText>
+        <LeftBottomText>Software Developer</LeftBottomText>
       </div>
 
       <FooterImage>
-        <ImageWithLink
-          href="https://www.linkedin.com/in/kamil-bobrowski-a8a276193/"
-          src={Images.LinkedIn}
-          alt=""
-        />
+        <ImageWithLink href="https://www.linkedin.com/in/kamil-bobrowski-a8a276193/" src={Images.LinkedIn} alt="" />
       </FooterImage>
 
       <RightText>
