@@ -10,7 +10,7 @@ export const experienceArray: ExperienceArrayType[] = [
   {
     id: 1,
     company: "LEOCODE",
-    date: "2021-10 - now",
+    date: "2021-10 - 2023-12",
     role: "Junior React Developer",
     listDuties: [
       "Web application development",

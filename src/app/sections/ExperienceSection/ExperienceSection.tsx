@@ -67,7 +67,7 @@ const horizontalArray = [
     ),
     second: <Image src={Icons.ArrowUp} alt="" />,
     third: <Image src={Icons.GreenDotWithRing} alt="GreenDotWithRing" />,
-    fourth: <Text text="2021-10 - now" color={colors.greenThemeColor} size="20px" centerText />,
+    fourth: <Text text="2021-10 - 2023-12" color={colors.greenThemeColor} size="20px" centerText />,
     fifth: "",
   },
 ];
@@ -75,7 +75,7 @@ const horizontalArray = [
 const verticalArray = [
   {
     company: "LEOCODE",
-    date: "2021-10 - now",
+    date: "2021-10 - 2023-12",
     role: "Junior React Developer",
     svg: Icons.Programming,
   },
